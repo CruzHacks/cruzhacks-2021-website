@@ -2,7 +2,7 @@ Problem
 =======
 What is the problem this work solves, including
 
-[Link to story or ticket](https://my-tracking-system.url/ticket-number)
+[Link to Asana Ticket](https://app.asana.com/1234)
 
 Solution
 ========
@@ -19,10 +19,10 @@ Change summary:
 Steps to Verify:
 ----------------
 1. A setup step / beginning state
-1. What to do next
-1. Any other instructions
-1. Expected behavior
-1. Suggestions for testing
+2. What to do next
+3. Any other instructions
+4. Expected behavior
+5. Suggestions for testing
 
 Screenshots (optional):
 -----------------------
