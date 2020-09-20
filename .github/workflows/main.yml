@@ -2,10 +2,6 @@ name: cruzhacks-2021-website
 
 on:
   push:
-    branches:
-      - main
-      - 'feature/**'
-      - 'chore/**'
   pull_request:
     branches: [ main ]
 
