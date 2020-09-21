@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Running JS tests 
-        run: echo JS testing will be here
+        run: yarn test:ci
 
   build:
     runs-on: ubuntu-latest
