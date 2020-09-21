@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v2 
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
       - name: Running JS tests 
         run: echo JS testing will be here
 
