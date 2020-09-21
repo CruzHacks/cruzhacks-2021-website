@@ -1,27 +1,32 @@
 module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module", // Allows for the use of imports
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "plugins": ["jest", "prettier"],
-  "rules": {
+  plugins: ["jest", "prettier", "@typescript-eslint"],
+  rules: {
     "no-unused-vars": [
       "error",
       {
-        "args": "after-used",
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_",
-      }
+        args: "after-used",
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     "no-var": "error",
     "prettier/prettier": "error",
   },
-  "extends": [
-    "react-app",
-    "plugin:jest/recommended",
-    "prettier",
+  extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-  ]
-}
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "react-app",
+    "eslint:recommended",
+  ],
+};
