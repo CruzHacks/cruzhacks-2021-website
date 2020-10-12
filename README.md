@@ -17,7 +17,7 @@ Available Scripts
 ========
 
 * `yarn start` starts a development server
-* `yarn lint:js` runs the linter for all typescript files
+* `yarn lint:ts` runs the linter for all typescript files
 * `yarn lint:css` runs the linter for all scss files
 * `yarn lint` runs entire linting suite (both typescript and css scripts)
 * `yarn test` runs the jest testing suite using the `--watch` flag
