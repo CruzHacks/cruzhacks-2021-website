@@ -1,4 +1,3 @@
-/*eslint no-use-before-define: off*/
 import React from "react";
 import ReactDOM from "react-dom";
 import "stylesheets/_base.scss";

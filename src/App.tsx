@@ -1,4 +1,3 @@
-/*eslint no-use-before-define: off*/
 import React from "react";
 
 const App: React.FC = () => {

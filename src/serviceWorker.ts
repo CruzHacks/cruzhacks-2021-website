@@ -1,4 +1,3 @@
-/* eslint-disable */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -26,7 +25,7 @@ type Config = {
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 };
 
-export function register(config?: Config) {
+export function register(config?: Config): void {
   if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
@@ -134,7 +133,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
     });
 }
 
-export function unregister() {
+export function unregister(): void {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.ready
       .then((registration) => {
