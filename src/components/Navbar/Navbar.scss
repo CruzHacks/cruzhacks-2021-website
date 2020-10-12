@@ -1,0 +1,5 @@
+@use "~stylesheets/typography";
+
+.Navbar {
+    @include typography.major-title();
+}

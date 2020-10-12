@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Sponsorship.scss";
 
 const SponsorshipPageView: React.FC = () => {
   return <div className="SponsorshipPage">Hello from SponsorshipPageView</div>;

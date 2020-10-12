@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Information.scss";
 
 const InformationPageView: React.FC = () => {
   return <div className="InformationPage">Hello from InformationPageView</div>;

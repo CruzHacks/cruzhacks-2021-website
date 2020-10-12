@@ -1,2 +1,12 @@
-$font-family-base: "Montserrat";
-$font-family-italic: "Montserrat Italic";
+$font-family-base: "Montserrat", "sans-serif";
+$font-family-italic: "Montserrat Italic", "sans-serif";
+
+@mixin major-title {
+  font-family: $font-family-italic;
+  font-size: 50px;
+}
+
+@mixin title-info {
+  font-family: $font-family-italic;
+  color: var(--white);
+}

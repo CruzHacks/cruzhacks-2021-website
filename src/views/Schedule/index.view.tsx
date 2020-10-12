@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Schedule.scss";
 
 const SchedulePageView: React.FC = () => {
   return <div className="SchedulePage">Hello from SchedulePageView</div>;

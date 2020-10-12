@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Navbar.scss";
 
 const Navbar: React.FC = () => {
   return <div className="Navbar">Hello from Navbar</div>;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./PostcardStack.scss";
 
 const PostcardStack: React.FC = () => {
   return <div className="PostcardStack">Hello from PostcardStack</div>;
