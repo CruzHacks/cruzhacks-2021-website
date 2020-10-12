@@ -14,7 +14,7 @@
 
 /* montserrat-500 - latin */
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat 500";
   font-style: normal;
   font-weight: 500;
   src: url("~fonts/montserrat-v15-latin-500.eot"); /* IE9 Compat Modes */
@@ -24,4 +24,18 @@
     url("~fonts/montserrat-v15-latin-500.woff") format("woff"),
     url("~fonts/montserrat-v15-latin-500.ttf") format("truetype"),
     url("~fonts/montserrat-v15-latin-500.svg#Montserrat") format("svg"); /* Legacy iOS */
+}
+
+/* montserrat-500italic - latin */
+@font-face {
+  font-family: "Montserrat Italic";
+  font-style: italic;
+  font-weight: 500;
+  src: url("~fonts/montserrat-v15-latin-500italic.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"),
+    url("~fonts/montserrat-v15-latin-500italic.eot?#iefix") format("embedded-opentype"),
+    url("~fonts/montserrat-v15-latin-500italic.woff2") format("woff2"),
+    url("~fonts/montserrat-v15-latin-500italic.woff") format("woff"),
+    url("~fonts/montserrat-v15-latin-500italic.ttf") format("truetype"),
+    url("~fonts/montserrat-v15-latin-500italic.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
