@@ -1,7 +1,12 @@
 import React from "react";
+import Routes from "routes/routes";
 
 const App: React.FC = () => {
-  return <div className="App"> Our app is live.</div>;
+  return (
+    <>
+      <Routes />
+    </>
+  );
 };
 
 export default App;
