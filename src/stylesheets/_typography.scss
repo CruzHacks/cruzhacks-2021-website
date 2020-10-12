@@ -4,9 +4,11 @@ $font-family-italic: "Montserrat Italic", "sans-serif";
 @mixin major-title {
   font-family: $font-family-italic;
   font-size: 50px;
+  color: var(--wedgewood);
 }
 
 @mixin title-info {
   font-family: $font-family-italic;
+  font-size: 50px;
   color: var(--white);
 }
