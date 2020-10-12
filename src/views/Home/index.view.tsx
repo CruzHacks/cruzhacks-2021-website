@@ -5,7 +5,7 @@ import "./index.scss";
 
 const HomepageView: React.FC = () => {
   return (
-    <div className="Home">
+    <div className="Homepage">
       <Navbar />
       Hello from HomepageView
     </div>
