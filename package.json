@@ -31,7 +31,7 @@
     "test:ci": "jest --coverage --ci --color --runInBand --passWithNoTests",
     "eject": "react-scripts eject",
     "lint": "npm-run-all -c lint:*",
-    "lint:js": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'"
   },
   "eslintConfig": {
