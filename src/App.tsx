@@ -1,9 +1,12 @@
-/*eslint no-use-before-define: off*/
 import React from "react";
-import "./App.scss";
+import Routes from "routes/routes";
 
 const App: React.FC = () => {
-  return <div className="App"> Our app is live.</div>;
+  return (
+    <>
+      <Routes />
+    </>
+  );
 };
 
 export default App;
