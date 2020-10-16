@@ -1,5 +1,17 @@
-// stylelint-disable at-rule-disallowed-list
+/* stylelint-disable at-rule-disallowed-list, selector-max-id, selector-max-compound-selectors */
 @import "_fonts";
 @import "_variables";
 @import "_spacers";
-// stylelint-enable
+
+html,
+body,
+#root,
+#root > div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: contain;
+}
+
+/* stylelint-enable */
