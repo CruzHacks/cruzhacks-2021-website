@@ -8,7 +8,7 @@ const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
       <Navbar />
-      <HeroView pageName={"Home"} />
+      <HeroView pageName={"Home"} title={"Title"} description={"Description"} />
     </div>
   );
 };

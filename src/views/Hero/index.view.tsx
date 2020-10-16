@@ -7,9 +7,11 @@ import "./Hero.scss";
 
 type HeroProps = {
   pageName: string;
+  title: string;
+  description: string;
 };
 
-const HeroView: React.FC<HeroProps> = ({ pageName }) => {
+const HeroView: React.FC<HeroProps> = ({ pageName, title, description }) => {
   return (
     <div
       className={cx("HeroView", { HeroView__homeView: pageName === "Home" })}
@@ -17,6 +19,8 @@ const HeroView: React.FC<HeroProps> = ({ pageName }) => {
       <PostcardStack pageName={pageName} />
       <EmailSubscriptionForm />
       Hello from HeroView
+      {title}
+      {description}
     </div>
   );
 };
@@ -25,4 +29,6 @@ export default HeroView;
 
 HeroView.propTypes = {
   pageName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
