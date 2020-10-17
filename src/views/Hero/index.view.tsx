@@ -21,11 +21,9 @@ const HeroView: React.FC<HeroProps> = ({ pageName, title, description }) => {
           <PostcardStack pageName={pageName} />
         </div>
         <div className="HeroView__text">
-          <h1>CruzHacks 2021 /</h1>
-          <h1>
-            <span>{title}</span>
-          </h1>
-          <p>{description}</p>
+          <h1 className="HeroView__titleText">CruzHacks 2021 /</h1>
+          <h1 className="HeroView__titleTextTwo">{title}</h1>
+          <p className="HeroView__description">{description}</p>
           <EmailSubscriptionForm />
         </div>
       </div>
