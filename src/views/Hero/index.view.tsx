@@ -16,11 +16,19 @@ const HeroView: React.FC<HeroProps> = ({ pageName, title, description }) => {
     <div
       className={cx("HeroView", { HeroView__homeView: pageName === "Home" })}
     >
-      <PostcardStack pageName={pageName} />
-      <EmailSubscriptionForm />
-      Hello from HeroView
-      {title}
-      {description}
+      <div className="HeroView__container">
+        <div className="HeroView__visual">
+          <PostcardStack pageName={pageName} />
+        </div>
+        <div className="HeroView__text">
+          <h1>CruzHacks 2021 /</h1>
+          <h1>
+            <span>{title}</span>
+          </h1>
+          <p>{description}</p>
+          <EmailSubscriptionForm />
+        </div>
+      </div>
     </div>
   );
 };

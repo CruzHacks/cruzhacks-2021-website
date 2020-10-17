@@ -9,7 +9,7 @@ module.exports = {
       "declaration-empty-line-before": null,
       "declaration-colon-newline-after": null,
       "declaration-no-important": true,
-      "max-nesting-depth": 1,
+      "max-nesting-depth": 3,
       "scss/at-function-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "scss/at-mixin-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "scss/dollar-variable-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
@@ -24,7 +24,7 @@ module.exports = {
             "Classes must be in BEM form like `MyComponent__element--variant`",
         },
       ],
-      "selector-max-compound-selectors": 1,
+      "selector-max-compound-selectors": 3,
       "selector-max-id": 0,
       "selector-no-qualifying-type": true,
       "sh-waqar/declaration-use-variable": [
