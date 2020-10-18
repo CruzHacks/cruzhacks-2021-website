@@ -1,12 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./PostcardStack.scss";
 
-type PostcardStackProps = {
+interface PostcardStackProps {
   pageName: string;
-};
+}
 
-const PostcardStack: React.FC<PostcardStackProps> = ({ pageName }) => {
+const PostcardStack: React.FC<PostcardStackProps> = ({
+  pageName,
+}: PostcardStackProps) => {
   return (
     <div className="PostcardStack">
       Hello from PostcardStack sent from {pageName}
@@ -15,7 +16,3 @@ const PostcardStack: React.FC<PostcardStackProps> = ({ pageName }) => {
 };
 
 export default PostcardStack;
-
-PostcardStack.propTypes = {
-  pageName: PropTypes.string.isRequired,
-};
