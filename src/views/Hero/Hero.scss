@@ -35,18 +35,17 @@
     margin: 0 auto;
   }
 
-  &__text {
+  &__textContainer {
     margin: 3em auto;
   }
 
   &__titleText {
     @include typography.title-text;
-  }
 
-  &__titleTextTwo {
-    @include typography.title-text;
-
-    color: var(--wedgewood__dark);
+    &--secondary {
+      @include typography.title-text;
+      color: var(--wedgewood__dark);
+    }
   }
 
   &__description {

@@ -7,6 +7,7 @@ $font-family-italic: "Montserrat Italic", "sans-serif";
   margin: 0;
   color: var(--white);
   font-family: $font-family-italic;
+  font-style: italic;
   font-weight: normal;
 
   @include responsiveness.font($responsive: 4vw, $min: 32px, $max: 50px);
