@@ -1,7 +1,7 @@
 @use "~stylesheets/responsiveness";
 
-$font-family-base: "Montserrat", "sans-serif";
-$font-family-italic: "Montserrat Italic", "sans-serif";
+$font-family-base: "Montserrat", sans-serif;
+$font-family-italic: "Montserrat Italic", sans-serif;
 
 @mixin title-text {
   margin: 0;
