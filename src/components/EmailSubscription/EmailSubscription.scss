@@ -1,4 +1,5 @@
 @use "~stylesheets/responsiveness";
+@use "~stylesheets/typography";
 
 .EmailSubscription {
   display: flex;
@@ -26,10 +27,14 @@
       text-overflow: ellipsis;
     }
   }
+
   .InputButton {
     background: var(--wedgewood);
     border-radius: 50%;
     padding: var(--medium-spacer);
     border: none;
+  }
+  .FeedbackMessage {
+    @include typography.title-info; // Will change to 'description' after Will's PR
   }
 }

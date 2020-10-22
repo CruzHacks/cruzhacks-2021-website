@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import axios, { AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
 
 const EmailSubscriptionForm: React.FC = () => {
-  var email: string = ""
+  const [userEmail, setUserEmail] = useState("");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [showFeedback, setShowFeedback] = useState(false);
+
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    email = event.currentTarget.value.trim()
-  }
+    setUserEmail(event.currentTarget.value.trim());
+  };
 
   const handleKey = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter")
-      submitEmail()
-  }
+    if (event.key === "Enter") {
+      submitEmail();
+    }
+  };
 
-  const submitEmail = (event?: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("We should submit the email!")
-    console.log(email)
-  }
+  const submitEmail = () => {
+    axios.post("https://us-central1-cruzhacks-4a899.cloudfunctions.net/subscribe", { email: userEmail })
+      .then((response: AxiosResponse) => {
+        setShowFeedback(true);
+        setFeedbackMessage(response.data.message);
+      })
+      .catch(() => {
+        setShowFeedback(true);
+        setFeedbackMessage("Oh no! Your submission looks like it failed - please try your request again!");
+      });
+  };
 
   return (
     <div className="EmailSubscription">
-      <input className="SearchBox" placeholder="enter email for updates..." type="text" name="name" onChange={handleInput} onKeyDown={handleKey}></input>
-      <button className="InputButton" onClick={submitEmail}><Arrow /></button>
+      { showFeedback
+      ? <div className="FeedbackMessage">{feedbackMessage}</div>
+      : < >
+          <input className="SearchBox" placeholder="enter email for updates..." type="text" name="name" onChange={handleInput} onKeyDown={handleKey}></input>
+          <button className="InputButton" onClick={submitEmail}><Arrow /></button>
+        </ >
+      }
     </div>
   );
 };
