@@ -57,7 +57,7 @@ const EmailSubscriptionForm: React.FC = () => {
             className="EmailSubscription__inputButton"
             onClick={submitEmail}
           >
-            <Arrow />
+            <Arrow className="EmailSubscription__Arrow" />
           </button>
         </>
       )}
