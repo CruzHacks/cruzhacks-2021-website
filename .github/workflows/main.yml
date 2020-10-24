@@ -94,6 +94,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Deploy to Firebase
-        env: 
-          token: ${{ secrets.FIREBASE_TOKEN }}
         run: yarn deploy:test --token token 
+        with: 
+          token: ${{ secrets.FIREBASE_TOKEN }}
