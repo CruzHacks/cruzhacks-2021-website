@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "cruzhacks-4a899"
+  },
+  "targets": {
+    "cruzhacks-4a899": {
+      "hosting": {
+        "test": [
+          "cruzhacks-2021-website-test"
+        ],
+        "production": [
+          "cruzhacks-2021-website"
+        ]
+      }
+    }
   }
 }

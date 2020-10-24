@@ -2,6 +2,7 @@
   "hosting": [
     {
       "site": "cruzhacks-2021-website",
+      "target": "production",
       "public": "build",
       "ignore": [
         "firebase.json",
@@ -18,6 +19,7 @@
     {
       "site": "cruzhacks-2021-website-test",
       "public": "build",
+      "target": "test",
       "ignore": [
         "firebase.json",
         "**/.*",
