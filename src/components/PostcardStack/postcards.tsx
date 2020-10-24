@@ -1,4 +1,4 @@
-import Home:SVGSVGElement from "./home.svg";
+import Home from "./home.svg";
 
 const postcards: Record<string, SVGSVGElement> = {
   home: Home,
