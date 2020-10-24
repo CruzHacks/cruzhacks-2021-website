@@ -93,8 +93,6 @@ jobs:
           node-version: 14.11.0
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-      - name: Install Firebase CLI 
-        run: yarn add -g firebase-tools
       - name: Deploy to Firebase
         run: firebase deploy --only hosting:cruzhacks-2021-website-test --token token 
         env: 
