@@ -37,8 +37,8 @@
     "lint": "npm-run-all -c lint:*",
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'",
-    "deploy:test": "firebase deploy --only hosting:cruzhacks-2021-website-test",
-    "deploy:production": "firebase deploy --only hosting:cruzhacks-2021-website"
+    "deploy:test": "firebase deploy --only hosting:test",
+    "deploy:production": "firebase deploy --only hosting:production"
   },
   "eslintConfig": {
     "extends": "react-app"
