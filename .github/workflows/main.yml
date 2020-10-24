@@ -94,6 +94,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Deploy to Firebase
-        run: firebase deploy --only hosting:cruzhacks-2021-website-test --token token 
+        run: yarn deploy:test --token token 
         env: 
           token: ${{ secrets.FIREBASE_TOKEN }}
