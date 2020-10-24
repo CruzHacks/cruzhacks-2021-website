@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.6",
     "classnames": "^2.2.6",
+    "firebase-tools": "^8.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -35,7 +36,9 @@
     "eject": "react-scripts eject",
     "lint": "npm-run-all -c lint:*",
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
-    "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'"
+    "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'",
+    "deploy:test": "firebase deploy --only hosting:test",
+    "deploy:production": "firebase deploy --only hosting:production"
   },
   "eslintConfig": {
     "extends": "react-app"
