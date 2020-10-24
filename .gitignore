@@ -26,3 +26,6 @@ yarn-error.log*
 .tool-versions
 /.firebase
 *.rb
+
+# IntelliJ
+.idea
