@@ -8,7 +8,11 @@
   min-height: 100%;
 
   &__homeView {
-    background: linear-gradient(180deg, var(--wedgewood__gradient) 0%, var(--waterleaf) 100%);
+    background: linear-gradient(
+      180deg,
+      var(--wedgewood__gradient) 0%,
+      var(--waterleaf) 100%
+    );
 
     /* We are excluding this for the MVP
     min-height: 90%;
@@ -21,9 +25,8 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 5em 3em;
+    flex-grow: 5;
+    margin: auto 1em;
 
     @include responsiveness.respond(phone) {
       margin: 1em;
@@ -32,12 +35,21 @@
 
   &__visual {
     // postcard styling
-    max-width: 500px;
+    max-width: 40vw;
+    min-width: 475px;
     margin: 0 auto;
+
+    @include responsiveness.respond(phone) {
+      max-width: 75vw;
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      min-width: 400px;
+    }
   }
 
   &__textContainer {
-    margin: 3em auto;
+    margin: 2em auto;
   }
 
   &__titleText {
