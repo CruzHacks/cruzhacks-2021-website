@@ -4,6 +4,9 @@
   --wedgewood: #4f728e;
   --grey: #bfbfbf;
 
+  /* variations */
+  --wedgewood__dark: #{darken(#4f728e, 7%)};
+
   /* These are for gradient */
   --wedgewood__gradient: #486988;
   --waterleaf: #a9ebdf;

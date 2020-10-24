@@ -1,14 +1,26 @@
-$font-family-base: "Montserrat", "sans-serif";
-$font-family-italic: "Montserrat Italic", "sans-serif";
+@use "~stylesheets/responsiveness";
 
-@mixin major-title {
+$font-family-base: "Montserrat", sans-serif;
+$font-family-italic: "Montserrat Italic", sans-serif;
+
+@mixin title-text {
+  margin: 0;
+  color: var(--white);
   font-family: $font-family-italic;
-  font-size: 50px;
-  color: var(--wedgewood);
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 4vw, $min: 32px, $max: 50px);
+  line-height: 50px;
+
+  @include responsiveness.respond(tab-port) {
+    line-height: 40px;
+  }
 }
 
-@mixin title-info {
-  font-family: $font-family-italic;
-  font-size: 50px;
+@mixin description {
   color: var(--white);
+  font-family: $font-family-base;
+
+  @include responsiveness.font($responsive: 2.4vw, $min: 12px, $max: 18px);
 }

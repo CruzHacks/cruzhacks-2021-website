@@ -63,12 +63,16 @@ jobs:
         with:
           name: build
           path: build
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          args: deploy --only hosting:cruzhacks-2021-website
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          node-version: 14.11.0
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Deploy to Firebase -- Production
+        run: yarn deploy:production --token $token 
+        env: 
+          token: ${{ secrets.FIREBASE_TOKEN }}
 
   auto-deploy-to-test:
     runs-on: ubuntu-latest
@@ -81,9 +85,13 @@ jobs:
         with:
           name: build
           path: build
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          args: deploy --only hosting:cruzhacks-2021-website-test
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          node-version: 14.11.0
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Deploy to Firebase -- Test
+        run: yarn deploy:test --token $token 
+        env: 
+          token: ${{ secrets.FIREBASE_TOKEN }}
