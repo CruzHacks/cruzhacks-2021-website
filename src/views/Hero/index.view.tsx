@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import PostcardStack from "components/PostcardStack/index.view";
+
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import "./Hero.scss";
 
