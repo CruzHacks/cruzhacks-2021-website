@@ -25,8 +25,13 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 5;
     margin: auto 1em;
+    max-width: 1800px;
+    flex-grow: 4;
+
+    @include responsiveness.respond(mission) {
+      max-width: unset;
+    }
 
     @include responsiveness.respond(phone) {
       margin: 1em;
@@ -35,9 +40,13 @@
 
   &__visual {
     // postcard styling
-    max-width: 40vw;
+    max-width: 800px;
     min-width: 475px;
     margin: 0 auto;
+
+    @include responsiveness.respond(mission) {
+      max-width: 600px;
+    }
 
     @include responsiveness.respond(phone) {
       max-width: 75vw;
