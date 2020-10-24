@@ -10,7 +10,11 @@ const PostcardStack: React.FC<PostcardStackProps> = ({
 }: PostcardStackProps) => {
   return (
     <div className="PostcardStack">
-      Hello from PostcardStack sent from {pageName}
+      <img
+        src={require(`../../images/postcards/${pageName.toLowerCase()}.svg`)}
+        className="PostcardStack__postcard"
+        alt="The winding road to the UCSC campus."
+      />
     </div>
   );
 };
