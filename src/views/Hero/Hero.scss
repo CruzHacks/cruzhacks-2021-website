@@ -1,11 +1,58 @@
+@use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
+
 .HeroView {
-  height: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  min-height: 100%;
 
   &__homeView {
     background: linear-gradient(180deg, var(--wedgewood__gradient) 0%, var(--waterleaf) 100%);
-    height: 90%;
+
+    /* We are excluding this for the MVP
+    min-height: 90%;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     box-shadow: 0 10px 16px rgba(0, 0, 0, 0.25);
+    */
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5em 3em;
+
+    @include responsiveness.respond(phone) {
+      margin: 1em;
+    }
+  }
+
+  &__visual {
+    // postcard styling
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__textContainer {
+    margin: 3em auto;
+  }
+
+  &__titleText {
+    @include typography.title-text;
+
+    &--secondary {
+      @extend .HeroView__titleText;
+      color: var(--wedgewood__dark);
+    }
+  }
+
+  &__description {
+    max-width: 375px;
+    margin: 2em 0;
+
+    @include typography.description;
   }
 }
