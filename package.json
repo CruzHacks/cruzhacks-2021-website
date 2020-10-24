@@ -7,6 +7,11 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
+<<<<<<< HEAD
+=======
+    "firebase-tools": "^8.13.1",
+    "prop-types": "^15.7.2",
+>>>>>>> 8d5f83886e1db550a51811d43db2fa1012961fcc
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -27,7 +32,9 @@
     "eject": "react-scripts eject",
     "lint": "npm-run-all -c lint:*",
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
-    "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'"
+    "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'",
+    "deploy:test": "firebase deploy --only hosting:test",
+    "deploy:production": "firebase deploy --only hosting:production"
   },
   "eslintConfig": {
     "extends": "react-app"
