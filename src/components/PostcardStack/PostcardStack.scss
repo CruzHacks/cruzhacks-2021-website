@@ -1,3 +1,7 @@
-/* stylelint-disable-line no-empty-source */
-
-/* Delete these lines when you begin development */
+.PostcardStack {
+  display: inline;
+  margin: 0 auto;
+  &__postcard {
+    max-width: 75%;
+  }
+}

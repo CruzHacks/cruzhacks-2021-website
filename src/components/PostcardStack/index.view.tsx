@@ -1,6 +1,5 @@
 import React from "react";
 import "./PostcardStack.scss";
-import postcards from "./postcards";
 
 interface PostcardStackProps {
   pageName: string;
@@ -9,7 +8,15 @@ interface PostcardStackProps {
 const PostcardStack: React.FC<PostcardStackProps> = ({
   pageName,
 }: PostcardStackProps) => {
-  return <div className="PostcardStack">{postcards[pageName]}</div>;
+  return (
+    <div className="PostcardStack">
+      <img
+        src={require(`../../images/postcards/${pageName.toLowerCase()}.svg`)}
+        className="PostcardStack__postcard"
+        alt="The winding road to the UCSC campus."
+      />
+    </div>
+  );
 };
 
 export default PostcardStack;
