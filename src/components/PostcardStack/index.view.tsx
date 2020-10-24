@@ -1,21 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./PostcardStack.scss";
 
-type PostcardStackProps = {
+interface PostcardStackProps {
   pageName: string;
-};
+}
 
-const PostcardStack: React.FC<PostcardStackProps> = ({ pageName }) => {
+const PostcardStack: React.FC<PostcardStackProps> = ({
+  pageName,
+}: PostcardStackProps) => {
   return (
     <div className="PostcardStack">
-      Hello from PostcardStack sent from {pageName}
+      <img
+        src={require(`images/postcards/${pageName.toLowerCase()}.svg`)}
+        className="PostcardStack__postcard"
+        alt="The winding road to the UCSC campus."
+      />
     </div>
   );
 };
 
 export default PostcardStack;
-
-PostcardStack.propTypes = {
-  pageName: PropTypes.string.isRequired,
-};
