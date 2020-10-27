@@ -20,6 +20,12 @@ module.exports = {
     "no-var": "error",
     "prettier/prettier": "error",
   },
+  globals: {
+    page: true,
+    browser: true,
+    context: true,
+    jestPuppeteer: true,
+  },
   extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
