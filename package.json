@@ -22,9 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watch --passWithNoTests",
-    "test:once": "jest --passWithNoTests",
-    "test:ci": "jest --coverage --ci --color --runInBand --passWithNoTests",
+    "test": "jest --watch",
+    "test:once": "jest",
+    "test:ci": "jest --coverage --ci --color --runInBand",
     "eject": "react-scripts eject",
     "lint": "npm-run-all -c lint:*",
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
