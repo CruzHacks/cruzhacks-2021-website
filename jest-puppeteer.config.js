@@ -1,6 +1,6 @@
 module.exports = {
   launch: {
-    headless: process.env.CI === "true",
+    headless: true,
   },
   server: {
     command: "yarn start",
