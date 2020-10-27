@@ -1,6 +1,8 @@
+const baseUrl = "http://localhost:3000";
+
 describe("CruzHacks", () => {
   beforeAll(async () => {
-    await page.goto("http://localhost:3000");
+    await page.goto(baseUrl);
   });
 
   it("should display correct title", async () => {

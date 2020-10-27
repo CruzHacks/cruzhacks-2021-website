@@ -10,4 +10,5 @@ module.exports = {
   ],
   preset: "jest-puppeteer",
   testPathIgnorePatterns: ["node_modules"],
+  testTimeout: 10000,
 };

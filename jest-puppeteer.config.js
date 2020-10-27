@@ -10,5 +10,4 @@ module.exports = {
     debug: true,
   },
   browser: "chromium",
-  testTimeout: 60000,
 };
