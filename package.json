@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.10",
