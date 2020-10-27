@@ -1,8 +1,5 @@
 module.exports = {
-  collectCoverageFrom: [
-    "src/**/*.{js, ts, jsx, tsx}",
-    "!<rootDir>/node_modules/",
-  ],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!<rootDir>/node_modules/"],
   modulePaths: ["src/"],
   reporters: [
     "default",
