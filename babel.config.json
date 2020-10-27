@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        [
+            "@babel/plugin-transform-react-jsx", 
+            {
+                "runtime": "automatic",
+                "importSource": "custom-jsx-library"
+            }
+        ]
+    ],
+    "presets": ["@babel/preset-typescript"]
+}
