@@ -3,7 +3,7 @@ module.exports = {
     headless: true,
   },
   server: {
-    command: "yarn serve -s test-build -l 3000",
+    command: "yarn start",
     port: 3000,
     usedPortAction: "kill",
     launchTimeout: 60000,
