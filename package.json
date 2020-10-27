@@ -27,7 +27,7 @@
     "test:ci": "jest --coverage --ci --color --runInBand",
     "eject": "react-scripts eject",
     "lint": "npm-run-all -c lint:*",
-    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:ts": "eslint 'src/**/*.{js, jsx, ts,tsx}'",
     "lint:css": "stylelint --allow-empty-input 'src/**/*.{css,scss}'",
     "deploy:test": "firebase deploy --only hosting:test",
     "deploy:production": "firebase deploy --only hosting:production"
