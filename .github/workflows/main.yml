@@ -35,11 +35,6 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Create Test Build
         run: yarn build
-      - name: Archive Test Build Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-build
-          path: ./test-build
       - name: Running JS tests 
         run: yarn test:ci
 
