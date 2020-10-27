@@ -8,5 +8,6 @@ module.exports = {
       { suiteName: "jest", outputDirectory: "<rootDir>/tmp/test-results" },
     ],
   ],
+  preset: "jest-puppeteer",
   testPathIgnorePatterns: ["node_modules"],
 };
