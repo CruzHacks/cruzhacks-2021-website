@@ -55,4 +55,8 @@
 
     @include typography.description;
   }
+
+  &__emailSubscriptionContainer {
+    max-width: fit-content;
+  }
 }

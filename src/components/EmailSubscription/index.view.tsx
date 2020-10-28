@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
+const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
 
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -26,7 +27,7 @@ const EmailSubscriptionForm: React.FC = () => {
     setUserEmail("");
 
     axios
-      .post(process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "", {
+      .post(subscriptionEndpoint, {
         email: userEmail,
       })
       .then((response: AxiosResponse) => {

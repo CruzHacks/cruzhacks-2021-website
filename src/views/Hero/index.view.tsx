@@ -24,7 +24,9 @@ const HeroView: React.FC<HeroProps> = ({ pageName, title, description }) => {
           <h1 className="HeroView__titleText">CruzHacks 2021 /</h1>
           <h1 className="HeroView__titleText--secondary">{title}</h1>
           <p className="HeroView__description">{description}</p>
-          <EmailSubscriptionForm />
+          <div className="HeroView__emailSubscriptionContainer">
+            <EmailSubscriptionForm />
+          </div>
         </div>
       </div>
     </div>

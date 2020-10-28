@@ -15,9 +15,9 @@
     border-radius: 50px;
     margin-right: var(--extra-large-spacer);
     padding: var(--small-spacer) var(--large-spacer);
-    width: 350px;
+    width: 300px;
 
-    @include responsiveness.respond(tab-land) {
+    @include responsiveness.respond(mission) {
       width: unset;
       padding-right: var(--extra-extra-large-spacer);
       margin-right: var(--large-spacer);
