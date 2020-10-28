@@ -7,7 +7,8 @@ import "./EmailSubscription.scss";
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
-  const [showFeedback, setShowFeedback] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(true);
+  const [showInput, setShowInput] = useState(true);
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     setUserEmail(event.currentTarget.value.trim());
@@ -20,17 +21,23 @@ const EmailSubscriptionForm: React.FC = () => {
   };
 
   const submitEmail = () => {
+    setShowFeedback(true);
+    setFeedbackMessage("Please wait while your message is being submitted...");
+    setUserEmail("");
+
     axios
       .post(
         "https://us-central1-cruzhacks-4a899.cloudfunctions.net/subscribe",
         { email: userEmail }
       )
       .then((response: AxiosResponse) => {
-        setShowFeedback(true);
         setFeedbackMessage(response.data.message);
+
+        if (response.status === 200) {
+          setShowInput(false);
+        }
       })
       .catch(() => {
-        setShowFeedback(true);
         setFeedbackMessage(
           "Oh no! Your submission looks like it failed - please try your request again!"
         );
@@ -38,18 +45,15 @@ const EmailSubscriptionForm: React.FC = () => {
   };
 
   return (
-    <div className="EmailSubscription">
-      {showFeedback ? (
-        <div className="EmailSubscription__feedbackMessage">
-          {feedbackMessage}
-        </div>
-      ) : (
-        <>
+    <>
+      {showInput && (
+        <div className="EmailSubscription">
           <input
             className="EmailSubscription__searchBox"
             placeholder="enter email for updates..."
             type="text"
             name="name"
+            value={userEmail}
             onChange={handleInput}
             onKeyDown={handleKey}
           />
@@ -59,9 +63,14 @@ const EmailSubscriptionForm: React.FC = () => {
           >
             <Arrow className="EmailSubscription__arrow" />
           </button>
-        </>
+        </div>
       )}
-    </div>
+      {showFeedback && (
+        <div className="EmailSubscription__feedbackMessage">
+          {feedbackMessage}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -5,41 +5,45 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
 
   &__searchBox {
-    @include typography.title-text;
+    @include typography.description;
     color: var(--grey);
+    font-style: italic;
     border: none;
 
     border-radius: 50px;
-    margin-right: var(--extra-extra-large-spacer);
-    padding: 0 var(--extra-large-spacer);
-    width: 765px;
-    min-width: 470px;
-    max-height: 60px;
+    margin-right: var(--extra-large-spacer);
+    padding: var(--small-spacer) var(--large-spacer);
+    width: 350px;
 
-    @include responsiveness.respond(tab-port) {
-      min-width: unset;
-      width: 100%;
-      text-overflow: ellipsis;
-      margin-bottom: var(--medium-spacer);
+    @include responsiveness.respond(tab-land) {
+      width: unset;
+      padding-right: var(--extra-extra-large-spacer);
+      margin-right: var(--large-spacer);
     }
   }
 
   &__inputButton {
     background: var(--wedgewood);
     border-radius: 50%;
-    padding: var(--medium-spacer);
+    padding: var(--small-spacer);
     border: none;
   }
 
   &__arrow {
-    width: 4.5vw;
-    max-width: 60px;
+    width: 3vw;
+    max-width: 30px;
   }
 
   &__feedbackMessage {
     @include typography.description;
+    color: var(--wedgewood);
+    width: 400px;
+    margin-top: var(--extra-small-spacer);
+
+    @include responsiveness.respond(tab-land) {
+      width: 325px;
+    }
   }
 }
