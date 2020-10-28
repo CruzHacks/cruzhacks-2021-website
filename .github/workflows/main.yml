@@ -1,5 +1,8 @@
 name: cruzhacks-2021-website
 
+env:
+  REACT_APP_SUBSCRIBE_ENDPOINT: ${{ secrets.REACT_APP_SUBSCRIBE_ENDPOINT }}
+
 on:
   push:
     branches: [ main, production ]

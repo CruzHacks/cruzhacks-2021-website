@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+import webpack from "webpack";
+require("dotenv").config();
+
 module.exports = {
   module: {
     rules: [
@@ -20,4 +24,13 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        REACT_APP_SUBSCRIBE_ENDPOINT: JSON.stringify(
+          process.env.REACT_APP_SUBSCRIBE_ENDPOINT
+        ),
+      },
+    }),
+  ],
 };
