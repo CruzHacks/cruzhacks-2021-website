@@ -26,10 +26,9 @@ const EmailSubscriptionForm: React.FC = () => {
     setUserEmail("");
 
     axios
-      .post(
-        "https://us-central1-cruzhacks-4a899.cloudfunctions.net/subscribe",
-        { email: userEmail }
-      )
+      .post(process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "", {
+        email: userEmail,
+      })
       .then((response: AxiosResponse) => {
         setFeedbackMessage(response.data.message);
 
