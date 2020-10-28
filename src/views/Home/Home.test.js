@@ -8,7 +8,11 @@ describe("Homepage", () => {
   it("displays Homepage", async () => {
     const homepageDiv = await page.$(".Homepage");
     expect(homepageDiv).not.toBeNull();
+    const heroHomepageDiv = await page.$(".HeroView__homeView");
+    expect(heroHomepageDiv).not.toBeNull();
     const postcardStack = await homepageDiv.$(".PostcardStack");
     expect(postcardStack).not.toBeNull();
+    const homePostcard = await postcardStack.$("#Home-postcard");
+    expect(homePostcard).not.toBeNull();
   });
 });
