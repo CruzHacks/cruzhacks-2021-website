@@ -5,7 +5,7 @@ describe("Homepage", () => {
     await page.goto(baseUrl);
   });
 
-  it("displays Homepage", async () => {
+  it("displays Homepage with appropriate components", async () => {
     const homepageDiv = await page.$(".Homepage");
     expect(homepageDiv).not.toBeNull();
     const heroHomepageDiv = await page.$(".HeroView__homeView");
