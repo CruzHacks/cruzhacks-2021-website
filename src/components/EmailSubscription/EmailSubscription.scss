@@ -25,25 +25,27 @@
   }
 
   &__inputButton {
+    display: flex;
     background: var(--wedgewood);
     border-radius: 50%;
-    padding: var(--small-spacer);
+    padding: 8px;
     border: none;
   }
 
   &__arrow {
     width: 3vw;
+    min-width: 14px;
     max-width: 30px;
   }
 
   &__feedbackMessage {
     @include typography.description;
     color: var(--wedgewood);
-    width: 400px;
+    width: 350px;
     margin-top: var(--extra-small-spacer);
 
-    @include responsiveness.respond(tab-land) {
-      width: 325px;
+    @include responsiveness.respond(mission) {
+      width: min(48vw, 300px);
     }
   }
 }
