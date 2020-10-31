@@ -51,6 +51,7 @@
     @include typography.error;
     margin: 0 auto;
 
-    color: var(--wedgewood);
+    color: var(--wedgewood-dark);
+    opacity: 0.5;
   }
 }
