@@ -4,7 +4,7 @@
 .EmailSubscription {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   &__searchBox {
     @include typography.description;
