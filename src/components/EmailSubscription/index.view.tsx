@@ -4,24 +4,15 @@ import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
-
+console.log(process.env);
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [showFeedback, setShowFeedback] = useState(true);
   const [showInput, setShowInput] = useState(true);
 
-  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    setUserEmail(event.currentTarget.value.trim());
-  };
-
-  const handleKey = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      submitEmail();
-    }
-  };
-
-  const submitEmail = () => {
+  const submitEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setShowFeedback(true);
     setFeedbackMessage("Please wait while your message is being submitted...");
     setUserEmail("");
@@ -47,23 +38,25 @@ const EmailSubscriptionForm: React.FC = () => {
   return (
     <>
       {showInput && (
-        <div className="EmailSubscription">
-          <input
-            className="EmailSubscription__searchBox"
-            placeholder="enter email for updates..."
-            type="text"
-            name="name"
-            value={userEmail}
-            onChange={handleInput}
-            onKeyDown={handleKey}
-          />
-          <button
-            className="EmailSubscription__inputButton"
-            onClick={submitEmail}
-          >
-            <Arrow className="EmailSubscription__arrow" />
-          </button>
-        </div>
+        <form onSubmit={(event) => submitEmail(event)}>
+          <div className="EmailSubscription">
+            <input
+              className="EmailSubscription__searchBox"
+              placeholder="enter email for updates…"
+              aria-label="enter your email address for updates"
+              type="email"
+              name="email input"
+              required
+            />
+            <button
+              className="EmailSubscription__inputButton"
+              type="submit"
+              aria-label="send button"
+            >
+              <Arrow className="EmailSubscription__arrow" />
+            </button>
+          </div>
+        </form>
       )}
       {showFeedback && (
         <div className="EmailSubscription__feedbackMessage">

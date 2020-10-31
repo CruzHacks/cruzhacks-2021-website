@@ -8,7 +8,7 @@
 
   &__searchBox {
     @include typography.description;
-    color: var(--grey);
+    color: var(--wedgewood);
     font-style: italic;
     border: none;
 
@@ -40,9 +40,10 @@
 
   &__feedbackMessage {
     @include typography.description;
+    text-align: center;
     color: var(--wedgewood);
     width: 350px;
-    margin-top: var(--extra-small-spacer);
+    margin-top: auto var(--extra-small-spacer) 0 auto;
 
     @include responsiveness.respond(mission) {
       width: min(48vw, 300px);
