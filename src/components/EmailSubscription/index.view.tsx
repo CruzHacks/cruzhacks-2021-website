@@ -59,8 +59,10 @@ const EmailSubscriptionForm: React.FC = () => {
         </form>
       )}
       {showFeedback && (
-        <div className="EmailSubscription__feedbackMessage">
-          {feedbackMessage}
+        <div className="EmailSubscription__feedbackContainer">
+          <span className="EmailSubscription__feedbackMessage">
+            {feedbackMessage}
+          </span>
         </div>
       )}
     </>

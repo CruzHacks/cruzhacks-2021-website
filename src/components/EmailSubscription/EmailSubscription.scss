@@ -15,7 +15,6 @@
     border-radius: 50px;
     margin-right: var(--extra-large-spacer);
     padding: var(--small-spacer) var(--large-spacer);
-    width: 300px;
 
     @include responsiveness.respond(mission) {
       width: unset;
@@ -38,15 +37,20 @@
     max-width: 30px;
   }
 
-  &__feedbackMessage {
-    @include typography.description;
-    text-align: center;
-    color: var(--wedgewood);
+  &__feedbackContainer {
+    margin: var(--medium-spacer) auto;
     width: 350px;
-    margin-top: auto var(--extra-small-spacer) 0 auto;
+    text-align: center;
 
     @include responsiveness.respond(mission) {
       width: min(48vw, 300px);
     }
+  }
+
+  &__feedbackMessage {
+    @include typography.error;
+    margin: 0 auto;
+
+    color: var(--wedgewood);
   }
 }
