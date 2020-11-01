@@ -2,23 +2,29 @@ import React from "react";
 import cx from "classnames";
 import PostcardStack from "components/PostcardStack/index.view";
 
-import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import "./Hero.scss";
 
 interface Description {
   description: string;
 }
 
+interface Title {
+  text: string;
+  style: string;
+}
+
 interface HeroProps {
   pageName: string;
-  title: string;
+  title: Title[];
   description: Description[];
+  children?: React.ReactNode;
 }
 
 const HeroView: React.FC<HeroProps> = ({
   pageName,
   title,
   description,
+  children,
 }: HeroProps) => {
   return (
     <div
@@ -29,16 +35,17 @@ const HeroView: React.FC<HeroProps> = ({
           <PostcardStack pageName={pageName} />
         </div>
         <div className="HeroView__textContainer">
-          <h1 className="HeroView__titleText">CruzHacks 2021 /</h1>
-          <h1 className="HeroView__titleText--secondary">{title}</h1>
+          {title.map((item) => (
+            <h1 className={`HeroView__titleText${item.style}`} key={item.text}>
+              {item.text}
+            </h1>
+          ))}
           {description.map((item) => (
             <p key={item.description} className="HeroView__description">
               {item.description}
             </p>
           ))}
-          <div className="HeroView__emailSubscriptionContainer">
-            <EmailSubscriptionForm />
-          </div>
+          {children}
         </div>
       </div>
     </div>

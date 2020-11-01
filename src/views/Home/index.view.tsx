@@ -1,9 +1,20 @@
 import React from "react";
 import HeroView from "views/Hero/index.view";
+import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 
 import "./Home.scss";
 
-const title = "Coming Soon";
+const title = [
+  {
+    text: "CruzHacks 2021 /",
+    style: "",
+  },
+  {
+    text: "Coming Soon",
+    style: "--secondary",
+  },
+];
+
 const description = [
   {
     description:
@@ -17,7 +28,11 @@ const description = [
 const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
-      <HeroView pageName={"Home"} title={title} description={description} />
+      <HeroView pageName={"Home"} title={title} description={description}>
+        <div className="Homepage__emailSubscriptionContainer">
+          <EmailSubscriptionForm />
+        </div>
+      </HeroView>
     </div>
   );
 };
