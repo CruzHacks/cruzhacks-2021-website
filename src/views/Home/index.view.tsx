@@ -5,8 +5,7 @@ import "./Home.scss";
 
 const title = "Coming Soon";
 const description = ["CruzHacks is the largest hackathon in Santa Cruz. Each year, we invite hundreds of students to develop solutions to real-world problems, pursue inclusion in tech, and kindle the spirit of innovation.  ",
-  "This year, we’re bringing CruzHacks to you.  ",
-  "Join us virtually in January for a high-energy weekend of creation, transformation, and inspiration."]
+  "This year, we’re bringing CruzHacks to you.  "]
 
 const HomepageView: React.FC = () => {
   return (
