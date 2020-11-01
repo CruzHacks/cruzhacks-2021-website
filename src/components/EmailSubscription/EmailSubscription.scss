@@ -49,6 +49,7 @@
 
   &__feedbackMessage {
     @include typography.error;
+    font-weight: bold;
     margin: 0 auto;
 
     color: var(--wedgewood-dark);
