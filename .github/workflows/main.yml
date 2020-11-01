@@ -33,6 +33,8 @@ jobs:
           node-version: 14.11.0
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+      - name: Create Test Build
+        run: yarn build
       - name: Running JS tests 
         run: yarn test:ci
 
