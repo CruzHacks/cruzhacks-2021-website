@@ -4,18 +4,17 @@
 .EmailSubscription {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   &__searchBox {
     @include typography.description;
-    color: var(--grey);
+    color: var(--wedgewood);
     font-style: italic;
     border: none;
 
     border-radius: 50px;
     margin-right: var(--extra-large-spacer);
     padding: var(--small-spacer) var(--large-spacer);
-    width: 300px;
 
     @include responsiveness.respond(mission) {
       width: unset;
@@ -38,14 +37,22 @@
     max-width: 30px;
   }
 
-  &__feedbackMessage {
-    @include typography.description;
-    color: var(--wedgewood);
+  &__feedbackContainer {
+    margin: var(--medium-spacer) auto;
     width: 350px;
-    margin-top: var(--extra-small-spacer);
+    text-align: center;
 
     @include responsiveness.respond(mission) {
       width: min(48vw, 300px);
     }
+  }
+
+  &__feedbackMessage {
+    @include typography.error;
+    font-weight: bold;
+    margin: 0 auto;
+
+    color: var(--wedgewood-dark);
+    opacity: 0.5;
   }
 }

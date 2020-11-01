@@ -24,7 +24,7 @@
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: auto 1em;
     max-width: 1800px;
     flex-grow: 4;
@@ -33,23 +33,28 @@
       max-width: unset;
     }
 
+    @include responsiveness.respond(tab-port) {
+      flex-wrap: wrap;
+    }
+
     @include responsiveness.respond(phone) {
       margin: 1em;
+      max-height: 200px;
     }
   }
 
   &__visual {
     // postcard styling
-    max-width: 800px;
+    max-width: 1000px;
     min-width: 475px;
     margin: 0 auto;
 
-    @include responsiveness.respond(mission) {
-      max-width: 600px;
+    @include responsiveness.respond(desktop) {
+      max-width: calc(50vw + 100px);
     }
 
-    @include responsiveness.respond(phone) {
-      max-width: 75vw;
+    @include responsiveness.respond(tab-port) {
+      max-width: calc(50vw + 10vh);
     }
 
     @include responsiveness.respond(phone-narrow) {
@@ -75,10 +80,9 @@
     margin: 2em 0;
 
     @include typography.description;
-  }
 
-  &__emailSubscriptionContainer {
-    max-width: fit-content;
-    margin: auto;
+    @include responsiveness.respond(tab-land) {
+      margin: 1.1em 0;
+    }
   }
 }
