@@ -29,7 +29,7 @@ const EmailSubscriptionForm: React.FC = () => {
       })
       .catch(() => {
         setFeedbackMessage(
-          "Oh no! We've got an error— please try your request again & contact us if this persists!"
+          "Oh no! We've got an error— please try your request again & contact us at dev@cruzhacks.com if this persists!"
         );
       });
   };
