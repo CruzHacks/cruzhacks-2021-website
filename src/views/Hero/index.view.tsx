@@ -8,7 +8,7 @@ import "./Hero.scss";
 interface HeroProps {
   pageName: string;
   title: string;
-  description: string;
+  description: Array<string>;
 }
 
 const HeroView: React.FC<HeroProps> = ({
@@ -27,7 +27,9 @@ const HeroView: React.FC<HeroProps> = ({
         <div className="HeroView__textContainer">
           <h1 className="HeroView__titleText">CruzHacks 2021 /</h1>
           <h1 className="HeroView__titleText--secondary">{title}</h1>
-          <p className="HeroView__description">{description}</p>
+          <p className="HeroView__description">{description[0]}</p>
+          <p className="HeroView__description">{description[1]}</p>
+          <p className="HeroView__description">{description[2]}</p>
           <div className="HeroView__emailSubscriptionContainer">
             <EmailSubscriptionForm />
           </div>

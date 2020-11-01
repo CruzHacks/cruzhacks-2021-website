@@ -4,10 +4,9 @@ import HeroView from "views/Hero/index.view";
 import "./Home.scss";
 
 const title = "Coming Soon";
-const description =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
-  "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis " +
-  "nostrud exercitation";
+const description = ["CruzHacks is the largest hackathon in Santa Cruz. Each year, we invite hundreds of students to develop solutions to real-world problems, pursue inclusion in tech, and kindle the spirit of innovation.  ",
+  "This year, we’re bringing CruzHacks to you.  ",
+  "Join us virtually in January for a high-energy weekend of creation, transformation, and inspiration."]
 
 const HomepageView: React.FC = () => {
   return (
