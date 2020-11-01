@@ -27,8 +27,7 @@ const EmailSubscriptionForm: React.FC = () => {
           setShowInput(false);
         }
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
         setFeedbackMessage(
           "Oh no! We've got an error— please try your request again & contact us if this persists!"
         );
