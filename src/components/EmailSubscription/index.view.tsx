@@ -4,16 +4,25 @@ import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
+const cruzHacksEmail = "dev@cruzhacks.com";
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
-  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [feedbackComponent, setFeedbackComponent] = useState(
+    React.createElement("span")
+  );
   const [showFeedback, setShowFeedback] = useState(true);
   const [showInput, setShowInput] = useState(true);
 
   const submitEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setShowFeedback(true);
-    setFeedbackMessage("Please wait while your message is being submitted...");
+    setFeedbackComponent(
+      React.createElement(
+        "span",
+        { className: "EmailSubscription__feedbackMessage" },
+        "Please wait while your message is being submitted..."
+      )
+    );
     setUserEmail("");
 
     axios
@@ -21,15 +30,40 @@ const EmailSubscriptionForm: React.FC = () => {
         email: userEmail,
       })
       .then((response: AxiosResponse) => {
-        setFeedbackMessage(response.data.message);
+        setFeedbackComponent(
+          React.createElement(
+            "span",
+            { className: "EmailSubscription__feedbackMessage" },
+            response.data.message
+          )
+        );
 
         if (response.status === 200) {
           setShowInput(false);
         }
       })
       .catch(() => {
-        setFeedbackMessage(
-          "Oh no! We've got an error— please try your request again & contact us if this persists!"
+        setFeedbackComponent(
+          React.createElement(
+            "span",
+            { className: "EmailSubscription__feedbackMessage" },
+            [
+              React.createElement(
+                "span",
+                {},
+                "Oh no! We've got an error — please try your request again & "
+              ),
+              React.createElement(
+                "a",
+                {
+                  href: "mailto:" + cruzHacksEmail,
+                  className: "EmailSubscription__mailToLink",
+                },
+                "contact us"
+              ),
+              React.createElement("span", {}, " if this persists"),
+            ]
+          )
         );
       });
   };
@@ -59,9 +93,7 @@ const EmailSubscriptionForm: React.FC = () => {
       )}
       {showFeedback && (
         <div className="EmailSubscription__feedbackContainer">
-          <span className="EmailSubscription__feedbackMessage">
-            {feedbackMessage}
-          </span>
+          {feedbackComponent}
         </div>
       )}
     </>
