@@ -18,6 +18,7 @@ module.exports = {
       },
     ],
     "no-var": "error",
+    "no-console": ["error"],
     "prettier/prettier": "error",
   },
   extends: [

@@ -4,7 +4,6 @@ import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
-console.log(process.env);
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
