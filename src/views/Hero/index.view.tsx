@@ -5,10 +5,14 @@ import PostcardStack from "components/PostcardStack/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import "./Hero.scss";
 
+interface Description {
+  description: string;
+}
+
 interface HeroProps {
   pageName: string;
   title: string;
-  description: Array<string>;
+  description: Description[];
 }
 
 const HeroView: React.FC<HeroProps> = ({
@@ -27,8 +31,11 @@ const HeroView: React.FC<HeroProps> = ({
         <div className="HeroView__textContainer">
           <h1 className="HeroView__titleText">CruzHacks 2021 /</h1>
           <h1 className="HeroView__titleText--secondary">{title}</h1>
-          <p className="HeroView__description">{description[0]}</p>
-          <p className="HeroView__description">{description[1]}</p>
+          {description.map((item) => (
+            <p key={item.description} className="HeroView__description">
+              {item.description}
+            </p>
+          ))}
           <div className="HeroView__emailSubscriptionContainer">
             <EmailSubscriptionForm />
           </div>
