@@ -10,7 +10,7 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   font-style: italic;
   font-weight: normal;
 
-  @include responsiveness.font($responsive: 4vw, $min: 32px, $max: 50px);
+  @include responsiveness.font($responsive: 3.8vw, $min: 32px, $max: 50px);
   line-height: 50px;
 
   @include responsiveness.respond(tab-port) {
@@ -22,5 +22,12 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   color: var(--white);
   font-family: $font-family-base;
 
-  @include responsiveness.font($responsive: 2.4vw, $min: 12px, $max: 18px);
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+}
+
+@mixin error {
+  color: var(--red);
+  font-family: $font-family-base;
+
+  @include responsiveness.font($responsive: 2.2vw, $min: 11px, $max: 14px);
 }
