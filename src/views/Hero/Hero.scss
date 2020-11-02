@@ -35,7 +35,7 @@
 
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
-      align-content: start;
+      align-content: center;
     }
 
     @include responsiveness.respond(phone) {
