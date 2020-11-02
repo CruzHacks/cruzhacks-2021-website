@@ -35,11 +35,11 @@
 
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
+      align-content: start;
     }
 
     @include responsiveness.respond(phone) {
       margin: 1em;
-      max-height: 200px;
     }
   }
 
@@ -58,7 +58,11 @@
     }
 
     @include responsiveness.respond(phone-narrow) {
-      min-width: 400px;
+      min-width: 380px;
+    }
+
+    @include responsiveness.respond(smallest) {
+      min-width: 300px;
     }
   }
 
