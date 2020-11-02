@@ -14,7 +14,6 @@ const EmailSubscriptionForm: React.FC = () => {
     event.preventDefault();
     setShowFeedback(true);
     setFeedbackMessage("Please wait while your message is being submitted...");
-    setUserEmail("");
 
     axios
       .post(subscriptionEndpoint, {
@@ -45,6 +44,7 @@ const EmailSubscriptionForm: React.FC = () => {
               aria-label="enter your email address for updates"
               type="email"
               name="email input"
+              onChange={(e) => setUserEmail(e.target.value)}
               required
             />
             <button
