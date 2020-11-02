@@ -16,6 +16,15 @@ Change summary:
 * Another great commit message
 * Something else I/we did
 
+Dev-Ops
+=======
+If you added an ENV variable, please check off that you've updated the following  
+- [ ] `.env` & `.env.sample` 
+- [ ] `webpack.config.js` 
+- [ ] GCP Secret Manager
+- [ ] Github Secrets 
+- [ ] GithubActions Workflow
+
 Steps to Verify:
 ----------------
 1. A setup step / beginning state

@@ -30,6 +30,7 @@ module.exports = {
         REACT_APP_SUBSCRIBE_ENDPOINT: JSON.stringify(
           process.env.REACT_APP_SUBSCRIBE_ENDPOINT
         ),
+        REACT_APP_API_KEY: JSON.stringify(process.env.REACT_APP_API_KEY),
       },
     }),
   ],
