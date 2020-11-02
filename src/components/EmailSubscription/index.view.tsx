@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 
 import "./EmailSubscription.scss";
@@ -14,12 +14,24 @@ const EmailSubscriptionForm: React.FC = () => {
     event.preventDefault();
     setShowFeedback(true);
     setFeedbackMessage("Please wait while your message is being submitted...");
-    setUserEmail("");
+
+    const apiKey = process.env.REACT_APP_API_KEY;
+
+    const axiosConfig: AxiosRequestConfig = {
+      headers: {
+        Authentication: apiKey,
+        "Content-Type": "application/json",
+      },
+    };
 
     axios
-      .post(subscriptionEndpoint, {
-        email: userEmail,
-      })
+      .post(
+        subscriptionEndpoint,
+        {
+          email: userEmail,
+        },
+        axiosConfig
+      )
       .then((response: AxiosResponse) => {
         setFeedbackMessage(response.data.message);
 
@@ -45,6 +57,7 @@ const EmailSubscriptionForm: React.FC = () => {
               aria-label="enter your email address for updates"
               type="email"
               name="email input"
+              onChange={(e) => setUserEmail(e.target.value)}
               required
             />
             <button
