@@ -4,7 +4,6 @@
 .HeroView {
   display: flex;
   overflow: hidden;
-  justify-content: center;
   min-height: 100%;
 
   &__homeView {
@@ -35,11 +34,11 @@
 
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
+      align-content: center;
     }
 
     @include responsiveness.respond(phone) {
       margin: 1em;
-      max-height: 200px;
     }
   }
 
@@ -53,12 +52,20 @@
       max-width: calc(50vw + 100px);
     }
 
+    @include responsiveness.respond(tab-land) {
+      margin-top: calc(1.5em + 1vw);
+    }
+
     @include responsiveness.respond(tab-port) {
       max-width: calc(50vw + 10vh);
     }
 
     @include responsiveness.respond(phone-narrow) {
-      min-width: 400px;
+      min-width: 380px;
+    }
+
+    @include responsiveness.respond(smallest) {
+      min-width: 300px;
     }
   }
 
