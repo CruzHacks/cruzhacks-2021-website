@@ -5,6 +5,10 @@
   margin: 0 auto;
   padding: 0 var(--medium-spacer) 0 0;
 
+  @include responsiveness.respond(tab-port) {
+    padding: 0;
+  }
+
   &__postcard {
     width: calc(100%);
 
