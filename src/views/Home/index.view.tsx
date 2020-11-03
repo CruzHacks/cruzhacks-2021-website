@@ -10,7 +10,7 @@ const title = [
     style: "",
   },
   {
-    text: "Coming Soon",
+    text: "January 15-17",
     style: "--secondary",
   },
 ];
