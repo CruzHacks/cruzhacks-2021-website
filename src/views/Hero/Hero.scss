@@ -53,8 +53,13 @@
       max-width: calc(50vw + 100px);
     }
 
+    @include responsiveness.respond(tab-land) {
+      margin-top: calc(2em + 1vw);
+    }
+
     @include responsiveness.respond(tab-port) {
       max-width: calc(50vw + 10vh);
+      justify-content: center;
     }
 
     @include responsiveness.respond(phone-narrow) {
