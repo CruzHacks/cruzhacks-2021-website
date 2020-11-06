@@ -5367,10 +5367,10 @@ escodegen@^1.11.0, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.11.0:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
-  integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
+eslint-config-prettier@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
+  integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -6273,10 +6273,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-firebase-tools@^8.13.1:
-  version "8.13.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.13.1.tgz#28320153f640f76bfa14bff7c98cd3cea92dffec"
-  integrity sha512-4Yw3ipwidHfa8suUKxOsykgeegOuyBaNJ9DEEbxK9gChXx788Mt4bQm+I+d8F7QqdeDIf9UFOxMZ+Dn1GepCgQ==
+firebase-tools@^8.15.1:
+  version "8.15.1"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.15.1.tgz#1d94d0ecc74f5e592ccb70fc54e92a508bd7f5b2"
+  integrity sha512-u2Kn2w5rWZLybBNmThVppHvZq5/23aZfBcvT0eon26bxX+nK7ApV6KS4DyaDR1tBH4vqL9LVHBVy0lVhAe2EyQ==
   dependencies:
     "@google-cloud/pubsub" "^1.7.0"
     JSONStream "^1.2.1"
@@ -6310,6 +6310,7 @@ firebase-tools@^8.13.1:
     marked-terminal "^3.3.0"
     minimatch "^3.0.4"
     morgan "^1.10.0"
+    node-fetch "^2.6.1"
     open "^6.3.0"
     ora "^3.4.0"
     plist "^3.0.1"
