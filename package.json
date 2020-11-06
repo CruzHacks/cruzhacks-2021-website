@@ -6,7 +6,7 @@
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "firebase-tools": "^8.13.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
