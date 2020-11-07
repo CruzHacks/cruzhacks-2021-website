@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React from "react";
 import "./PostcardStack.scss";
 
@@ -7,20 +8,17 @@ interface PostcardStackProps {
 
 interface Postcard {
   name: string;
-  image: string;
   altText: string;
 }
 
 const postcards: Postcard[] = [
   {
     name: "Home",
-    image: require("images/postcards/home.svg"),
     altText: "The winding road to the UCSC campus.",
   },
   {
     name: "Information",
-    image: require("images/postcards/home.svg"),
-    altText: "The winding road to the UCSC campus.",
+    altText: "Information Alt Text Here.",
   },
 ];
 const PostcardStack: React.FC<PostcardStackProps> = ({
@@ -30,9 +28,9 @@ const PostcardStack: React.FC<PostcardStackProps> = ({
     <div className="PostcardStack">
       {postcards
         .filter((item) => item.name === pageName)
-        .map(({ name, image, altText }) => (
+        .map(({ name, altText }) => (
           <img
-            src={image}
+            src={require(`images/postcards/${name.toLowerCase()}.svg`).default}
             className="PostcardStack__postcard"
             alt={altText}
             key={name}
