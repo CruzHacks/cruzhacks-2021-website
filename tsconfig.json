@@ -19,8 +19,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "sourceMap": true,  
-    "watch":true,
+    "sourceMap": true,
+    "watch": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"
