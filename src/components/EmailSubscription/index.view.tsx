@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 import ClipLoader from "react-spinners/ClipLoader";
+import Icon from "@mdi/react";
+import { mdiAlertCircle, mdiCheckCircleOutline } from "@mdi/js";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
@@ -11,6 +13,7 @@ const states = {
   SUBMITTED: 2,
   ERRORED: 3,
 };
+const wedgewood = "#4f728e";
 
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -84,18 +87,26 @@ const EmailSubscriptionForm: React.FC = () => {
       <div className="EmailSubscription__feedbackContainer">
         <div className="EmailSubscription__icon">
           {requestState === states.LOADING && (
-            <ClipLoader size={25} color={"#4f728e"} loading={true} />
+            <ClipLoader size={25} color={wedgewood} loading={true} />
           )}
           {requestState === states.SUBMITTED && (
-            <img
-              src="https://icongr.am/material/check-circle-outline.svg?size=25&color=4f728e"
-              alt="checkmark"
+            <Icon
+              path={mdiCheckCircleOutline}
+              title="Successful Request"
+              size={1}
+              horizontal
+              vertical
+              color="green"
             />
           )}
           {requestState === states.ERRORED && (
-            <img
-              src="https://icongr.am/material/alert-circle-outline.svg?size=25&color=4f728e"
-              alt="error"
+            <Icon
+              path={mdiAlertCircle}
+              title="Error Occured"
+              size={1}
+              horizontal
+              vertical
+              color="red"
             />
           )}
         </div>
