@@ -13,6 +13,7 @@ const states = {
   SUBMITTED: 2,
   ERRORED: 3,
 };
+const wedgewood = "#4f728e";
 
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -86,23 +87,22 @@ const EmailSubscriptionForm: React.FC = () => {
       <div className="EmailSubscription__feedbackContainer">
         <div className="EmailSubscription__icon">
           {requestState === states.LOADING && (
-            <ClipLoader size={25} color={"#4f728e"} loading={true} />
+            <ClipLoader size={25} color={wedgewood} loading={true} />
           )}
           {requestState === states.SUBMITTED && (
             <Icon
               path={mdiCheckCircleOutline}
-              title="User Profile"
+              title="Successful Request"
               size={1}
               horizontal
               vertical
-              rotate={90}
               color="green"
             />
           )}
           {requestState === states.ERRORED && (
             <Icon
               path={mdiAlertCircle}
-              title="User Profile"
+              title="Error Occured"
               size={1}
               horizontal
               vertical
