@@ -38,13 +38,18 @@
   }
 
   &__feedbackContainer {
+    display: flex;
+    align-items: center;
     margin: var(--medium-spacer) auto;
     width: 350px;
-    text-align: center;
 
     @include responsiveness.respond(mission) {
       width: min(48vw, 300px);
     }
+  }
+
+  &__icon {
+    margin-right: var(--small-spacer);
   }
 
   &__feedbackMessage {
