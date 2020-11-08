@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
+import ClipLoader from "react-spinners/ClipLoader";
+import Icon from "@mdi/react";
+import { mdiAlertCircle, mdiCheckCircleOutline } from "@mdi/js";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
+const states = {
+  NOT_SUBMITTED: 0,
+  LOADING: 1,
+  SUBMITTED: 2,
+  ERRORED: 3,
+};
+const wedgewood = "#4f728e";
+const grass_green = "#5B8F49";
+const mahogany = "#8F3E3B";
+
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
-  const [showFeedback, setShowFeedback] = useState(true);
+  const [requestState, setRequestState] = useState(states.NOT_SUBMITTED);
   const [showInput, setShowInput] = useState(true);
 
   const submitEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setShowFeedback(true);
+    setRequestState(states.LOADING);
     setFeedbackMessage("Please wait while your message is being submitted...");
 
     const apiKey = process.env.REACT_APP_API_KEY;
@@ -33,13 +46,16 @@ const EmailSubscriptionForm: React.FC = () => {
         axiosConfig
       )
       .then((response: AxiosResponse) => {
+        setRequestState(states.ERRORED);
         setFeedbackMessage(response.data.message);
 
         if (response.status === 200) {
+          setRequestState(states.SUBMITTED);
           setShowInput(false);
         }
       })
       .catch(() => {
+        setRequestState(states.ERRORED);
         setFeedbackMessage(
           "Oh no! We've got an error— please try your request again & contact us at dev@cruzhacks.com if this persists!"
         );
@@ -70,13 +86,32 @@ const EmailSubscriptionForm: React.FC = () => {
           </div>
         </form>
       )}
-      {showFeedback && (
-        <div className="EmailSubscription__feedbackContainer">
-          <span className="EmailSubscription__feedbackMessage">
-            {feedbackMessage}
-          </span>
+      <div className="EmailSubscription__feedbackContainer">
+        <div className="EmailSubscription__icon">
+          {requestState === states.LOADING && (
+            <ClipLoader size={25} color={wedgewood} loading={true} />
+          )}
+          {requestState === states.SUBMITTED && (
+            <Icon
+              path={mdiCheckCircleOutline}
+              title="Successful Request"
+              size={1}
+              color={grass_green}
+            />
+          )}
+          {requestState === states.ERRORED && (
+            <Icon
+              path={mdiAlertCircle}
+              title="Error Occurred"
+              size={1}
+              color={mahogany}
+            />
+          )}
         </div>
-      )}
+        <div className="EmailSubscription__feedbackMessage">
+          {feedbackMessage}
+        </div>
+      </div>
     </>
   );
 };
