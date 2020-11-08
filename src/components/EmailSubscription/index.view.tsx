@@ -14,6 +14,8 @@ const states = {
   ERRORED: 3,
 };
 const wedgewood = "#4f728e";
+const wedgewood_green = "#5B8F49";
+const wedgewood_red = "#8F3E3B";
 
 const EmailSubscriptionForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -94,19 +96,15 @@ const EmailSubscriptionForm: React.FC = () => {
               path={mdiCheckCircleOutline}
               title="Successful Request"
               size={1}
-              horizontal
-              vertical
-              color="green"
+              color={wedgewood_green}
             />
           )}
           {requestState === states.ERRORED && (
             <Icon
               path={mdiAlertCircle}
-              title="Error Occured"
+              title="Error Occurred"
               size={1}
-              horizontal
-              vertical
-              color="red"
+              color={wedgewood_red}
             />
           )}
         </div>
