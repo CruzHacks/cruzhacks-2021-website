@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^5.8.55",
+    "@mdi/react": "^1.4.0",
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
     "firebase-tools": "^8.15.1",

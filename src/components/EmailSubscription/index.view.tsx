@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 import ClipLoader from "react-spinners/ClipLoader";
+import Icon from "@mdi/react";
+import { mdiAlertCircle, mdiCheckCircleOutline } from "@mdi/js";
 
 import "./EmailSubscription.scss";
 const subscriptionEndpoint = process.env.REACT_APP_SUBSCRIBE_ENDPOINT || "";
@@ -87,15 +89,24 @@ const EmailSubscriptionForm: React.FC = () => {
             <ClipLoader size={25} color={"#4f728e"} loading={true} />
           )}
           {requestState === states.SUBMITTED && (
-            <img
-              src="https://icongr.am/material/check-circle-outline.svg?size=25&color=4f728e"
-              alt="checkmark"
+            <Icon
+              path={mdiCheckCircleOutline}
+              title="User Profile"
+              size={1}
+              horizontal
+              vertical
+              rotate={90}
+              color="green"
             />
           )}
           {requestState === states.ERRORED && (
-            <img
-              src="https://icongr.am/material/alert-circle-outline.svg?size=25&color=4f728e"
-              alt="error"
+            <Icon
+              path={mdiAlertCircle}
+              title="User Profile"
+              size={1}
+              horizontal
+              vertical
+              color="red"
             />
           )}
         </div>
