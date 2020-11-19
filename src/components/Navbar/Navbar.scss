@@ -1,3 +1,42 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
-/* Delete these lines when you begin development */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--extra-small-spacer) var(--extra-large-spacer);
+  margin-bottom: -58px;
+
+  background: var(--white);
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  border-radius: 0  0 25px 25px;
+
+  @include responsiveness.respond(phone) {
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typography.title-text;
+    color: var(--wedgewood);
+
+    @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 35px);
+  }
+
+  &__buttonContainer {
+    display: flex;
+  }
+
+  &__button {
+    @include typography.button-text;
+    background: var(--wedgewood);
+    border-radius: 15px;
+    padding: var(--extra-small-spacer) var(--large-spacer);
+    border: none;
+
+    &:first-child {
+      margin-right: var(--large-spacer);
+    }
+  }
+}

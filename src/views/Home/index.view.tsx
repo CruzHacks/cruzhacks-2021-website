@@ -1,12 +1,13 @@
 import React from "react";
 import HeroView from "views/Hero/index.view";
+import Navbar from "components/Navbar/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 
 import "./Home.scss";
 
 const title = [
   {
-    text: "CruzHacks 2021 /",
+    text: "CruzHacks 2021",
     style: "",
   },
   {
@@ -25,9 +26,20 @@ const description = [
   },
 ];
 
+const links = {
+  sponsor:
+    "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/",
+  hacker: "/",
+};
+
 const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
+      <Navbar
+        title={title[0].text}
+        sponsorURL={links.sponsor}
+        hackerURL={links.hacker}
+      />
       <HeroView pageName={"Home"} title={title} description={description}>
         <div className="Homepage__emailSubscriptionContainer">
           <EmailSubscriptionForm />
