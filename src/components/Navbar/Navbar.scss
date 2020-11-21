@@ -27,16 +27,8 @@
   &__buttonContainer {
     display: flex;
   }
+}
 
-  &__button {
-    @include typography.button-text;
-    background: var(--wedgewood);
-    border-radius: 15px;
-    padding: var(--extra-small-spacer) var(--large-spacer);
-    border: none;
-
-    &:first-child {
-      margin-right: var(--large-spacer);
-    }
-  }
+.Button:first-child {
+  margin-right: var(--large-spacer);
 }

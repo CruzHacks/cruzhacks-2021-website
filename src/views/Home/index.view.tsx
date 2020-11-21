@@ -7,7 +7,7 @@ import "./Home.scss";
 
 const title = [
   {
-    text: "CruzHacks 2021",
+    text: "CruzHacks 2021 /",
     style: "",
   },
   {
@@ -26,19 +26,27 @@ const description = [
   },
 ];
 
-const links = {
-  sponsor:
-    "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/",
-  hacker: "/",
+const navBarButtons = {
+  sponsor: {
+    text: "Be a sponsor!",
+    link:
+      "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
+    label: "sponsor sign-up button",
+  },
+  hacker: {
+    text: "Apply to hack!",
+    link: "/",
+    label: "hacker sign-up button",
+  },
 };
 
 const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
       <Navbar
-        title={title[0].text}
-        sponsorURL={links.sponsor}
-        hackerURL={links.hacker}
+        title={title[0].text.slice(0, -2)}
+        sponsorButtonProp={navBarButtons.sponsor}
+        hackerButtonProp={navBarButtons.hacker}
       />
       <HeroView pageName={"Home"} title={title} description={description}>
         <div className="Homepage__emailSubscriptionContainer">

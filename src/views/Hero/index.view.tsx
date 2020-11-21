@@ -37,7 +37,7 @@ const HeroView: React.FC<HeroProps> = ({
         <div className="HeroView__textContainer">
           {title.map((item) => (
             <h1 className={`HeroView__titleText${item.style}`} key={item.text}>
-              {item.text} /
+              {item.text}
             </h1>
           ))}
           {description.map((item) => (
