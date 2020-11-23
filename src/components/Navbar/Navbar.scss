@@ -23,12 +23,4 @@
 
     @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 35px);
   }
-
-  &__buttonContainer {
-    display: flex;
-  }
-}
-
-.Button:first-child {
-  margin-right: var(--large-spacer);
 }

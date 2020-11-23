@@ -1,6 +1,7 @@
 import React from "react";
 import HeroView from "views/Hero/index.view";
-import Navbar from "components/Navbar/index.view";
+// import Navbar from "components/Navbar/index.view";
+import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 
 import "./Home.scss";
@@ -27,30 +28,34 @@ const description = [
 ];
 
 const navBarButtons = {
-  sponsor: {
-    text: "Be a sponsor!",
-    link:
-      "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
-    label: "sponsor sign-up button",
-  },
   hacker: {
     text: "Apply to hack!",
     link: "/",
     label: "hacker sign-up button",
+  },
+  sponsor_mentor: {
+    text: "Be a sponsor / mentor!",
+    link:
+      "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
+    label: "sponsor sign-up button",
   },
 };
 
 const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
-      <Navbar
+      {/* <Navbar
         title={title[0].text.slice(0, -2)}
         sponsorButtonProp={navBarButtons.sponsor}
         hackerButtonProp={navBarButtons.hacker}
-      />
+      /> */}
       <HeroView pageName={"Home"} title={title} description={description}>
         <div className="Homepage__emailSubscriptionContainer">
           <EmailSubscriptionForm />
+        </div>
+        <div className="Homepage__buttonContainer">
+          <Button {...navBarButtons.hacker} />
+          <Button {...navBarButtons.sponsor_mentor} />
         </div>
       </HeroView>
     </div>

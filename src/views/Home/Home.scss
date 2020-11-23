@@ -1,8 +1,13 @@
 .Homepage {
   height: 100%;
 
-  &__emailSubscriptionContainer {
-    max-width: fit-content;
-    margin: auto;
+  &__buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+
+.Button:first-child {
+  margin-right: var(--large-spacer);
+  margin-bottom: var(--medium-spacer);
 }
