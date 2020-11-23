@@ -4,21 +4,17 @@ import "./Navbar.scss";
 
 interface NavbarProps {
   title: string;
-  sponsorButtonProp: ButtonProps;
-  hackerButtonProp: ButtonProps;
+  buttonProps: ButtonProps[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({
-  title,
-  sponsorButtonProp,
-  hackerButtonProp,
-}: NavbarProps) => {
+const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
   return (
     <div className="Navbar">
       <div className="Navbar__title">{title}</div>
       <div className="Navbar__buttonContainer">
-        <Button {...sponsorButtonProp} />
-        <Button {...hackerButtonProp} />
+        {buttonProps.map((entry) => (
+          <Button key={entry.label} {...entry} />
+        ))}
       </div>
     </div>
   );
