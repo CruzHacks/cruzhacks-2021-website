@@ -3,6 +3,7 @@
 .Button {
   &__element {
     @include typography.button-text;
+    height: calc(25px + 2.5vh);
     background: var(--wedgewood);
     border-radius: 15px;
     padding: var(--extra-small-spacer) var(--large-spacer);
