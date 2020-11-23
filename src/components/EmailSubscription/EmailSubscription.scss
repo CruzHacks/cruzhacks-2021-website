@@ -5,22 +5,18 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100%;
 
   &__searchBox {
     @include typography.description;
     color: var(--wedgewood);
     font-style: italic;
     border: none;
+    width: 80%;
 
     border-radius: 50px;
     margin-right: var(--extra-large-spacer);
     padding: var(--small-spacer) var(--large-spacer);
-
-    @include responsiveness.respond(mission) {
-      width: unset;
-      padding-right: var(--extra-extra-large-spacer);
-      margin-right: var(--large-spacer);
-    }
   }
 
   &__inputButton {
@@ -40,8 +36,7 @@
   &__feedbackContainer {
     display: flex;
     align-items: center;
-    margin: var(--medium-spacer) auto;
-    width: 350px;
+    margin: var(--medium-spacer) 0;
 
     @include responsiveness.respond(mission) {
       width: min(48vw, 300px);
@@ -55,8 +50,6 @@
   &__feedbackMessage {
     @include typography.error;
     font-weight: bold;
-    margin: 0 auto;
-
     color: var(--wedgewood-dark);
     opacity: 0.5;
   }
