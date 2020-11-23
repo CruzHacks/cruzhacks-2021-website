@@ -1,0 +1,12 @@
+@use "~stylesheets/typography";
+
+.Button {
+  &__element {
+    @include typography.button-text;
+    background: var(--wedgewood);
+    border-radius: 15px;
+    padding: var(--extra-small-spacer) var(--large-spacer);
+    border: none;
+    cursor: pointer;
+  }
+}

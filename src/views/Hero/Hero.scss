@@ -24,7 +24,7 @@
   &__container {
     display: flex;
     flex-wrap: nowrap;
-    margin: auto 1em;
+    margin: auto;
     max-width: 1800px;
     flex-grow: 4;
 
@@ -46,14 +46,10 @@
     // postcard styling
     max-width: 1000px;
     min-width: 475px;
-    margin: 0 auto;
+    margin: auto;
 
     @include responsiveness.respond(desktop) {
       max-width: calc(50vw + 100px);
-    }
-
-    @include responsiveness.respond(tab-land) {
-      margin-top: calc(1.5em + 1vw);
     }
 
     @include responsiveness.respond(tab-port) {
@@ -70,7 +66,11 @@
   }
 
   &__textContainer {
-    margin: 2em auto;
+    margin: 2em var(--medium-spacer);
+
+    @include responsiveness.respond(tab-port) {
+      margin: 2em auto;
+    }
   }
 
   &__titleText {
@@ -83,7 +83,7 @@
   }
 
   &__description {
-    max-width: 375px;
+    max-width: 425px;
     margin: 2em 0;
 
     @include typography.description;
