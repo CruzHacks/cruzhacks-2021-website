@@ -29,6 +29,7 @@
     border-radius: 50%;
     padding: 8px;
     height: calc(20px + 2.5vh);
+    cursor: pointer;
     border: none;
   }
 
@@ -55,7 +56,7 @@
   &__feedbackMessage {
     @include typography.error;
     font-weight: bold;
-    color: var(--waterleaf);
+    color: var(--waterleaf); 
     opacity: 0.5;
   }
 }
