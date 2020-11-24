@@ -1,13 +1,29 @@
 @use "~stylesheets/typography";
 
 .Button {
+  transform: translateY(2px);
+  transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
+
   &__element {
     @include typography.button-text;
     height: calc(25px + 2.5vh);
     background: var(--wedgewood);
     border-radius: 15px;
     padding: var(--extra-small-spacer) var(--large-spacer);
+  
     border: none;
     cursor: pointer;
+  }
+
+  &__element:hover {
+    background: linear-gradient(23deg, rgb(63, 91, 114), --waterleaf)
+  }
+
+  &:hover {
+    transform: translateY(-0.05vh);
+  }
+
+  &:active {
+    transform: translateY(.1vh);
   }
 }
