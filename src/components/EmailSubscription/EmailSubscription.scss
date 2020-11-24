@@ -9,10 +9,14 @@
 
   &__searchBox {
     @include typography.description;
-    color: var(--wedgewood);
+    @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 16px);
+    color: var(--grey);
+    background-color: var(--black);
     font-style: italic;
+
     border: none;
     width: 80%;
+    height: calc(10px + 2vh);
 
     border-radius: 50px;
     margin-right: var(--extra-large-spacer);
@@ -24,6 +28,8 @@
     background: var(--wedgewood);
     border-radius: 50%;
     padding: 8px;
+    height: calc(20px + 2.5vh);
+    cursor: pointer;
     border: none;
   }
 
@@ -50,7 +56,8 @@
   &__feedbackMessage {
     @include typography.error;
     font-weight: bold;
-    color: var(--wedgewood-dark);
-    opacity: 0.5;
+    color: var(--waterleaf);
+
+    opacity: 0.77;
   }
 }
