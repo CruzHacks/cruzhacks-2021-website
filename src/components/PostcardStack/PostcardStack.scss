@@ -10,10 +10,11 @@
   }
 
   &__postcard {
-    width: calc(100%);
+    width: 100%;
 
     @include responsiveness.respond(tab-port) {
       padding-top: var(--small-spacer);
+      width: calc(100% - 4vw);
       max-height: 45vh;
       min-height: 200px;
     }
