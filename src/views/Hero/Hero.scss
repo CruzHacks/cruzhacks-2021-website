@@ -61,7 +61,7 @@
     }
 
     @include responsiveness.respond(phone-narrow) {
-      min-width: 360px;
+      min-width: calc(60vw + 10vh);
     }
 
     @include responsiveness.respond(smallest) {
