@@ -13,7 +13,8 @@
       var(--waterleaf) 100%
     );
 
-    background-image: linear-gradient(rgb(46, 67, 87) 0%, rgb(18, 74, 66) 100%);
+    // dark mode overlay
+    background-image: linear-gradient(var(--wedgewood__night) 0%, var(--waterleaf__night) 100%);
     background-color: initial;
 
     /* We are excluding this for the MVP
