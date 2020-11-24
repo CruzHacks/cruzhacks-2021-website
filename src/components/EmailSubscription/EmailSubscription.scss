@@ -55,7 +55,7 @@
   &__feedbackMessage {
     @include typography.error;
     font-weight: bold;
-    color: var(--wedgewood-dark);
+    color: var(--waterleaf);
     opacity: 0.5;
   }
 }
