@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Button, { ButtonProps } from "components/Button/index.view";
 import "./Navbar.scss";
 

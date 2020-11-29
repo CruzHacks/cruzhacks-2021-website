@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./Information.scss";
 
 const InformationPageView: React.FC = () => {
