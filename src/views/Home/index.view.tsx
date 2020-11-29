@@ -2,7 +2,7 @@ import * as React from "react";
 import HeroView from "views/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
-import MLHBanner from "components/MLHBanner/mlhbanner.view";
+import MLHBanner from "components/MLHBanner/index.view";
 import "./Home.scss";
 
 const title = [
