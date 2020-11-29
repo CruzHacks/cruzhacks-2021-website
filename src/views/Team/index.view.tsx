@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./Team.scss";
 
 const TeamPageView: React.FC = () => {
