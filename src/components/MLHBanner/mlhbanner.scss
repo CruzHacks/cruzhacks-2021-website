@@ -1,0 +1,20 @@
+@use "~stylesheets/responsiveness";
+
+.MLHBanner {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  right: 50px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
+
+  &__image {
+    width: 100%;
+  }
+
+  @include responsiveness.respond(phone) {
+    visibility: hidden;
+  }
+}
