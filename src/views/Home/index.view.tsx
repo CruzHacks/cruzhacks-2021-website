@@ -1,8 +1,8 @@
 import * as React from "react";
 import HeroView from "views/Hero/index.view";
-// import Navbar from "components/Navbar/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
+import MLHBanner from "components/MLHBanner/mlhbanner.view";
 import "./Home.scss";
 
 const title = [
@@ -48,18 +48,25 @@ const buttonProps = {
 
 const HomepageView: React.FC = () => {
   return (
-    <div className="Homepage">
-      <HeroView pageName={"Home"} title={title} description={description}>
-        <div className="Homepage__emailSubscriptionContainer">
-          <EmailSubscriptionForm />
-        </div>
-        <div className="Homepage__buttonContainer">
-          {Object.entries(buttonProps).map(([_, buttonProp]) => (
-            <Button key={buttonProp.text} {...buttonProp} />
-          ))}
-        </div>
-      </HeroView>
-    </div>
+    <>
+      <MLHBanner />
+      <div className="Homepage">
+        <HeroView pageName={"Home"} title={title} description={description}>
+          <div className="Homepage__emailSubscriptionContainer">
+            <EmailSubscriptionForm />
+          </div>
+          <div className="Homepage__buttonContainer">
+            {Object.entries(buttonProps).map(([_, buttonProp]) => (
+              <Button
+                key={buttonProp.text}
+                className="Homepage__button"
+                {...buttonProp}
+              />
+            ))}
+          </div>
+        </HeroView>
+      </div>
+    </>
   );
 };
 
