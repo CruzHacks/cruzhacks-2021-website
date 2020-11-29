@@ -5,9 +5,9 @@
     display: flex;
     flex-wrap: wrap;
   }
-}
 
-.Button {
-  margin-right: var(--large-spacer);
-  margin-bottom: var(--medium-spacer);
+  &__button {
+    margin-right: var(--large-spacer);
+    margin-bottom: var(--medium-spacer);
+  }
 }
