@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import * as React from "react";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ReactComponent as Arrow } from "images/arrow.svg";
 import ClipLoader from "react-spinners/ClipLoader";
