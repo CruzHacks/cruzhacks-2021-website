@@ -20,6 +20,8 @@ module.exports = {
     "no-var": "error",
     "no-console": ["error"],
     "prettier/prettier": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
   },
   globals: {
     page: true,

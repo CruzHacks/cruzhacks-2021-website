@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import HeroView from "views/Hero/index.view";
 // import Navbar from "components/Navbar/index.view";
 import Button from "components/Button/index.view";
