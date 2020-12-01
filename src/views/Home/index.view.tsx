@@ -44,10 +44,18 @@ const buttonProps = {
       "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
     label: "sponsor sign-up button",
   },
+};
+
+const secondSetButtonProps = {
   codeOfConduct: {
     text: "Our Code of Conduct",
     link: "http://mlh.io/code-of-conduct",
     label: "mlh code of conduct",
+  },
+  contactUs: {
+    text: "Contact Us",
+    link: "mailto:contact@cruzhacks.com",
+    label: "contact us",
   },
 };
 
@@ -65,6 +73,15 @@ const HomepageView: React.FC = () => {
               <Button
                 key={buttonProp.text}
                 className="Homepage__button"
+                {...buttonProp}
+              />
+            ))}
+          </div>
+          <div className="Homepage__buttonContainer">
+            {Object.entries(secondSetButtonProps).map(([_, buttonProp]) => (
+              <Button
+                key={buttonProp.text}
+                className="Homepage__button--secondary"
                 {...buttonProp}
               />
             ))}
