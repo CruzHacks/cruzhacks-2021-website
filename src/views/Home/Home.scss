@@ -3,11 +3,16 @@
 
   &__buttonContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 
   &__button {
     margin-right: var(--large-spacer);
     margin-bottom: var(--medium-spacer);
+
+    &--secondary {
+      @extend .Homepage__button;
+      background: var(--light-aqua);
+    }
   }
 }
