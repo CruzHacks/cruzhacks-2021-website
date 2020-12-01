@@ -1,8 +1,8 @@
 :root {
-  --black: #000;
+  --black: #181a1b;
   --white: #fff;
   --wedgewood: #4f728e;
-  --grey: #bfbfbf;
+  --grey: rgb(137, 167, 189);
   --darkmode: #1a1542;
 
   /* variations */
@@ -12,4 +12,8 @@
   --wedgewood__gradient: #486988;
   --waterleaf: #a9ebdf;
 
+  /* dark mode */
+  --wedgewood__night: rgb(46, 67, 87);
+  --waterleaf__night: rgb(18, 74, 66);
+  --wedgewood__darker: rgb(151, 178, 197);
 }

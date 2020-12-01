@@ -1,0 +1,20 @@
+@use "~stylesheets/typography";
+
+.Background { 
+    position: relative;
+    background: var(--darkmode);
+    height: auto;
+    width: 100%;  
+    
+    &_wire {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+    }
+    &_children {
+        z-index: 999;
+        position: relative;
+    }
+}
+
