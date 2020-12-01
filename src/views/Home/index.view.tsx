@@ -44,6 +44,11 @@ const buttonProps = {
       "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
     label: "sponsor sign-up button",
   },
+  codeOfConduct: {
+    text: "Our Code of Conduct",
+    link: "http://mlh.io/code-of-conduct",
+    label: "mlh code of conduct",
+  },
 };
 
 const HomepageView: React.FC = () => {
