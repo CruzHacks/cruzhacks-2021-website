@@ -15,13 +15,8 @@ const Button: React.FC<ButtonProps> = ({
   className,
 }: ButtonProps) => {
   return (
-    <a
-      className={`Button ${className}`}
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <button className="Button__element" aria-label={label}>
+    <a className="Button" href={link} target="_blank" rel="noreferrer">
+      <button className={`Button__element ${className}`} aria-label={label}>
         {text}
       </button>
     </a>
