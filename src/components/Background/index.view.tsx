@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./Background.scss";
 import { ReactComponent as Wire } from "images/wire.svg";
 import { ReactComponent as Rainbow } from "images/rainbowpath.svg";
