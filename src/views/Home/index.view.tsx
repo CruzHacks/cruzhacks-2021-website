@@ -3,6 +3,7 @@ import HeroView from "views/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
+import MilestonesComponent from "./components/Milestones/index.view";
 import cx from "classnames";
 import "./Home.scss";
 
@@ -84,6 +85,8 @@ const HomepageView: React.FC = () => {
             </div>
           ))}
         </HeroView>
+
+        <MilestonesComponent />
       </div>
     </>
   );
