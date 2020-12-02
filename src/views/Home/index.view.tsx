@@ -3,6 +3,7 @@ import HeroView from "views/Hero/index.view";
 // import Navbar from "components/Navbar/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
+import Background from "components/Background/index.view";
 import "./Home.scss";
 
 const title = [
@@ -49,16 +50,18 @@ const buttonProps = {
 const HomepageView: React.FC = () => {
   return (
     <div className="Homepage">
-      <HeroView pageName={"Home"} title={title} description={description}>
-        <div className="Homepage__emailSubscriptionContainer">
-          <EmailSubscriptionForm />
-        </div>
-        <div className="Homepage__buttonContainer">
-          {Object.entries(buttonProps).map(([_, buttonProp]) => (
-            <Button key={buttonProp.text} {...buttonProp} />
-          ))}
-        </div>
-      </HeroView>
+      <Background>
+        <HeroView pageName={"Home"} title={title} description={description}>
+          <div className="Homepage__emailSubscriptionContainer">
+            <EmailSubscriptionForm />
+          </div>
+          <div className="Homepage__buttonContainer">
+            {Object.entries(buttonProps).map(([_, buttonProp]) => (
+              <Button key={buttonProp.text} {...buttonProp} />
+            ))}
+          </div>
+        </HeroView>
+      </Background>
     </div>
   );
 };
