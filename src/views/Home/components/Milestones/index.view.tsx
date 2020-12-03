@@ -27,7 +27,7 @@ const MilestonesComponent: React.FC = () => {
       <div className="Milestones__container">
         {Object.values(milestones).map(({ title, text }) => (
           <div className="Milestones__box" key={title}>
-            <div className="Milestones__boxTop backdrop-blur">{text}</div>
+            <div className="Milestones__boxTop">{text}</div>
             <div className="Milestones__boxBottom">{title}</div>
           </div>
         ))}
