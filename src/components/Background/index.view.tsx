@@ -10,23 +10,11 @@ const Background: React.FC<BackgroundProps> = ({
   children,
 }: BackgroundProps) => {
   return (
-    <div>
-      <div className="Background">
-        <div className="Background__children">
-          {Array.isArray(children)
-            ? children.filter((child, index) => index < 4)
-            : children}
-          <Wire className="Background__wire"></Wire>
-        </div>
-      </div>
-      <div className="Background__gradient">
-        <div className="Background__children">
-          {Array.isArray(children)
-            ? children.filter((child, index) => index >= 4)
-            : children}
-          <Rainbow className="Background__wire"></Rainbow>
-        </div>
-      </div>
+    <div className="Background">
+      <div className="Background__gradient"></div>
+      <div className="Background__children">{children}</div>
+      <Wire className="Background__wire"></Wire>
+      <Rainbow className="Background__wire--variant"></Rainbow>
     </div>
   );
 };
