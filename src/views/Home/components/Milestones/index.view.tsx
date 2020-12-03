@@ -25,10 +25,10 @@ const MilestonesComponent: React.FC = () => {
     <div className="Milestones">
       <h1 className="Milestones__title">Milestones of 2020</h1>
       <div className="Milestones__container">
-        {Object.entries(milestones).map(([_, milestone]) => (
-          <div className="Milestones__box" key={_}>
-            <h1 className="Milestones__box--top">{milestone.text}</h1>
-            <p className="Milestones__box--bottom">{milestone.title}</p>
+        {Object.values(milestones).map(({ title, text }) => (
+          <div className="Milestones__box" key={title}>
+            <div className="Milestones__boxTop backdrop-blur">{text}</div>
+            <div className="Milestones__boxBottom">{title}</div>
           </div>
         ))}
       </div>
