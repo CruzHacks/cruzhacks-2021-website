@@ -4,14 +4,14 @@
 .Milestones {
   overflow: auto;
   margin: 0;
-  min-height: 500px;
+  min-height: 375px;
   background: url("~images/components/milestones/background.png") repeat-y, var(--dark-purple);
   background-size: 100% auto;
 
   &__title {
     @include typography.anaglyph-title-text;
 
-    margin: var(--extra-large-spacer) 0;
+    margin: var(--extra-extra-large-spacer) 0 var(--medium-spacer) 0;
     text-align: center;
   }
 
@@ -27,6 +27,7 @@
     margin: var(--medium-spacer);
     min-width: 200px;
     text-align: center;
+    z-index: 99;
   }
 
   &__boxTop {
@@ -52,5 +53,29 @@
     box-shadow: 0 0 35px -3px var(--heliotrope);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 35px 35px;
+  }
+
+  &__pencil {
+    position: absolute;
+    min-width: 230px;
+    width: 35%;
+  }
+
+  &__pencil--alt {
+    @extend .Milestones__pencil;
+    left: 25%;
+    transform: rotate(30deg);
+  }
+
+  &__shell {
+    position: absolute;
+    width: 200px;
+    margin-top: 120px;
+    right: 50px;
+
+    @include responsiveness.respond(smallest) {
+      // push shell towards the bottom on small screens
+      margin-top: 100%;
+    }
   }
 }

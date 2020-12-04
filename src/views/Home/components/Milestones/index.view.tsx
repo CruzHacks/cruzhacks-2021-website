@@ -1,5 +1,7 @@
 import React from "react";
 import "./milestones.scss";
+import { ReactComponent as Pencil } from "images/components/milestones/pencil.svg";
+import { ReactComponent as Shell } from "images/components/milestones/shell.svg";
 
 const milestones = [
   {
@@ -24,6 +26,8 @@ const MilestonesComponent: React.FC = () => {
   return (
     <div className="Milestones">
       <h1 className="Milestones__title">Milestones of 2020</h1>
+      <Pencil className="Milestones__pencil" />
+      <Shell className="Milestones__shell" />
       <div className="Milestones__container">
         {Object.values(milestones).map(({ title, text }) => (
           <div className="Milestones__box" key={title}>
@@ -32,6 +36,7 @@ const MilestonesComponent: React.FC = () => {
           </div>
         ))}
       </div>
+      <Pencil className="Milestones__pencil--alt" />
     </div>
   );
 };
