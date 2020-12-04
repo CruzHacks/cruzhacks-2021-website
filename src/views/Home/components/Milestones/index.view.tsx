@@ -25,7 +25,7 @@ const milestones = [
 const MilestonesComponent: React.FC = () => {
   return (
     <div className="Milestones">
-      <h1 className="Milestones__title">Milestones of 2020</h1>
+      <div className="Milestones__title">Milestones of 2020</div>
       <Pencil className="Milestones__pencil" />
       <Shell className="Milestones__shell" />
       <div className="Milestones__container">
