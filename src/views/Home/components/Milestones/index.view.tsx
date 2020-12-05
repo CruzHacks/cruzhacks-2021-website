@@ -25,18 +25,22 @@ const milestones = [
 const MilestonesComponent: React.FC = () => {
   return (
     <div className="Milestones">
-      <div className="Milestones__title">Milestones of 2020</div>
-      <Pencil className="Milestones__pencil" />
-      <Shell className="Milestones__shell" />
       <div className="Milestones__container">
-        {Object.values(milestones).map(({ title, text }) => (
-          <div className="Milestones__box" key={title}>
-            <div className="Milestones__boxTop">{text}</div>
-            <div className="Milestones__boxBottom">{title}</div>
-          </div>
-        ))}
+        <div className="Milestones__title">Milestones of 2020</div>
+        <Pencil className="Milestones__pencil" />
+        <Shell className="Milestones__shell" />
+        <Pencil className="Milestones__pencil--alt" />
+        <div className="Milestones__boxContainer">
+          {Object.values(milestones).map(({ title, text }) => {
+            return (
+              <div className="Milestones__box" key={title}>
+                <div className="Milestones__boxTop">{text}</div>
+                <div className="Milestones__boxBottom">{title}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <Pencil className="Milestones__pencil--alt" />
     </div>
   );
 };

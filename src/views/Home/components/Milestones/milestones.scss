@@ -2,20 +2,25 @@
 @use "~stylesheets/responsiveness";
 
 .Milestones {
-  overflow: auto;
   margin: 0;
-  min-height: 375px;
-  background: url("~images/components/milestones/background.png") repeat-y, var(--dark-purple);
+  background: url("~images/components/milestones/background.svg") repeat-y, var(--dark-purple);
   background-size: 100% auto;
+
+  &__container {
+    position: relative;
+    max-width: 1800px;
+    min-height: 400px;
+    margin: 0 auto;
+  }
 
   &__title {
     @include typography.anaglyph-title-text;
 
-    margin: var(--extra-extra-large-spacer) 0 var(--medium-spacer) 0;
+    padding: var(--extra-extra-large-spacer) 0 var(--medium-spacer) 0;
     text-align: center;
   }
 
-  &__container {
+  &__boxContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -57,25 +62,24 @@
 
   &__pencil {
     position: absolute;
-    min-width: 230px;
-    width: 35%;
+    width: 450px;
+
+    @include responsiveness.respond(phone) {
+      width: 230px;
+    }
   }
 
   &__pencil--alt {
     @extend .Milestones__pencil;
-    left: 25%;
+    top: 300px;
+    left: 20%;
     transform: rotate(30deg);
   }
 
   &__shell {
     position: absolute;
     width: 200px;
-    margin-top: 120px;
     right: 50px;
-
-    @include responsiveness.respond(smallest) {
-      // push shell towards the bottom on small screens
-      margin-top: 100%;
-    }
+    bottom: 30px;
   }
 }
