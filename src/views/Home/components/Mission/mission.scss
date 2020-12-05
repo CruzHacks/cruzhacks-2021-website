@@ -1,17 +1,23 @@
+@use "~stylesheets/responsiveness";
 @use "~stylesheets/typography";
 @use "~stylesheets/variables";
 
 .Mission {
-  display: flex;
-  flex-direction: column;
-  background: url("~images/mission-background.png");
-  background-size: 100%;
-  padding: 5% 10%;
+  /* Text Layer */
+  &--text {
+    display: flex;
+    flex-direction: column;
+    background: url("~images/mission-background.png");
+    background-size: 100%;
+    padding: 10% 22%;
+  }
 
   &__section {
-    &:first-child {
+    z-index: 2;
+
+    &:first-of-type {
       display: flex;
-      margin-bottom: var(--extra-extra-large-spacer);
+      margin-bottom: 10%;
     }
   }
 
@@ -58,5 +64,52 @@
   &__text {
     @include typography.description-dark;
     line-height: 105%;
+  }
+
+  /* Image Layer */
+  &--images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &__can {
+    width: 20%;
+  }
+
+  &__can--right {
+    width: 20%;
+    align-self: flex-end;
+    margin-top: -23%;
+
+    @include responsiveness.respond(desktop) {
+      margin-top: -19%;
+    }
+
+    @include responsiveness.respond(mission) {
+      margin-top: -13%;
+    }
+
+    @include responsiveness.respond(tab-land) {
+      margin-top: -6%;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin-top: 4%;
+    }
+
+    @include responsiveness.respond(phone) {
+      margin-top: 20%;
+    }
+  }
+
+  &__flower {
+    width: 35%;
+    margin-top: -25%;
   }
 }
