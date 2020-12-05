@@ -18,11 +18,30 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   }
 }
 
+@mixin title-body {
+  color: var(--white);
+  font-family: $font-family-italic;
+  font-style: italic;
+  text-shadow: 2px 2px #1b68ff, -3px -2px rgba(252, 34, 73, 0.46);
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 32px, $max: 50px);
+  line-height: 50px;
+
+  @include responsiveness.respond(tab-port) {
+    line-height: 40px;
+  }
+}
+
 @mixin description {
   color: var(--white);
   font-family: $font-family-base;
 
   @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+}
+
+@mixin description-dark {
+  @include description;
+  color: var(--dark-navy);
 }
 
 @mixin button-text {
