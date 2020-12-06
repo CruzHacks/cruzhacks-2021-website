@@ -1,18 +1,3 @@
 .Homepage {
   height: 100%;
-
-  &__buttonContainer {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  &__button {
-    margin-right: var(--large-spacer);
-    margin-bottom: var(--medium-spacer);
-
-    &--secondary {
-      @extend .Homepage__button;
-      background: var(--light-aqua);
-    }
-  }
 }

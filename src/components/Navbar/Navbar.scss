@@ -3,11 +3,9 @@
 
 .Navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  padding: var(--extra-small-spacer) var(--extra-large-spacer);
-  margin-bottom: -58px;
+  padding: 0 var(--extra-large-spacer);
+  margin-bottom: -54px;
 
   background: var(--white);
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
@@ -19,8 +17,20 @@
 
   &__title {
     @include typography.title-text;
-    color: var(--wedgewood);
+    color: var(--froly);
+    margin-right: var(--extra-large-spacer);
 
     @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 35px);
   }
+
+  &__buttonContainer {
+    &--secondary {
+      margin: 0 calc(100px - 25px + var(--small-spacer)) 0 auto;
+    }
+  }
+}
+
+.Button__element {
+  background: var(--froly);
+  margin: var(--small-spacer) var(--large-spacer) var(--small-spacer) 0;
 }

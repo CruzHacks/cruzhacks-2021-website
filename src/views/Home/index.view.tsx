@@ -1,9 +1,9 @@
 import * as React from "react";
 import HeroView from "views/Hero/index.view";
-import Button from "components/Button/index.view";
+import { ButtonTypes } from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
+import Navbar from "components/Navbar/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
-import cx from "classnames";
 import "./Home.scss";
 
 const title = [
@@ -28,61 +28,55 @@ const description = [
 ];
 
 const buttonProps = {
-  primary: {
-    hacker: {
-      text: "Apply to hack!",
-      link: "https://bit.ly/cruzhacks-2021-hacker",
-      label: "hacker sign-up button",
-    },
-    judge_mentor: {
-      text: "Be a judge / mentor!",
-      link:
-        "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
-      label: "judge/mentor sign-up button",
-    },
-    sponsor: {
-      text: "Be a sponsor!",
-      link:
-        "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
-      label: "sponsor sign-up button",
-    },
+  hacker: {
+    text: "Apply to hack!",
+    link: "https://bit.ly/cruzhacks-2021-hacker",
+    label: "hacker sign-up button",
+    type: ButtonTypes.PRIMARY,
   },
-  secondary: {
-    codeOfConduct: {
-      text: "Our Code of Conduct",
-      link: "http://mlh.io/code-of-conduct",
-      label: "mlh code of conduct",
-    },
-    contactUs: {
-      text: "Contact Us",
-      link: "mailto:contact@cruzhacks.com",
-      label: "contact us",
-    },
+  judge_mentor: {
+    text: "Be a judge / mentor!",
+    link:
+      "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
+    label: "judge/mentor sign-up button",
+    type: ButtonTypes.PRIMARY,
   },
+  sponsor: {
+    text: "Be a sponsor!",
+    link:
+      "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
+    label: "sponsor sign-up button",
+    type: ButtonTypes.PRIMARY,
+  },
+  code_conduct: {
+    text: "Our Code of Conduct",
+    link: "http://mlh.io/code-of-conduct",
+    label: "mlh code of conduct",
+    type: ButtonTypes.SECONDARY,
+  },
+  contact_us: {
+    text: "Contact Us",
+    link: "mailto:contact@cruzhacks.com",
+    label: "contact us",
+    type: ButtonTypes.SECONDARY,
+  },
+};
+
+const buttonPropsObject = {
+  title: "CruzHacks 2021",
+  buttonProps: Object.values(buttonProps),
 };
 
 const HomepageView: React.FC = () => {
   return (
     <>
+      <Navbar {...buttonPropsObject} />
       <MLHBanner />
       <div className="Homepage">
         <HeroView pageName={"Home"} title={title} description={description}>
           <div className="Homepage__emailSubscriptionContainer">
             <EmailSubscriptionForm />
           </div>
-          {Object.entries(buttonProps).map(([type, props]) => (
-            <div key={type} className="Homepage__buttonContainer">
-              {Object.entries(props).map(([_, buttonProp]) => (
-                <Button
-                  key={buttonProp.text}
-                  className={cx("Homepage__button", {
-                    "Homepage__button--secondary": type === "secondary",
-                  })}
-                  {...buttonProp}
-                />
-              ))}
-            </div>
-          ))}
         </HeroView>
       </div>
     </>

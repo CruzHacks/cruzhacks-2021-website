@@ -31,6 +31,7 @@
     margin: auto;
     max-width: 1800px;
     flex-grow: 4;
+    margin-top: 108px;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
