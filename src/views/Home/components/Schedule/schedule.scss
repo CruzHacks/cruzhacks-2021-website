@@ -1,3 +1,22 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/typography";
 
-/* Delete these lines when you begin development */
+.Schedule {
+    background: var(--black);
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -999;
+
+    &__schedule {
+        width: 60%;
+        padding-top: 5%;
+    }
+    &__moon {
+        position: absolute;
+        left: 0px;
+        bottom: 50%;
+        width: 20%;
+        z-index: -500;
+    }
+}

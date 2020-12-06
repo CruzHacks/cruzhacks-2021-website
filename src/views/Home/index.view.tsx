@@ -7,6 +7,7 @@ import Background from "components/Background/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
+import Schedule from "views/Home/components/Schedule/index.view";
 import FooterComponent from "./components/Footer/index.view";
 import "./Home.scss";
 
@@ -57,6 +58,7 @@ const HomepageView: React.FC = () => {
             questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
           />
           <SponsorsComponent sponsors={sponsors} />
+          <Schedule />
           <FooterComponent />
         </Background>
       </div>
