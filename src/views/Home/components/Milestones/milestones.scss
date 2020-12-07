@@ -3,13 +3,13 @@
 
 .Milestones {
   margin: 0;
-  background: url("~images/components/milestones/background.svg") repeat-y, var(--dark-purple);
+  background: url("~images/components/milestones/background.svg") repeat-y;
   background-size: 100% auto;
 
   &__container {
     position: relative;
-    max-width: 1800px;
-    min-height: 400px;
+    max-width: 2000px;
+    min-height: 500px;
     margin: 0 auto;
   }
 
@@ -78,8 +78,16 @@
 
   &__shell {
     position: absolute;
-    width: 200px;
+    width: 300px;
     right: 50px;
     bottom: 30px;
+
+    @include responsiveness.respond(desktop) {
+      width: 200px;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      width: 125px;
+    }
   }
 }
