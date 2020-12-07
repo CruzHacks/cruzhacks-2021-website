@@ -1,3 +1,70 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
-/* Delete these lines when you begin development */
+.Prizes {
+  margin: 0;
+  background: url("~images/components/prizes/background.svg") repeat-y;
+  background-size: 100% auto;
+
+  &__title {
+    @include typography.anaglyph-title-text;
+
+    padding: var(--extra-extra-large-spacer) 0 var(--medium-spacer) 0;
+    text-align: center;
+  }
+
+  &__boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin: var(--medium-spacer) auto;
+  }
+
+  &__box {
+    margin: var(--large-spacer);
+    width: 350px;
+    max-width: 80%;
+    text-align: center;
+    z-index: 99;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin: var(--medium-spacer);
+    }
+  }
+
+  &__boxTop {
+    background: var(--purple-frosted-glass);
+    border-radius: 58px 58px 0 0;
+  }
+
+  &__prizeIcon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  &__prizeTitle {
+    @include typography.title-text-secondary;
+  }
+
+  &__boxBottom {
+    @include typography.description;
+
+    padding: 10px 20px;
+    min-height: 125px;
+    background: linear-gradient(180deg, var(--light-purple) 0%, var(--light-purple__gradient) 100%);
+    box-shadow: 0 0 35px -3px var(--heliotrope);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 58px 58px;
+
+    @include responsiveness.respond(phone) {
+      min-height: 80px;
+    }
+  }
+}

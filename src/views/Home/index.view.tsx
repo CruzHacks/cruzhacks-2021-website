@@ -4,6 +4,7 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
+import PrizesComponent from "./components/Prizes/index.view";
 import cx from "classnames";
 import "./Home.scss";
 
@@ -86,6 +87,8 @@ const HomepageView: React.FC = () => {
               </div>
             ))}
           </HeroView>
+
+          <PrizesComponent />
         </Background>
       </div>
     </>

@@ -19,4 +19,22 @@
   --wedgewood__night: rgb(46, 67, 87);
   --waterleaf__night: rgb(18, 74, 66);
   --wedgewood__darker: rgb(151, 178, 197);
+
+  ///////////
+  // To be removed after #91
+
+  /* anaglyph effect */
+  --anaglyph-cyan: #0085ff;
+  --anaglyph-red: rgba(255, 0, 0, 0.57);
+
+  /* box component (bottom) */
+  --light-purple: #7c9bff;
+  --light-purple__gradient: #8a9dda;
+  --heliotrope: #a687ff;
+
+  /* missions, milestones, and topics section */
+  --dark-purple: #1a1542;
+  --purple-frosted-glass: rgba(91, 75, 147, 0.67);
+
+  ///////////
 }
