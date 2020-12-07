@@ -1,0 +1,40 @@
+@use "~stylesheets/typography";
+
+.Background {
+  position: relative;
+  background: var(--darkmode);
+  height: 3000px;
+  width: 100%;
+  z-index: -3;
+
+  &__wire {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    bottom: calc(100% / 7 * 3);
+
+    &--variant {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+
+  &__children {
+    z-index: 999;
+    position: relative;
+  }
+
+  &__gradient {
+    z-index: -2;
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      var(--blue) 0%,
+      var(--blue__gradient) 100%
+    );
+    width: 100%;
+    height: calc(100% / 7 * 3);
+    bottom: 0;
+  }
+}
