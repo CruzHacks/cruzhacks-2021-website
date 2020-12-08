@@ -4,6 +4,8 @@ import { ButtonTypes } from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Navbar from "components/Navbar/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
+import Background from "components/Background/index.view";
+import cx from "classnames";
 import "./Home.scss";
 
 const title = [
@@ -73,11 +75,26 @@ const HomepageView: React.FC = () => {
       <Navbar {...buttonPropsObject} />
       <MLHBanner />
       <div className="Homepage">
-        <HeroView pageName={"Home"} title={title} description={description}>
-          <div className="Homepage__emailSubscriptionContainer">
-            <EmailSubscriptionForm />
-          </div>
-        </HeroView>
+        <Background>
+          <HeroView pageName={"Home"} title={title} description={description}>
+            <div className="Homepage__emailSubscriptionContainer">
+              <EmailSubscriptionForm />
+            </div>
+            {Object.entries(buttonProps).map(([type, props]) => (
+              <div key={type} className="Homepage__buttonContainer">
+                {Object.entries(props).map(([_, buttonProp]) => (
+                  <Button
+                    key={buttonProp.text}
+                    className={cx("Homepage__button", {
+                      "Homepage__button--secondary": type === "secondary",
+                    })}
+                    {...buttonProp}
+                  />
+                ))}
+              </div>
+            ))}
+          </HeroView>
+        </Background>
       </div>
     </>
   );
