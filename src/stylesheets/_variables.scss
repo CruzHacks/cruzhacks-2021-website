@@ -2,8 +2,10 @@
   --black: #181a1b;
   --white: #fff;
   --wedgewood: #4f728e;
+  --light-aqua: #4f9c95;
   --grey: rgb(137, 167, 189);
   --dark-navy: #1a1542;
+  --blue: #4366c0;
 
   /* variations */
   --wedgewood__dark: #{darken(#4f728e, 7%)};
@@ -11,6 +13,7 @@
   /* These are for gradient */
   --wedgewood__gradient: #486988;
   --waterleaf: #a9ebdf;
+  --blue__gradient: #344790;
 
   /* dark mode */
   --wedgewood__night: rgb(46, 67, 87);
