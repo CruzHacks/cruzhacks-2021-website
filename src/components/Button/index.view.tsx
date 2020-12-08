@@ -10,7 +10,7 @@ export interface ButtonProps {
   text: string;
   link: string;
   label: string;
-  type: ButtonTypes
+  type: ButtonTypes;
   className?: string;
 }
 

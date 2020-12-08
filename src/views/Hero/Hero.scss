@@ -16,7 +16,7 @@
     margin: auto;
     max-width: 1800px;
     flex-grow: 4;
-    margin-top: 108px;
+    margin-top: 10vh;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
@@ -29,6 +29,7 @@
 
     @include responsiveness.respond(phone) {
       margin: 1em;
+      margin-top: 10vh;
     }
   }
 

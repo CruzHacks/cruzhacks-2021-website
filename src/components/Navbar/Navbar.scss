@@ -18,14 +18,26 @@
   &__title {
     @include typography.title-text;
     color: var(--froly);
+    text-align: center;
     margin-right: var(--extra-large-spacer);
 
     @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 35px);
   }
 
-  &__buttonContainer {
-    &--secondary {
-      margin: 0 calc(100px - 25px + var(--small-spacer)) 0 auto;
+  &__buttonContainer--primary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__buttonContainer--secondary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 calc(100px - 25px + var(--small-spacer)) 0 auto;
+
+    @include responsiveness.respond(phone) {
+      margin: 0;
     }
   }
 }
