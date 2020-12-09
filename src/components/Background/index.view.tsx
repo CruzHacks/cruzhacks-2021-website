@@ -11,9 +11,9 @@ const Background: React.FC<BackgroundProps> = ({
 }: BackgroundProps) => {
   return (
     <div className="Background">
+      <Wire className="Background__wire"></Wire>
       <div className="Background__gradient"></div>
       <div className="Background__children">{children}</div>
-      <Wire className="Background__wire"></Wire>
       <Rainbow className="Background__wire--variant"></Rainbow>
     </div>
   );
