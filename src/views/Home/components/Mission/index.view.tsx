@@ -18,7 +18,7 @@ const MissionComponent: React.FC<MissionProps> = ({
       <div className="Mission--text">
         <div className="Mission__section">
           <div className="Mission__highlight" />
-          <div className="Mission__section--sub-container">
+          <div className="Mission__section--subsection">
             <div className="Mission__title">{about_text.title}</div>
             <div className="Mission__body">
               <div className="Mission__rectangle" />
@@ -35,7 +35,7 @@ const MissionComponent: React.FC<MissionProps> = ({
         </div>
       </div>
       <div className="Mission--images">
-        <LeftCan className="Mission__can" />
+        <LeftCan className="Mission__can--left" />
         <RightCan className="Mission__can--right" />
         <Flower className="Mission__flower" />
       </div>
