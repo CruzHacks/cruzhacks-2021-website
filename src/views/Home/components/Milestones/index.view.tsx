@@ -1,5 +1,6 @@
 import React from "react";
 import "./milestones.scss";
+import { ReactComponent as Background } from "images/components/milestones/background.svg";
 import { ReactComponent as Pencil } from "images/components/milestones/pencil.svg";
 import { ReactComponent as Shell } from "images/components/milestones/shell.svg";
 
@@ -25,6 +26,7 @@ const milestones = [
 const MilestonesComponent: React.FC = () => {
   return (
     <div className="Milestones">
+      <Background className="Milestones__background" />
       <div className="Milestones__container">
         <div className="Milestones__title">Milestones of 2020</div>
         <Pencil className="Milestones__pencil" />
