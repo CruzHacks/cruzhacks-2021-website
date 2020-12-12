@@ -1,7 +1,6 @@
 @use "~stylesheets/typography";
 
 .Button {
-  transform: translateY(2px);
   transition: opacity 0.4s ease 0.27s, transform 0.2s ease, 0.8s filter ease;
 
   &__element {
@@ -14,10 +13,10 @@
   }
 
   &:hover {
-    transform: translateY(-0.05vh);
+    transform: translateY(-0.08vh);
   }
 
   &:active {
-    transform: translateY(0.2vh);
+    transform: translateY(0.06vh);
   }
 }
