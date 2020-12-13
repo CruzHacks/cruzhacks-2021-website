@@ -30,7 +30,7 @@ height: 776.95px;
         border-radius: 5vh;
     }
 
-    &__activeTab {
+    &__tab {
         @include typography.description;
 
         background: #FFD9E0;
