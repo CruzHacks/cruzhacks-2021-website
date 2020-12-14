@@ -1,128 +1,195 @@
 @use "~stylesheets/typography";
-/*
- width: 1350.54px;
-height: 776.95px;
-*/
+
 .Schedule {
-    height: 1000px;
-    overflow: auto;
+  height: 1000px;
+  overflow: auto;
+  width: 100%;
+  position: relative;
+  z-index: -5;
+
+  &__container {
+    position: absolute;
+    margin: auto;
+    left: 25%;
+    overflow-x: visible;
+    width: 50%;
+    min-width: 300px;
+    height: 35%;
+    z-index: -4;
+  }
+
+  &__whiteRect {
+    padding-top: 57.5%;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background: #fdfdee;
+    box-shadow: 0px 0px 20px 11px rgba(89, 93, 130, 0.5);
+    border-radius: calc(5vh - 20px);
+  }
+
+  &__tab {
+    @include typography.description;
+
+    background: #ffd9e0;
+    border-radius: calc(6vh - 15px);
+    height: calc((57.5% / 3) * 2);
+    width: calc(57.9% / 3);
+    padding-top: 2%;
+    text-align: center;
+    color: #f06c84;
+    transform: rotate(-90deg);
+    min-height: 0.5em;
+  }
+
+  &__tab--variant {
+    z-index: 0;
+    background: #fdfdee;
+  }
+  &__dayOne {
+    z-index: 0;
+    position: absolute;
+    left: -5%;
+    top: -4.4%;
+  }
+
+  &__dayTwo {
+    z-index: -3;
+    position: absolute;
+    left: -5%;
+    top: 28.9%;
+  }
+
+  &__dayThree {
+    z-index: -3;
+    position: absolute;
+    left: -5%;
+    top: 62.5%;
+  }
+
+  &__event {
     width: 100%;
     position: relative;
-    z-index: -5;
-    &__container {
-        position: absolute;
-        margin: auto;
-        left: 25%;
-        overflow-x: visible;
-        width: 50%;
-        min-width: 300px; 
-        height: 35%;
-        z-index: -4;
-    }
+    flex-grow: 1;
+  }
 
-    &__whiteRect {
-        padding-top: 57.5%;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        background: #FDFDEE;
-        box-shadow: 0px 0px 20px 11px rgba(89, 93, 130, 0.5);
-        border-radius: 5vh;
-    }
+  &__eventText {
+    position: relative;
+    font-family: Source Code Pro;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 2px;
+    padding-left: 20%;
+    color: #1a1542;
+  }
 
-    &__tab {
-        @include typography.description;
+  &__timeText {
+    position: relative;
+    top: -2.2em;
+    right: -35vw;
+    font-family: Source Code Pro;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 60px;
+    color: #898989;
+  }
 
-        background: #FFD9E0;
-        border-radius: 5vh;
-        height: calc((57.5% /3)*2);
-        width: calc(57.5% / 3);
-        padding-top: 2%;
-        text-align: center;
-        color: #F06C84;
-        transform: rotate(-90deg);
-        min-height: 0.5em;
-        
-    }
-    &__dayOne {
-        z-index: -4;
-        position: absolute;
-        left: -5%;
-        top: -4.3%;
-        background: #FDFDEE;
-        z-index: 0;
-    }
+  &__dayText {
+    @include typography.description;
 
-    &__dayTwo {
-        z-index: -3;
-        position: absolute;
-        left: -5%;
-        top: 28.9%;
-    }
+    position: absolute;
+    padding: var(--extra-small-spacer);
+    bottom: 40%;
+    margin-right: 20px;
+    left: calc(-2.3vw + 10px);
+    color: #f06c84;
+    transform: rotate(-90deg);
+  }
 
-    &__dayThree {
-        z-index: -3;
-        position: absolute;
-        left: -5%;
-        top: 62%;
-    }
+  &__title {
+    @include typography.title-text;
 
-    &__dayText {
-        @include typography.description;
-        position: absolute;
-        padding: var(--extra-small-spacer);
-        bottom: 40%;
-        margin-right: 20px;
-        left: calc(-2.3vw + 10px);
-        color: #F06C84;
-        transform: rotate(-90deg);
-    }
+    position: absolute;
+    font-size: 20px !important;
+    padding-left: var(--large-spacer);
+    z-index: 1;
+    margin-bottom: var(--large-spacer);
+    top: 0;
+    color: #f06c84;
+  }
 
-    &__title {
-        @include typography.title-text;
-        font-size: 18px !important;
-        position: absolute;
-        padding-left: var(--large-spacer);
-        z-index: 1;
-        margin-bottom: var(--large-spacer);
-        top: 0;
-        color: #F06C84;
+  &__eventContainer {
+    overflow: hidden;
+    position: absolute;
+    top: calc(23% + 2.3vh);
+    left: 4%;
+    width: 90%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    }
+  &__date {
+    @include typography.title-text;
 
-    &__date {
-        @include typography.title-text;
-        font-size: 18px !important;
-        position: absolute;
-        padding-left: var(--large-spacer);
-        z-index: 1;
-        top: 1em;
-        color: #1A1542;
-    }
-    &__whiteRect--variant {
-        position: absolute;
-        padding-top: 57.5%;
-        right: 20%;
-        width: 30%;
-        background: #FDFDEE;
-        border-radius: 0px 5vh 5vh 0px;
+    font-size: 20px !important;
+    position: absolute;
+    padding-left: var(--large-spacer);
+    z-index: 1;
+    top: 1em;
+    color: #1a1542;
+  }
+  
+  &__whiteRect--variant {
+    position: absolute;
+    padding-top: 57.5%;
+    right: 35%;
+    width: 30%;
+    background: #fdfdee;
+    border-radius: 0px calc(5vh - 10px) calc(5vh - 10px) 0px;
+  }
 
-    }
+  &__pinkRect {
+    position: absolute;
+    width: 47%;
+    padding-top: 57.5%;
+    right: 0;
+    background: #ffd9e0;
+    border-radius: 0px calc(5vh - 20px) calc(5vh - 20px) 0px;
+  }
 
-    &__pinkRect {
-        position: absolute;
-        width: 47%;
-        padding-top: 57.5%;
-        right: 0;
-        background: #FFD9E0;
-        border-radius: 0px 5vh 5vh 0px;
-    }
+  &__greyRect {
+    position: absolute;
+    background: #898989;
+    width: 90%;
+    left: 0;
+    left: 4%;
+    height: 0.5vh;
+    top: calc(20% + 2.3vh);
+    z-index: 1;
+  }
 
-    &__moon {
-        position: absolute;
-        left: 0px;
-        bottom: 50%;
-        width: 20%;
-        z-index: -500;
-    }
+  &__greyRect--variant {
+    background: linear-gradient(
+      270deg,
+      #898989 61.73%,
+      rgba(137, 137, 137, 0) 100%
+    );
+    width: 100%;
+    height: 0.2vh;
+    margin-top: -6vh;
+  }
+
+  &__moon {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 20%;
+    z-index: -500;
+  }
 }

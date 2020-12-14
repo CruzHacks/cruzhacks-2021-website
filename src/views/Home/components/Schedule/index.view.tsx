@@ -1,30 +1,88 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-// import { useState } from "react";
+import { useState } from "react";
 import * as React from "react";
 import "./schedule.scss";
 
 const scheduleItems = [
   {
     date: "Friday, January 15, 2021",
+    events: [
+      { event: "Event Begins", time: "5:00 pm" },
+      { event: "Opening Ceremony", time: "7:00 pm" },
+      { event: "Hacking Begins!", time: "9:00 pm" },
+      { event: "Ongoing Workshops", time: "10:00 pm" },
+    ],
   },
   {
     date: "Saturday, January 16, 2021",
+    events: [{ event: "Ongoing Workshops", time: "10:30 am" }],
   },
   {
     date: "Sunday, January 17, 2021",
+    events: [
+      { event: "Project Submissions", time: "10:00 am" },
+      { event: "Judging", time: "11:30 am" },
+      { event: "Closing Ceremony", time: "2:00 pm" },
+      { event: "Event Ends", time: "4:00 pm" },
+    ],
   },
 ];
 const ScheduleComponent: React.FC = () => {
-  // const [selectedDay] = useState(1);
+  const changeDay = (day: number) => {
+    const prevActive = document.getElementById(`day${selectedDay + 1}`);
+    if (prevActive) {
+      prevActive.classList.remove("Schedule__tab--variant");
+      prevActive.style.zIndex = "-3";
+    }
+    const currActive = document.getElementById(`day${day}`);
+    if (currActive) {
+      currActive.classList.add("Schedule__tab--variant");
+      currActive.style.zIndex = "0";
+      setSelectedDay(day - 1);
+    }
+  };
+  const [selectedDay, setSelectedDay] = useState(0);
   return (
     <div className="Schedule">
       <div className="Schedule__container">
         <div className="Schedule__whiteRect">
           <div className="Schedule__title">General Schedule</div>
-          <div className="Schedule__date">{scheduleItems[0].date}</div>
-          <div className="Schedule__tab Schedule__dayOne">Day 1</div>
-          <div className="Schedule__tab Schedule__dayTwo">Day 2</div>
-          <div className="Schedule__tab Schedule__dayThree">Day 3</div>
+          <div className="Schedule__date">
+            {scheduleItems[selectedDay].date}
+          </div>
+          <div className="Schedule__greyRect"></div>
+          <div className="Schedule__eventContainer">
+            {scheduleItems[selectedDay].events.map((event) => {
+              return (
+                <div className="Schedule__event" key={event.event}>
+                  <div className="Schedule__eventText">{event.event}</div>
+                  <div className="Schedule__timeText">{event.time}</div>
+                  <div className="Schedule__greyRect--variant"></div>
+                </div>
+              );
+            })}
+          </div>
+          <div
+            id="day1"
+            onClick={() => changeDay(1)}
+            className="Schedule__tab Schedule__dayOne Schedule__tab--variant"
+          >
+            Day 1
+          </div>
+          <div
+            id="day2"
+            onClick={() => changeDay(2)}
+            className="Schedule__tab Schedule__dayTwo"
+          >
+            Day 2
+          </div>
+          <div
+            id="day3"
+            onClick={() => changeDay(3)}
+            className="Schedule__tab Schedule__dayThree"
+          >
+            Day 3
+          </div>
         </div>
         <div className="Schedule__pinkRect"></div>
         <div className="Schedule__whiteRect--variant"></div>
