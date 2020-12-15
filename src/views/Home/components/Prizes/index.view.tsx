@@ -1,5 +1,6 @@
 import React from "react";
 import "./prizes.scss";
+import { ReactComponent as Background } from "images/components/prizes/background.svg";
 import { ReactComponent as HealthHacksIcon } from "images/components/prizes/health_hacks.svg";
 import { ReactComponent as EarthHacksIcon } from "images/components/prizes/earth_hacks.svg";
 import { ReactComponent as JusticeHacksIcon } from "images/components/prizes/justice_hacks.svg";
@@ -47,19 +48,22 @@ const topics = [
 const PrizesComponent: React.FC = () => {
   return (
     <div className="Prizes">
-      <div className="Prizes__title">Topics</div>
-      <div className="Prizes__boxContainer">
-        {Object.values(topics).map(({ title, icon, text }) => {
-          return (
-            <div className="Prizes__box" key={title}>
-              <div className="Prizes__boxTop">
-                <div className="Prizes__prizeIcon">{icon}</div>
-                <div className="Prizes__prizeTitle">{title}</div>
+      <Background className="Prizes__background" />
+      <div className="Prizes__container">
+        <div className="Prizes__title">Topics</div>
+        <div className="Prizes__boxContainer">
+          {Object.values(topics).map(({ title, icon, text }) => {
+            return (
+              <div className="Prizes__box" key={title}>
+                <div className="Prizes__boxTop">
+                  <div className="Prizes__prizeIcon">{icon}</div>
+                  <div className="Prizes__prizeTitle">{title}</div>
+                </div>
+                <div className="Prizes__boxBottom">{text}</div>
               </div>
-              <div className="Prizes__boxBottom">{text}</div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
