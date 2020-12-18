@@ -2,7 +2,11 @@
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
+<<<<<<< HEAD
 $font-family-source-base: "Source Code Pro", sans-serif;
+=======
+$font-family-source-base: source code pro;
+>>>>>>> fixed linting issues
 
 @mixin title-text {
   margin: 0;

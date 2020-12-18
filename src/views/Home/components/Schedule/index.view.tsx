@@ -29,21 +29,6 @@ const scheduleItems = [
   },
 ];
 const ScheduleComponent: React.FC = () => {
-  /*
-  const changeDay = (day: number) => {
-    const prevActive = document.getElementById(`day${selectedDay + 1}`);
-    if (prevActive) {
-      prevActive.classList.remove("Schedule__tab--variant");
-      prevActive.style.zIndex = "-3";
-    }
-    const currActive = document.getElementById(`day${day}`);
-    if (currActive) {
-      currActive.classList.add("Schedule__tab--variant");
-      currActive.style.zIndex = "0";
-      setSelectedDay(day - 1);
-    }
-  };
-  */
   const [selectedDay, setSelectedDay] = useState(0);
   return (
     <div className="Schedule">
