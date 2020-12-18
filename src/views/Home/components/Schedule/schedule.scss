@@ -1,4 +1,5 @@
 @use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
 .Schedule {
   height: 1000px;
@@ -23,7 +24,7 @@
     width: 100%;
     height: auto;
     position: absolute;
-    background: #fdfdee;
+    background: var(--white__off);
     box-shadow: 0px 0px 20px 11px rgba(89, 93, 130, 0.5);
     border-radius: calc(5vh - 20px);
   }
@@ -31,37 +32,40 @@
   &__tab {
     @include typography.description;
 
-    background: #ffd9e0;
-    border-radius: calc(6vh - 15px);
+    background: var(--pink__light);
+    border-radius: 5vh;
     height: calc((57.5% / 3) * 2);
     width: calc(57.9% / 3);
     padding-top: 2%;
     text-align: center;
-    color: #f06c84;
+    color: var(--grey__dark);
     transform: rotate(-90deg);
     min-height: 0.5em;
+    z-index: -3;
+    &--variant {
+      z-index: 0;
+      background: var(--white__off);
+      color: var(--pink);
+    }
+    
+     @include responsiveness.respond(tab-port) {
+      border-radius: 3vh;
+    }
   }
-
-  &__tab--variant {
-    z-index: 0;
-    background: #fdfdee;
-  }
+  
   &__dayOne {
-    z-index: 0;
     position: absolute;
     left: -5%;
     top: -4.4%;
   }
 
   &__dayTwo {
-    z-index: -3;
     position: absolute;
     left: -5%;
     top: 28.9%;
   }
 
   &__dayThree {
-    z-index: -3;
     position: absolute;
     left: -5%;
     top: 62.5%;
@@ -70,32 +74,21 @@
   &__event {
     width: 100%;
     position: relative;
-    flex-grow: 1;
+    height: 3em;
   }
 
   &__eventText {
-    position: relative;
-    font-family: Source Code Pro;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 2px;
+    @include typography.schedulePurple-text;
+    position: absolute;
+    left: 0;
     padding-left: 20%;
-    color: #1a1542;
   }
 
   &__timeText {
-    position: relative;
-    top: -2.2em;
-    right: -35vw;
-    font-family: Source Code Pro;
-    font-style: italic;
-    font-weight: 500;
-    text-align: left;
-    margin-left: auto;
-    font-size: 20px;
-    line-height: 60px;
-    color: #898989;
+    @include typography.scheduleTime-text;
+    position: absolute;
+    padding-right: 2em;
+    right: 0;
   }
 
   &__dayText {
@@ -106,28 +99,34 @@
     bottom: 40%;
     margin-right: 20px;
     left: calc(-2.3vw + 10px);
-    color: #f06c84;
+    color: var(--pink);
     transform: rotate(-90deg);
   }
 
   &__title {
-    @include typography.title-text;
+    @include typography.scheduleHeader-text;
 
     position: absolute;
-    font-size: 20px !important;
     padding-left: var(--large-spacer);
     z-index: 1;
+    padding-top: var(--medium-spacer);
     margin-bottom: var(--large-spacer);
     top: 0;
-    color: #f06c84;
+
+    @include responsiveness.respond(tab-port) {
+      padding-top: 0;
+    }
+
+
   }
 
   &__eventContainer {
-    overflow: hidden;
     position: absolute;
     top: calc(23% + 2.3vh);
     left: 4%;
+    height: calc(100% - (23% + 2.3vh));
     width: 90%;
+    padding-left: 3%;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -135,14 +134,12 @@
   }
 
   &__date {
-    @include typography.title-text;
+    @include typography.schedulePurple-text;
 
-    font-size: 20px !important;
     position: absolute;
     padding-left: var(--large-spacer);
     z-index: 1;
-    top: 1em;
-    color: #1a1542;
+    top: 15%;
   }
   
   &__whiteRect--variant {
@@ -150,8 +147,8 @@
     padding-top: 57.5%;
     right: 35%;
     width: 30%;
-    background: #fdfdee;
-    border-radius: 0px calc(5vh - 10px) calc(5vh - 10px) 0px;
+    background: var(--white__off);
+    border-radius: 0px calc(5vh - 20px) calc(5vh - 10px) 0px;
   }
 
   &__pinkRect {
@@ -159,13 +156,13 @@
     width: 47%;
     padding-top: 57.5%;
     right: 0;
-    background: #ffd9e0;
+    background: var(--pink__light);
     border-radius: 0px calc(5vh - 20px) calc(5vh - 20px) 0px;
   }
 
   &__greyRect {
     position: absolute;
-    background: #898989;
+    background: var(--grey__dark);
     width: 90%;
     left: 0;
     left: 4%;
@@ -175,14 +172,16 @@
   }
 
   &__greyRect--variant {
+    position: absolute;
     background: linear-gradient(
       270deg,
-      #898989 61.73%,
+      var(--grey__dark) 61.73%,
       rgba(137, 137, 137, 0) 100%
     );
     width: 100%;
-    height: 0.2vh;
-    margin-top: -6vh;
+    height: 1px;
+    bottom: 0;
+    margin-bottom: 5px;
   }
 
   &__moon {

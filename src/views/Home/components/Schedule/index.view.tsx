@@ -2,6 +2,7 @@
 import { useState } from "react";
 import * as React from "react";
 import "./schedule.scss";
+import cx from "classnames";
 
 const scheduleItems = [
   {
@@ -28,6 +29,7 @@ const scheduleItems = [
   },
 ];
 const ScheduleComponent: React.FC = () => {
+  /*
   const changeDay = (day: number) => {
     const prevActive = document.getElementById(`day${selectedDay + 1}`);
     if (prevActive) {
@@ -41,6 +43,7 @@ const ScheduleComponent: React.FC = () => {
       setSelectedDay(day - 1);
     }
   };
+  */
   const [selectedDay, setSelectedDay] = useState(0);
   return (
     <div className="Schedule">
@@ -64,22 +67,40 @@ const ScheduleComponent: React.FC = () => {
           </div>
           <div
             id="day1"
-            onClick={() => changeDay(1)}
-            className="Schedule__tab Schedule__dayOne Schedule__tab--variant"
+            onClick={() => setSelectedDay(0)}
+            className={cx(
+              {
+                "Schedule__tab--variant": selectedDay === 0,
+              },
+              "Schedule__tab",
+              "Schedule__dayOne"
+            )}
           >
             Day 1
           </div>
           <div
             id="day2"
-            onClick={() => changeDay(2)}
-            className="Schedule__tab Schedule__dayTwo"
+            onClick={() => setSelectedDay(1)}
+            className={cx(
+              {
+                "Schedule__tab--variant": selectedDay === 1,
+              },
+              "Schedule__tab",
+              "Schedule__dayTwo"
+            )}
           >
             Day 2
           </div>
           <div
             id="day3"
-            onClick={() => changeDay(3)}
-            className="Schedule__tab Schedule__dayThree"
+            onClick={() => setSelectedDay(2)}
+            className={cx(
+              {
+                "Schedule__tab--variant": selectedDay === 2,
+              },
+              "Schedule__tab",
+              "Schedule__dayThree"
+            )}
           >
             Day 3
           </div>
