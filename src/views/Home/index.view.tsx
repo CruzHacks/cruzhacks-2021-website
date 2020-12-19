@@ -68,28 +68,27 @@ const HomepageView: React.FC = () => {
     <>
       <MLHBanner />
       <div className="Homepage">
-        <Background>
-          <HeroView pageName={"Home"} title={title} description={description}>
-            <div className="Homepage__emailSubscriptionContainer">
-              <EmailSubscriptionForm />
+        <Background />
+        <HeroView pageName={"Home"} title={title} description={description}>
+          <div className="Homepage__emailSubscriptionContainer">
+            <EmailSubscriptionForm />
+          </div>
+          {Object.entries(buttonProps).map(([type, props]) => (
+            <div key={type} className="Homepage__buttonContainer">
+              {Object.entries(props).map(([_, buttonProp]) => (
+                <Button
+                  key={buttonProp.text}
+                  className={cx("Homepage__button", {
+                    "Homepage__button--secondary": type === "secondary",
+                  })}
+                  {...buttonProp}
+                />
+              ))}
             </div>
-            {Object.entries(buttonProps).map(([type, props]) => (
-              <div key={type} className="Homepage__buttonContainer">
-                {Object.entries(props).map(([_, buttonProp]) => (
-                  <Button
-                    key={buttonProp.text}
-                    className={cx("Homepage__button", {
-                      "Homepage__button--secondary": type === "secondary",
-                    })}
-                    {...buttonProp}
-                  />
-                ))}
-              </div>
-            ))}
-          </HeroView>
+          ))}
+        </HeroView>
 
-          <MilestonesComponent />
-        </Background>
+        <MilestonesComponent />
       </div>
     </>
   );
