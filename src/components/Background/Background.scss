@@ -3,7 +3,9 @@
 .Background {
   position: relative;
   background: var(--darkmode);
-  height: 3000px;
+  height: 4000px;
+  min-height: fit-content;
+  overflow: hidden;
   width: 100%;
   z-index: -3;
 
@@ -11,11 +13,13 @@
     z-index: -1;
     position: absolute;
     width: 100%;
-    bottom: calc(100% / 7 * 3);
+    height: 75%;
 
     &--variant {
       position: absolute;
+      background: none;
       width: 100%;
+      transform: scale(1.03);
       bottom: 0;
     }
   }
