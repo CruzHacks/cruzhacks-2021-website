@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({
   children,
 }: HeroProps) => {
   return (
-    <div className="Hero__homeView">
+    <>
       <div className="Hero__container">
         <div className="Hero__visual">
           <PostcardStack pageName={pageName} />
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({
           {children}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

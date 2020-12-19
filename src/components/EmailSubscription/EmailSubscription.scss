@@ -16,7 +16,8 @@
 
     border: none;
     width: 80%;
-    height: calc(10px + 2vh);
+    height: calc(25px + 1.25vh);
+    max-height: 50px;
 
     border-radius: 50px;
     margin-right: var(--large-spacer);
