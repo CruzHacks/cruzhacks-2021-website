@@ -1,3 +1,5 @@
+@use "~components/Button/Button";
+
 .Homepage {
   height: 100%;
 
@@ -7,12 +9,8 @@
   }
 
   &__button {
+    @extend .Button;
     margin-right: var(--large-spacer);
     margin-bottom: var(--medium-spacer);
-
-    &--secondary {
-      @extend .Homepage__button;
-      background: var(--light-aqua);
-    }
   }
 }
