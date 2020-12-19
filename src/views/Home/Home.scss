@@ -10,7 +10,7 @@
 
   &__button {
     @extend .Button;
-    margin-right: var(--large-spacer);
+    margin-right: 2vw;
     margin-bottom: var(--medium-spacer);
   }
 }

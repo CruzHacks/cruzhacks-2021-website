@@ -4,7 +4,6 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import cx from "classnames";
 import "./Home.scss";
 
 const title = [
@@ -65,16 +64,16 @@ const buttonProps = {
       label: "hacker sign-up button",
     },
     judge_mentor: {
-      text: "Be a judge / mentor!",
+      text: "Be a mentor!",
       link:
         "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
-      label: "judge/mentor sign-up button",
+      label: "mentor sign-up button",
     },
     sponsor: {
       text: "Be a sponsor!",
       link:
         "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
-      label: "sponsor sign-up button",
+      label: "sponsorship contact button",
     },
   },
 };
@@ -94,9 +93,7 @@ const HomepageView: React.FC = () => {
               {Object.entries(props).map(([_, buttonProp]) => (
                 <Button
                   key={buttonProp.text}
-                  className={cx("Homepage__button", {
-                    "Homepage__button--secondary": type === "secondary",
-                  })}
+                  className={"Homepage__button"}
                   {...buttonProp}
                 />
               ))}

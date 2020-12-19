@@ -21,21 +21,18 @@
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
       align-content: center;
-    }
-
-    @include responsiveness.respond(phone) {
-      margin: 1em;
+      padding-top: calc(2.5px + 2.5vh);
     }
   }
 
   &__visual {
     // postcard styling
     max-width: 1000px;
-    min-width: 475px;
+    min-width: 455px;
     margin: auto;
 
     @include responsiveness.respond(desktop) {
-      max-width: calc(50vw + 100px);
+      max-width: calc(50vw + 10px);
     }
 
     @include responsiveness.respond(tab-port) {
@@ -52,30 +49,39 @@
   }
 
   &__textContainer {
-    margin: 2em var(--medium-spacer);
+    margin: 2em auto;
+    width: 55%;
+    align-items: center;
 
-    @include responsiveness.respond(tab-port) {
-      margin: 2em auto;
+    @include responsiveness.respond(phone-narrow) {
+      width: 85%;
     }
   }
 
   &__titleText {
     @include typography.title-text;
+    white-space: nowrap;
 
     &--secondary {
       @extend .Hero__titleText;
       color: var(--wedgewood__darker);
     }
+
+    
   }
 
   &__description {
-    max-width: 425px;
+    max-width: 25em;
     margin: 2em 0;
 
     @include typography.description;
 
     @include responsiveness.respond(tab-land) {
       margin: 1.1em 0;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin: 1.1em auto;
     }
   }
 }

@@ -6,11 +6,11 @@
   z-index: 0;
 
   @include typography.button-text;
-  height: calc(25px + 2.5vh);
-  max-height: 75px;
+  max-height: fit-content;
+  min-width: 80px;
   background: var(--wedgewood);
   border-radius: 15px;
-  padding: var(--extra-small-spacer) var(--large-spacer);
+  padding: calc(10px + 0.5vw) calc(5px + 1vw);
   border: none;
   cursor: pointer;
   
