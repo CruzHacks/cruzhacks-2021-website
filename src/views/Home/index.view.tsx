@@ -1,5 +1,5 @@
 import * as React from "react";
-import HeroView from "views/Hero/index.view";
+import Hero from "views/Home/components/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
@@ -22,9 +22,38 @@ const description = [
   {
     description:
       "CruzHacks is the largest hackathon in Santa Cruz. Each year, we invite hundreds of students to develop solutions to real-world problems, pursue inclusion in tech, and kindle the spirit of innovation.  ",
+    style: "description",
+    line: 0,
   },
   {
     description: "This year, we’re bringing CruzHacks to you.  ",
+    style: "description",
+    line: 1,
+  },
+  {
+    description: (
+      <>
+        <a
+          className=""
+          href="http://mlh.io/code-of-conduct"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Our Code of Conduct
+        </a>
+
+        <a
+          className=""
+          href="mailto:contact@cruzhacks.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contact Us
+        </a>
+      </>
+    ),
+    style: "details",
+    line: 3,
   },
 ];
 
@@ -48,18 +77,6 @@ const buttonProps = {
       label: "sponsor sign-up button",
     },
   },
-  secondary: {
-    codeOfConduct: {
-      text: "Our Code of Conduct",
-      link: "http://mlh.io/code-of-conduct",
-      label: "mlh code of conduct",
-    },
-    contactUs: {
-      text: "Contact Us",
-      link: "mailto:contact@cruzhacks.com",
-      label: "contact us",
-    },
-  },
 };
 
 const HomepageView: React.FC = () => {
@@ -68,7 +85,7 @@ const HomepageView: React.FC = () => {
       <MLHBanner />
       <div className="Homepage">
         <Background>
-          <HeroView pageName={"Home"} title={title} description={description}>
+          <Hero pageName={"Home"} title={title} description={description}>
             <div className="Homepage__emailSubscriptionContainer">
               <EmailSubscriptionForm />
             </div>
@@ -85,7 +102,7 @@ const HomepageView: React.FC = () => {
                 ))}
               </div>
             ))}
-          </HeroView>
+          </Hero>
         </Background>
       </div>
     </>

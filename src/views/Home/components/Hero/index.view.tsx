@@ -1,11 +1,12 @@
 import * as React from "react";
-import cx from "classnames";
 import PostcardStack from "components/PostcardStack/index.view";
 
 import "./Hero.scss";
 
 interface Description {
-  description: string;
+  description: string | React.ReactElement;
+  style: string;
+  line: number;
 }
 
 interface Title {
@@ -20,28 +21,26 @@ interface HeroProps {
   children?: React.ReactNode;
 }
 
-const HeroView: React.FC<HeroProps> = ({
+const Hero: React.FC<HeroProps> = ({
   pageName,
   title,
   description,
   children,
 }: HeroProps) => {
   return (
-    <div
-      className={cx("HeroView", { HeroView__homeView: pageName === "Home" })}
-    >
-      <div className="HeroView__container">
-        <div className="HeroView__visual">
+    <div className="Hero__homeView">
+      <div className="Hero__container">
+        <div className="Hero__visual">
           <PostcardStack pageName={pageName} />
         </div>
-        <div className="HeroView__textContainer">
+        <div className="Hero__textContainer">
           {title.map((item) => (
-            <h1 className={`HeroView__titleText${item.style}`} key={item.text}>
+            <h1 className={`Hero__titleText${item.style}`} key={item.text}>
               {item.text}
             </h1>
           ))}
           {description.map((item) => (
-            <p key={item.description} className="HeroView__description">
+            <p className={`Hero__${item.style}`} key={item.line}>
               {item.description}
             </p>
           ))}
@@ -52,4 +51,4 @@ const HeroView: React.FC<HeroProps> = ({
   );
 };
 
-export default HeroView;
+export default Hero;
