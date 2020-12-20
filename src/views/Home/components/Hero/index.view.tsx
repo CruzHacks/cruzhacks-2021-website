@@ -55,12 +55,12 @@ const Hero: React.FC<HeroProps> = ({
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {typeof item.description == "object"
+                  {typeof item.description === "object"
                     ? item.description.leftText
                     : null}
                 </a>
               ) : null}
-              {typeof item.description == "string" ? item.description : null}
+              {typeof item.description === "string" ? item.description : null}
               {item.linkRight ? (
                 <a
                   className="Hero__details--link"
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {typeof item.description == "object"
+                  {typeof item.description === "object"
                     ? item.description.rightText
                     : null}
                 </a>
