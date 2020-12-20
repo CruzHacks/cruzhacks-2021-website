@@ -32,7 +32,7 @@ const description = [
   {
     description: (
       <>
-        <div className="Hero__details">
+        <span className="Hero__details">
           <a
             className="Hero__details--link"
             href="http://mlh.io/code-of-conduct"
@@ -50,7 +50,7 @@ const description = [
           >
             Contact Us
           </a>
-        </div>
+        </span>
       </>
     ),
     style: "details",
