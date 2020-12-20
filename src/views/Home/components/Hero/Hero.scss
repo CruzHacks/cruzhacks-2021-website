@@ -93,7 +93,6 @@
 
     max-width: calc(30px + 38vw);
 
-
     @include responsiveness.respond(tab-port) {
       justify-content: space-around;
       max-width: 97%;
