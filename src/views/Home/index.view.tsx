@@ -30,31 +30,14 @@ const description = [
     line: 1,
   },
   {
-    description: (
-      <>
-        <span className="Hero__details">
-          <a
-            className="Hero__details--link"
-            href="http://mlh.io/code-of-conduct"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Our Code of Conduct
-          </a>
-
-          <a
-            className="Hero__details--link"
-            href="mailto:contact@cruzhacks.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contact Us
-          </a>
-        </span>
-      </>
-    ),
+    description: {
+      rightText: "Our Code of Conduct",
+      leftText: "Contact Us",
+    },
     style: "details",
     line: 3,
+    linkRight: "http://mlh.io/code-of-conduct",
+    linkLeft: "mailto:contact@cruzhacks.com",
   },
 ];
 
