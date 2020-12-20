@@ -1,4 +1,5 @@
 @use "~stylesheets/responsiveness";
+@use "~stylesheets/variables";
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
@@ -16,6 +17,12 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   @include responsiveness.respond(tab-port) {
     line-height: 40px;
   }
+}
+
+/* title text with the 3D cyan-red effect */
+@mixin anaglyph-title-text {
+  @include title-text;
+  text-shadow: 3px 3px var(--anaglyph-cyan), -2px -2px var(--anaglyph-red);
 }
 
 @mixin description {
