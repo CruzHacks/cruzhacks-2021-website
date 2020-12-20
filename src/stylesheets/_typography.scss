@@ -1,5 +1,4 @@
 @use "~stylesheets/responsiveness";
-@use "~stylesheets/variables";
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
@@ -19,21 +18,10 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   }
 }
 
-///////////
-// To be removed after #91
-
 /* title text with the 3D cyan-red effect */
 @mixin anaglyph-title-text {
   @include title-text;
   text-shadow: 3px 3px var(--anaglyph-cyan), -2px -2px var(--anaglyph-red);
-}
-
-///////////
-
-/* smaller than title-text but bigger than description */
-@mixin title-text-secondary {
-  @include title-text;
-  @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
 }
 
 @mixin description {

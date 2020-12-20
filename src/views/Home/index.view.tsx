@@ -4,6 +4,7 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
+import MilestonesComponent from "./components/Milestones/index.view";
 import PrizesComponent from "./components/Prizes/index.view";
 import cx from "classnames";
 import "./Home.scss";
@@ -68,28 +69,27 @@ const HomepageView: React.FC = () => {
     <>
       <MLHBanner />
       <div className="Homepage">
-        <Background>
-          <HeroView pageName={"Home"} title={title} description={description}>
-            <div className="Homepage__emailSubscriptionContainer">
-              <EmailSubscriptionForm />
+        <Background />
+        <HeroView pageName={"Home"} title={title} description={description}>
+          <div className="Homepage__emailSubscriptionContainer">
+            <EmailSubscriptionForm />
+          </div>
+          {Object.entries(buttonProps).map(([type, props]) => (
+            <div key={type} className="Homepage__buttonContainer">
+              {Object.entries(props).map(([_, buttonProp]) => (
+                <Button
+                  key={buttonProp.text}
+                  className={cx("Homepage__button", {
+                    "Homepage__button--secondary": type === "secondary",
+                  })}
+                  {...buttonProp}
+                />
+              ))}
             </div>
-            {Object.entries(buttonProps).map(([type, props]) => (
-              <div key={type} className="Homepage__buttonContainer">
-                {Object.entries(props).map(([_, buttonProp]) => (
-                  <Button
-                    key={buttonProp.text}
-                    className={cx("Homepage__button", {
-                      "Homepage__button--secondary": type === "secondary",
-                    })}
-                    {...buttonProp}
-                  />
-                ))}
-              </div>
-            ))}
-          </HeroView>
+          ))}
+        </HeroView>
 
-          <PrizesComponent />
-        </Background>
+        <MilestonesComponent />
       </div>
     </>
   );
