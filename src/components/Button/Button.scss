@@ -5,7 +5,6 @@
   transition: opacity 0.4s ease 0.27s, transform 0.2s ease, 0.8s filter ease;
   z-index: 0;
 
-  @include typography.button-text;
   max-height: fit-content;
   min-width: 80px;
   background: var(--wedgewood);
@@ -16,6 +15,7 @@
 
   &__link {
     text-decoration: none;
+    @include typography.button-text;
     z-index: 1;
   }
 
