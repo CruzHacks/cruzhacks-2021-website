@@ -8,7 +8,7 @@ describe("Homepage", () => {
   it("displays Homepage with appropriate components", async () => {
     const homepageDiv = await page.$(".Homepage");
     expect(homepageDiv).not.toBeNull();
-    const heroHomepageDiv = await page.$(".Hero__homeView");
+    const heroHomepageDiv = await page.$(".Hero");
     expect(heroHomepageDiv).not.toBeNull();
     const postcardStack = await homepageDiv.$(".PostcardStack");
     expect(postcardStack).not.toBeNull();
