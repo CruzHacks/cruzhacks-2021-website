@@ -32,23 +32,25 @@ const description = [
   {
     description: (
       <>
-        <a
-          className=""
-          href="http://mlh.io/code-of-conduct"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Our Code of Conduct
-        </a>
+        <div className="Hero__details">
+          <a
+            className="Hero__details--link"
+            href="http://mlh.io/code-of-conduct"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Our Code of Conduct
+          </a>
 
-        <a
-          className=""
-          href="mailto:contact@cruzhacks.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Contact Us
-        </a>
+          <a
+            className="Hero__details--link"
+            href="mailto:contact@cruzhacks.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Contact Us
+          </a>
+        </div>
       </>
     ),
     style: "details",

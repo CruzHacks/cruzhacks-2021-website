@@ -78,4 +78,27 @@
       margin: 1.1em auto;
     }
   }
+
+  &__details {
+    display: flex;
+    justify-content: space-around;
+    width: 87%;
+    margin: 0 0 1em;
+
+    
+
+    text-decoration: none;
+
+    max-width: calc(30px + 38vw);
+
+    @include responsiveness.respond(tab-port) {
+      justify-content: space-around;
+      max-width: 97%;
+    }
+  }
+
+  &__details--link {
+    @include typography.description;
+    font-style: italic;
+  }
 }
