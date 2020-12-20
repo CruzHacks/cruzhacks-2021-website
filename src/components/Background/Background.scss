@@ -1,7 +1,7 @@
 @use "~stylesheets/typography";
 
 .Background {
-  position: relative;
+  position: absolute;
   background: var(--darkmode);
   height: 4000px;
   min-height: fit-content;
