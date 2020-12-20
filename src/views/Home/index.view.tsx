@@ -90,6 +90,7 @@ const HomepageView: React.FC = () => {
         </HeroView>
 
         <MilestonesComponent />
+        <PrizesComponent />
       </div>
     </>
   );

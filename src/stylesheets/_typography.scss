@@ -18,6 +18,12 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   }
 }
 
+/* smaller than title-text but bigger than description */
+@mixin title-text-secondary {
+  @include title-text;
+  @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
+}
+
 /* title text with the 3D cyan-red effect */
 @mixin anaglyph-title-text {
   @include title-text;
