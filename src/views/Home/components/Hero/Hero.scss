@@ -45,9 +45,13 @@
   }
 
   &__textContainer {
-    margin: 2em auto;
+    margin: 1.5em;
     width: 55%;
     align-items: center;
+
+    @include responsiveness.respond(tab-port) {
+      margin: 2em auto;
+    }
 
     @include responsiveness.respond(phone-narrow) {
       width: 85%;
@@ -89,6 +93,7 @@
 
     max-width: calc(30px + 38vw);
 
+
     @include responsiveness.respond(tab-port) {
       justify-content: space-around;
       max-width: 97%;
@@ -96,6 +101,8 @@
   }
 
   &__details--link {
+    margin: 0 1em 0 1em;
+
     @include typography.description;
     font-style: italic;
   }
