@@ -31,13 +31,13 @@ const description = [
   },
   {
     description: {
-      rightText: "Our Code of Conduct",
-      leftText: "Contact Us",
+      rightText: "Contact Us",
+      leftText: "Our Code of Conduct",
     },
     style: "details",
     line: 3,
-    linkRight: "http://mlh.io/code-of-conduct",
-    linkLeft: "mailto:contact@cruzhacks.com",
+    linkRight: "mailto:contact@cruzhacks.com",
+    linkLeft: "http://mlh.io/code-of-conduct",
   },
 ];
 
