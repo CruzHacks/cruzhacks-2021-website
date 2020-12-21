@@ -1,11 +1,10 @@
 import * as React from "react";
-import HeroView from "views/Hero/index.view";
+import Hero from "views/Home/components/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import MilestonesComponent from "./components/Milestones/index.view";
-import cx from "classnames";
+
 import "./Home.scss";
 
 const title = [
@@ -23,9 +22,23 @@ const description = [
   {
     description:
       "CruzHacks is the largest hackathon in Santa Cruz. Each year, we invite hundreds of students to develop solutions to real-world problems, pursue inclusion in tech, and kindle the spirit of innovation.  ",
+    style: "description",
+    line: 0,
   },
   {
     description: "This year, we’re bringing CruzHacks to you.  ",
+    style: "description",
+    line: 1,
+  },
+  {
+    description: {
+      rightText: "Contact Us",
+      leftText: "Our Code of Conduct",
+    },
+    style: "details",
+    line: 3,
+    linkRight: "mailto:contact@cruzhacks.com",
+    linkLeft: "http://mlh.io/code-of-conduct",
   },
 ];
 
@@ -37,28 +50,16 @@ const buttonProps = {
       label: "hacker sign-up button",
     },
     judge_mentor: {
-      text: "Be a judge / mentor!",
+      text: "Be a mentor!",
       link:
         "https://docs.google.com/forms/d/e/1FAIpQLScVmW-gIcKGrp7fBVeH5i8G1VQ83IwmKrkIo_J2PeRj3PRYTw/viewform",
-      label: "judge/mentor sign-up button",
+      label: "mentor sign-up button",
     },
     sponsor: {
       text: "Be a sponsor!",
       link:
         "https://drive.google.com/file/d/127G6lE1SFVQUeC3wSMdMwn12E9sVFCyU/view",
-      label: "sponsor sign-up button",
-    },
-  },
-  secondary: {
-    codeOfConduct: {
-      text: "Our Code of Conduct",
-      link: "http://mlh.io/code-of-conduct",
-      label: "mlh code of conduct",
-    },
-    contactUs: {
-      text: "Contact Us",
-      link: "mailto:contact@cruzhacks.com",
-      label: "contact us",
+      label: "sponsorship contact button",
     },
   },
 };
@@ -69,7 +70,7 @@ const HomepageView: React.FC = () => {
       <MLHBanner />
       <div className="Homepage">
         <Background />
-        <HeroView pageName={"Home"} title={title} description={description}>
+        <Hero pageName={"Home"} title={title} description={description}>
           <div className="Homepage__emailSubscriptionContainer">
             <EmailSubscriptionForm />
           </div>
@@ -78,17 +79,13 @@ const HomepageView: React.FC = () => {
               {Object.entries(props).map(([_, buttonProp]) => (
                 <Button
                   key={buttonProp.text}
-                  className={cx("Homepage__button", {
-                    "Homepage__button--secondary": type === "secondary",
-                  })}
+                  className={"Homepage__button"}
                   {...buttonProp}
                 />
               ))}
             </div>
           ))}
-        </HeroView>
-
-        <MilestonesComponent />
+        </Hero>
       </div>
     </>
   );
