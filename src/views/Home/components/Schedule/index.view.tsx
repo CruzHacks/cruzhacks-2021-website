@@ -100,6 +100,34 @@ const ScheduleComponent: React.FC = () => {
         key="moon"
         id="moon"
       />
+      <img
+        src={require("images/schedule/stars.svg").default}
+        className="Schedule__stars"
+        alt="stars"
+        key="stars"
+        id="stars"
+      />
+      <img
+        src={require("images/schedule/comets.svg").default}
+        className="Schedule__comets"
+        alt="comets"
+        key="comets"
+        id="comets"
+      />
+      <img
+        src={require("images/schedule/constellation.svg").default}
+        className="Schedule__constellation"
+        alt="constellation"
+        key="constellation"
+        id="constellation"
+      />
+      <img
+        src={require("images/schedule/grid.svg").default}
+        className="Schedule__grid"
+        alt="grid"
+        key="grid"
+        id="grid"
+      />
     </div>
   );
 };
