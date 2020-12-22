@@ -2,20 +2,24 @@
 @use "~stylesheets/responsiveness";
 
 .Schedule {
-  height: 1000px;
-  overflow: auto;
-  width: 100%;
   position: relative;
+  z-index: -3;
+  display: flex;
+  overflow: hidden;
+  min-height: 100%;
 
-  &__container {
+  &__schedule {
     position: absolute;
     margin: auto;
     left: 25%;
-    bottom: 20%;
+    bottom: 21%;
     width: 50%;
     min-width: 300px;
     height: 35%;
-    z-index: -4;
+
+    @include responsiveness.respond(tab-port) {
+      left: 10%;
+    }
   }
 
   &__whiteRect {
@@ -56,7 +60,7 @@
   &__dayOne {
     position: absolute;
     left: -5%;
-    top: -4.4%;
+    top: -4%;
   }
 
   &__dayTwo {
@@ -79,6 +83,7 @@
 
   &__eventText {
     @include typography.schedulepurple-text;
+
     position: absolute;
     left: 0;
     padding-left: 20%;
@@ -185,9 +190,13 @@
   &__moon {
     position: absolute;
     left: 0;
-    bottom: 50%;
+    bottom: 40%;
     width: 20%;
     z-index: -5;
+
+    @include responsiveness.respond(tab-port) {
+      bottom: 60%;
+    }
   }
 
   &__stars {
@@ -213,7 +222,7 @@
 
     @include responsiveness.respond(tab-port) {
       width: 500px;
-      bottom: 55vh;
+      bottom: 40vh;
     }
   }
 
@@ -225,15 +234,20 @@
 
     @include responsiveness.respond(tab-port) {
       width: 100px;
-      bottom: 40vh;
+      bottom: 20vh;
     }
   }
 
   &__grid {
     position: absolute;
-    left: 56%;
-    width: 90%;
-    opacity: 0.5;
+    left: 50%;
+    bottom: 10%;
+    width: 100%;
+    opacity: 0.9;
     z-index: -6;
+
+    @include responsiveness.respond(tab-port) {
+      top: 0;
+    }
   }
 }

@@ -32,7 +32,7 @@ const ScheduleComponent: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(0);
   return (
     <div className="Schedule">
-      <div className="Schedule__container">
+      <div className="Schedule__schedule">
         <div className="Schedule__whiteRect">
           <div className="Schedule__title">General Schedule</div>
           <div className="Schedule__date">
