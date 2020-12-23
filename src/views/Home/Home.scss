@@ -1,7 +1,7 @@
 @use "~components/Button/Button";
 
 .Homepage {
-  height: 100%;
+  height: fit-content;
 
   &__buttonContainer {
     display: flex;

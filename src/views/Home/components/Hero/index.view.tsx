@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ReactComponent as Background } from "images/components/hero/grid.svg";
 import PostcardStack from "components/PostcardStack/index.view";
 
 import "./Hero.scss";
@@ -37,6 +38,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
       <div className="Hero__container">
+        <Background className="Hero__grid" />
         <div className="Hero__visual">
           <PostcardStack pageName={pageName} />
         </div>

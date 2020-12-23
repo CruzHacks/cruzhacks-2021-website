@@ -8,11 +8,14 @@
 
   &__container {
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
     margin: auto;
-    max-width: 1800px;
+    width: 100vw;
+    max-width: 175em;
     padding-top: calc(65px + 10vh);
     flex-grow: 4;
+    justify-content: space-around;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
@@ -22,6 +25,26 @@
       flex-wrap: wrap;
       align-content: center;
       padding-top: calc(2.5px + 2.5vh);
+    }
+  }
+
+  &__background {
+    height: 100%;
+  }
+
+  &__grid {
+    position: absolute;
+    transform: scaleY(-1);
+    z-index: -1;
+    bottom: 0;
+    left: 4vw;
+    max-width: 55%;
+    max-height: 50%;
+
+    @include responsiveness.respond(tab-port) {
+      left: 0;
+      max-width: calc(20vw + 15vh);
+      min-height: 75%;
     }
   }
 
@@ -45,8 +68,8 @@
   }
 
   &__textContainer {
-    margin: 1.5em;
-    width: 55%;
+    margin: auto;
+    max-width: 55%;
     align-items: center;
 
     @include responsiveness.respond(tab-port) {
@@ -54,7 +77,7 @@
     }
 
     @include responsiveness.respond(phone-narrow) {
-      width: 85%;
+      max-width: 85%;
     }
   }
 
