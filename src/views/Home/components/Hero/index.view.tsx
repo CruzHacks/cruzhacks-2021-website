@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ReactComponent as Background } from "images/components/hero/grid.svg";
+import { ReactComponent as Grid } from "images/components/hero/grid.svg";
+import { ReactComponent as Computer } from "images/components/hero/computer.svg";
 import PostcardStack from "components/PostcardStack/index.view";
-
 import "./Hero.scss";
 
 type DescriptionDetail = {
@@ -38,7 +38,8 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
       <div className="Hero__container">
-        <Background className="Hero__grid" />
+        <Grid className="Hero__grid" />
+        <Computer className="Hero__computer" />
         <div className="Hero__visual">
           <PostcardStack pageName={pageName} />
         </div>

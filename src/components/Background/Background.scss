@@ -1,4 +1,5 @@
 @use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
 .Background {
   position: absolute;
@@ -22,6 +23,10 @@
       width: 100%;
       transform: scale(1.03);
       bottom: 0;
+    }
+
+    @include responsiveness.respond(big-desktop) {
+      top: 0;
     }
   }
 
