@@ -54,6 +54,7 @@
     &__text--answer {
         @include typography.description;
         font-family: Source Code Pro;
+        font-weight: normal;
         color: black;
         padding-left: 1em;
         padding-right: 1em;
