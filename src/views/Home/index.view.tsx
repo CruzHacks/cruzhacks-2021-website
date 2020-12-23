@@ -4,6 +4,7 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
+import FAQ from "views/Home/components/FAQ/index.view";
 
 import "./Home.scss";
 
@@ -86,6 +87,7 @@ const HomepageView: React.FC = () => {
             </div>
           ))}
         </Hero>
+        <FAQ />
       </div>
     </>
   );
