@@ -40,11 +40,11 @@ const ScheduleComponent: React.FC = () => {
           </div>
           <div className="Schedule__greyRect"></div>
           <div className="Schedule__eventContainer">
-            {scheduleItems[selectedDay].events.map((event) => {
+            {scheduleItems[selectedDay].events.map(({ event, time }) => {
               return (
-                <div className="Schedule__event" key={event.event}>
-                  <div className="Schedule__eventText">{event.event}</div>
-                  <div className="Schedule__timeText">{event.time}</div>
+                <div className="Schedule__event" key={event}>
+                  <div className="Schedule__eventText">{event}</div>
+                  <div className="Schedule__timeText">{time}</div>
                   <div className="Schedule__greyRect--variant"></div>
                 </div>
               );
