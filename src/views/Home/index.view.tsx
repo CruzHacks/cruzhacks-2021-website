@@ -6,6 +6,7 @@ import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
 
 import "./Home.scss";
+import MilestonesComponent from "./components/Milestones/index.view";
 
 const title = [
   {
@@ -86,6 +87,7 @@ const HomepageView: React.FC = () => {
             </div>
           ))}
         </Hero>
+        <MilestonesComponent />
       </div>
     </>
   );

@@ -59,11 +59,11 @@
   }
 
   &__titleText {
-    @include typography.title-text;
+    @include typography.anaglyph-title-text;
     white-space: nowrap;
 
     &--secondary {
-      @extend .Hero__titleText;
+      @include typography.title-text;
       color: var(--wedgewood__darker);
     }
   }
