@@ -1,7 +1,7 @@
 import * as React from "react";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import HeroView from "views/Hero/index.view";
+import HeroView from "components/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Mission from "views/Home/components/Mission/index.view";

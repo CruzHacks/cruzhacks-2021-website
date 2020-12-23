@@ -1,9 +1,11 @@
 @use "~stylesheets/typography";
 
 .Background {
-  position: relative;
-  background: var(--dark-navy);
-  height: 3000px;
+  position: absolute;
+  background: var(--darkmode);
+  height: calc(100vh + 155vw);
+  min-height: fit-content;
+  overflow: hidden;
   width: 100%;
   z-index: -3;
 
@@ -11,18 +13,16 @@
     z-index: -1;
     position: absolute;
     width: 100%;
-    bottom: calc(100% / 7 * 3);
+    height: 95%;
+    top: 8.7%;
 
     &--variant {
       position: absolute;
+      background: none;
       width: 100%;
+      transform: scale(1.03);
       bottom: 0;
     }
-  }
-
-  &__children {
-    z-index: 999;
-    position: relative;
   }
 
   &__gradient {
