@@ -1,7 +1,8 @@
 import React from "react";
-import { ReactComponent as LeftCan } from "images/mission-can-left.svg";
-import { ReactComponent as RightCan } from "images/mission-can-right.svg";
-import { ReactComponent as Flower } from "images/mission-flower.svg";
+import { ReactComponent as Background } from "images/components/mission/background.svg";
+import { ReactComponent as LeftCan } from "images/components/mission/can-left.svg";
+import { ReactComponent as RightCan } from "images/components/mission/can-right.svg";
+import { ReactComponent as Flower } from "images/components/mission/flower.svg";
 import "./mission.scss";
 
 interface MissionProps {
@@ -15,6 +16,7 @@ const MissionComponent: React.FC<MissionProps> = ({
 }: MissionProps) => {
   return (
     <div className="Mission">
+      <Background className="Mission__background" />
       <div className="Mission--text">
         <div className="Mission__section">
           <div className="Mission__highlight" />
