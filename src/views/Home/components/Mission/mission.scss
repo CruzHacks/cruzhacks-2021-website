@@ -1,3 +1,124 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/responsiveness";
+@use "~stylesheets/typography";
+@use "~stylesheets/variables";
 
-/* Delete these lines when you begin development */
+.Mission {
+  position: relative;
+  max-width: 1800px;
+  margin: auto;
+
+  /* Background Layer */
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Text Layer */
+  &--text {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 22%;
+  }
+
+  &__section {
+    z-index: 2;
+
+    &:first-of-type {
+      display: flex;
+      margin-bottom: 13%;
+    }
+
+    &--subsection {
+      max-width: 100%;
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      min-width: 115%;
+    }
+  }
+
+  &__title {
+    @include typography.anaglyph-title-text;
+    padding: var(--medium-spacer) var(--extra-extra-large-spacer);
+
+    @include responsiveness.respond(phone) {
+      padding: var(--small-spacer) var(--large-spacer);
+    }
+
+    background: var(--frosted-glass);
+    mix-blend-mode: hard-light;
+    backdrop-filter: blur(4px);
+    border-radius: 58px 58px 0 0;
+  }
+
+  &__body {
+    display: flex;
+    padding: var(--medium-spacer) var(--large-spacer) var(--medium-spacer) var(--extra-extra-large-spacer);
+
+    @include responsiveness.respond(phone) {
+      padding: var(--medium-spacer) var(--medium-spacer) var(--medium-spacer) var(--extra-large-spacer);
+    }
+
+    background: linear-gradient(180deg, var(--malibu) 0%, var(--new-blue) 100%);
+    box-shadow: 0 0 22px -3px var(--heliotrope);
+    border-radius: 0 0 63px 63px;
+  }
+
+  &__rectangle {
+    width: 5px;
+    flex-shrink: 0;
+    margin-right: var(--medium-spacer);
+
+    background: var(--dark-navy);
+    border-radius: 155px;
+  }
+
+  &__highlight {
+    width: 75px;
+    flex-shrink: 0;
+    margin: 0 -65px 0 -10px;
+    background: linear-gradient(180deg, var(--highlight-red) 0%, var(--highlight-blue) 100%);
+    box-shadow: 0 0 22px -3px var(--heliotrope);
+    border-radius: 59px;
+  }
+
+  &__text {
+    @include typography.description-dark;
+    line-height: 105%;
+  }
+
+  /* Image Layer */
+  &--images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &__can--left {
+    position: absolute;
+    width: 18%;
+    left: 1%;
+    top: 0;
+  }
+
+  &__can--right {
+    position: absolute;
+    width: 18%;
+    left: 80%;
+    top: 32%;
+  }
+
+  &__flower {
+    position: absolute;
+    width: 28%;
+    left: 5%;
+    bottom: 5%;
+  }
+}
