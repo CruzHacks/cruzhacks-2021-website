@@ -17,6 +17,7 @@
     padding-bottom: calc(65px + 10vh);
     flex-grow: 4;
     justify-content: space-around;
+    overflow: hidden;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
@@ -69,6 +70,21 @@
     }
   }
 
+  &__mouse {
+    position: absolute;
+    bottom: calc(6em + 6vh);
+    z-index: -1;
+    right: 0;
+    max-height: calc(40% - 10vh);
+    width: fit-content;
+
+    @include responsiveness.respond(tab-port) {
+      max-height: calc(20% - 4vh);
+      bottom: calc(10em + 10vh);
+      right: -4em;
+    }
+  }
+
   &__visual {
     // postcard styling
     max-width: 1000px;
@@ -85,6 +101,11 @@
 
     @include responsiveness.respond(phone-narrow) {
       min-width: calc(70vw + 8vh);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-10em - 4vh);
+      left: calc(-5em - 15vh);
     }
   }
 

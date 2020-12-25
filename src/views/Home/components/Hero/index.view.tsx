@@ -1,6 +1,10 @@
 import * as React from "react";
 import { ReactComponent as Grid } from "images/components/hero/grid.svg";
 import { ReactComponent as Computer } from "images/components/hero/computer.svg";
+import { ReactComponent as Mouse } from "images/components/hero/mouse.svg";
+import { ReactComponent as LargeFlare } from "images/components/hero/mouse.svg";
+import { ReactComponent as MediumFlare } from "images/components/hero/mouse.svg";
+import { ReactComponent as SmallFlare } from "images/components/hero/mouse.svg";
 import PostcardStack from "components/PostcardStack/index.view";
 import "./Hero.scss";
 
@@ -39,7 +43,11 @@ const Hero: React.FC<HeroProps> = ({
     <>
       <div className="Hero__container">
         <Grid className="Hero__grid" />
+        <LargeFlare className="Hero__largeFlare" />
+        <MediumFlare className="Hero__mediumFlare" />
+        <SmallFlare className="Hero__smallFlare" />
         <Computer className="Hero__computer" />
+        <Mouse className="Hero__mouse" />
         <div className="Hero__visual">
           <PostcardStack pageName={pageName} />
         </div>
