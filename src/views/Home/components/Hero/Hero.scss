@@ -10,9 +10,8 @@
     display: flex;
     position: relative;
     flex-wrap: nowrap;
-    margin: auto;
-    width: 100%;
-    max-width: 175em;
+    margin: 0;
+    width: 100vw;
     padding-top: calc(65px + 10vh);
     padding-bottom: calc(65px + 10vh);
     flex-grow: 4;
@@ -36,15 +35,20 @@
     transform: scaleY(-1);
     z-index: -2;
     bottom: 0;
-    left: 12vw;
-    max-width: 55%;
+    left: 6vw;
+    max-width: calc(90% - 40vw);
     max-height: 50%;
+    min-height: calc(20em + 60vh);
 
     @include responsiveness.respond(tab-port) {
       left: 0;
       max-width: calc(20vw + 15vh);
-      min-height: 75%;
+      min-height: 90%;
       max-height: 100%;
+    }
+
+    @include responsiveness.respond(smallest) {
+      visibility: hidden;
     }
   }
 
@@ -53,7 +57,7 @@
     z-index: -1;
     top: calc(-30em - 4vh);
     width: 100%;
-    max-width: 150em;
+    max-width: 125em;
     left: calc(-10em - 15vh);
 
     @include responsiveness.respond(tab-land) {
@@ -72,21 +76,47 @@
 
   &__mouse {
     position: absolute;
-    bottom: calc(6em + 6vh);
     z-index: -1;
-    right: 0;
+    bottom: calc(4em + 4vh);
+    right: 2vw;
     max-height: calc(40% - 10vh);
     width: fit-content;
+
+    @include responsiveness.respond(desktop) {
+      right: 0;
+    }
 
     @include responsiveness.respond(tab-port) {
       max-height: calc(20% - 4vh);
       bottom: calc(10em + 10vh);
-      right: -4em;
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      visibility: hidden;
     }
   }
 
+  &__largeFlare {
+    position: absolute;
+    z-index: -3;
+    width: 110vw;
+    height: calc(100%);
+    max-height: 1900px;
+    top: calc(-20vh);
+    margin-right: calc(-4vw - 5vh);
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-20vh - 20vw);
+      margin-right: calc(-35vw - 5vh);
+    }
+
+    @include responsiveness.respond(phone) {
+      visibility: hidden;
+    }
+  }
+
+  // postcard styling
   &__visual {
-    // postcard styling
     max-width: 1000px;
     min-width: 455px;
     margin: auto;

@@ -2,9 +2,9 @@ import * as React from "react";
 import { ReactComponent as Grid } from "images/components/hero/grid.svg";
 import { ReactComponent as Computer } from "images/components/hero/computer.svg";
 import { ReactComponent as Mouse } from "images/components/hero/mouse.svg";
-import { ReactComponent as LargeFlare } from "images/components/hero/mouse.svg";
-import { ReactComponent as MediumFlare } from "images/components/hero/mouse.svg";
-import { ReactComponent as SmallFlare } from "images/components/hero/mouse.svg";
+import { ReactComponent as LargeFlare } from "images/components/hero/ellipse1.svg";
+import { ReactComponent as MediumFlare } from "images/components/hero/ellipse2.svg";
+import { ReactComponent as SmallFlare } from "images/components/hero/ellipse3.svg";
 import PostcardStack from "components/PostcardStack/index.view";
 import "./Hero.scss";
 

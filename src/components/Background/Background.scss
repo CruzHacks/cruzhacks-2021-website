@@ -26,7 +26,7 @@
     }
 
     @include responsiveness.respond(big-desktop) {
-      top: 0;
+      top: -5em;
     }
   }
 
