@@ -6,12 +6,31 @@
   overflow: hidden;
   min-height: 100%;
 
+  @mixin flare {
+    position: absolute;
+    z-index: -3;
+    width: 110vw;
+    height: calc(100%);
+    max-height: 1900px;
+    top: calc(-20vh);
+    margin-right: calc(-4vw - 5vh);
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-20vh - 20vw);
+      margin-right: calc(-35vw - 5vh);
+    }
+
+    @include responsiveness.respond(phone) {
+      visibility: hidden;
+    }
+  }
+
   &__container {
     display: flex;
     position: relative;
     flex-wrap: nowrap;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     padding-top: calc(65px + 10vh);
     padding-bottom: calc(65px + 10vh);
     flex-grow: 4;
@@ -97,21 +116,34 @@
   }
 
   &__largeFlare {
-    position: absolute;
-    z-index: -3;
-    width: 110vw;
-    height: calc(100%);
-    max-height: 1900px;
-    top: calc(-20vh);
-    margin-right: calc(-4vw - 5vh);
+    @include flare;
+  }
 
-    @include responsiveness.respond(tab-port) {
-      top: calc(-20vh - 20vw);
-      margin-right: calc(-35vw - 5vh);
+  &__mediumFlare {
+    @include flare;
+    margin-right: calc(-44vw - 5vh);
+    height: calc(70%);
+  }
+
+  &__smallFlare {
+    @include flare;
+    margin-right: calc(-75vw - 5vh);
+    height: 14%;
+    bottom: calc(35vh);
+    top: unset;
+
+    @include responsiveness.respond(big-desktop) {
+      top: calc(43%);
     }
 
-    @include responsiveness.respond(phone) {
-      visibility: hidden;
+    @include responsiveness.respond(desktop) {
+      bottom: calc(31vh + 5%);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin-right: calc(-60vw - 5vh);
+      bottom: calc(39vh + 10%);
+      top: unset;
     }
   }
 
