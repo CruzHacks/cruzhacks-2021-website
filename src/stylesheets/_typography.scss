@@ -3,6 +3,7 @@
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
+$font-family-secondary: "Source Code Pro", sans-serif;
 
 @mixin title-text {
   margin: 0;
@@ -45,8 +46,18 @@ $font-family-italic: "Montserrat Italic", sans-serif;
 }
 
 @mixin error {
-  color: var(--red);
-  font-family: $font-family-base;
+  font-family: $font-family-secondary;
+  font-style: italic;
+  color: var(--froly);
+  letter-spacing: 25px;
 
-  @include responsiveness.font($responsive: 2.2vw, $min: 11px, $max: 14px);
+  @include responsiveness.font($responsive: 3.8vw, $min: 78px, $max: 121px);
+}
+
+@mixin error-button {
+  @include error;
+  color: var(--haiti);
+  letter-spacing: 7px;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 52px, $max: 80px);
 }

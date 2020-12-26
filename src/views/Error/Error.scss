@@ -1,0 +1,28 @@
+@use "~stylesheets/typography";
+
+.ErrorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  background: linear-gradient(180deg, var(--aubergine) 0%, var(--haiti) 100%);
+
+  &__text {
+    @include typography.error;
+    margin-bottom: var(--extra-large-spacer);
+  }
+
+  &__button {
+    @include typography.error-button;
+    background: linear-gradient(90deg, var(--apricot) 0%, var(--froly__dark) 100%);
+    box-shadow: 0 0 35px 16px var(--frosted-white);
+    border: none;
+    border-radius: 27px;
+
+    margin-top: 95px;
+    padding: var(--medium-spacer) var(--medium-spacer);
+    cursor: pointer;
+  }
+}

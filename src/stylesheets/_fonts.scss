@@ -39,3 +39,10 @@
     url("~fonts/montserrat-v15-latin-500italic.ttf") format("truetype"),
     url("~fonts/montserrat-v15-latin-500italic.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
+
+/* source-code-pro-regular */
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+}
