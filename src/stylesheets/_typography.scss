@@ -29,6 +29,15 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   @include responsiveness.font($responsive: 2.3vw, $min: 18px, $max: 32px);
 }
 
+@mixin alt-title-text-medium {
+  color: var(--pink);
+  font-family: $font-family-base;
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 22px, $max: 45px);
+}
+
 @mixin source-description-purple {
   color: var(--purple);
   font-style: italic;

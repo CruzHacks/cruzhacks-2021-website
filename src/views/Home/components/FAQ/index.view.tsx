@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./faq.scss";
 
 const text = [
@@ -41,7 +41,7 @@ const text = [
         "Check out our Instagram page and Twitter account @cruzhacks to receive updates. We will also email attendees closer to the event. Our Facebook event is a great place to find other hackers to team​ ​up with,​ ​or​ ​explore new​ ​ideas​ ​on​ ​what​ ​to​ ​build.",
     },
     {
-      question: "Do I need coding/hackathon experience to apply?",
+      question: "Do I need coding / hackathon experience to apply?",
       answer:
         "No experience required. We are looking for applicants who want to learn and get creative! 47% of our attendees are first time hackers.",
     },
@@ -61,7 +61,9 @@ const FAQComponent: React.FC = () => {
     <div className="FAQ">
       Hello from FAQComponent
       <div className="FAQ__whiteRect">
-        <div className="FAQ__text--header">Frequently Asked Questions</div>
+        <div className="FAQ__text--container">
+          <div className="FAQ__text--header">Frequently Asked Questions</div>
+        </div>
         <div className="FAQ__pinkRect--left">
           {text[0].map((item) => {
             return (
