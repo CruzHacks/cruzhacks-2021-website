@@ -26,6 +26,7 @@
 
     @include typography.description;
     font-style: italic;
+    text-shadow: 2px 2px var(--black);
 
     @include responsiveness.respond(tab-port) {
       flex-direction: column;
@@ -54,5 +55,10 @@
     @include responsiveness.respond(tab-port) {
       text-align: center;
     }
+  }
+
+  &__link {
+    color: inherit;
+    margin-left: 0.5rem;
   }
 }
