@@ -2,6 +2,8 @@
 
 .Homepage {
   height: fit-content;
+  display: flex;
+  flex-direction: column;
 
   &__buttonContainer {
     display: flex;

@@ -3,9 +3,9 @@
 
 .Background {
   position: absolute;
-  background: var(--darkmode);
-  height: calc(100vh + 155vw);
-  min-height: fit-content;
+  background: var(--dark-navy);
+  height: calc(200vh + 110vw);
+  min-height: 100%;
   overflow: hidden;
   width: 100%;
   z-index: -3;
