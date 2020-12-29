@@ -149,10 +149,11 @@
 
   // postcard styling
   &__visual {
+    width: 45vw;
+    padding: 2em;
     max-width: 1000px;
-    min-width: 455px;
     margin: auto;
-
+    transform: rotate(-6deg);
     @include responsiveness.respond(desktop) {
       max-width: calc(50vw + 10px);
     }
