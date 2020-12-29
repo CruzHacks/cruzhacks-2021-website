@@ -11,34 +11,53 @@
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
   border-radius: 0  0 25px 25px;
 
-  @include responsiveness.respond(phone) {
-    flex-direction: column;
-  }
-
   &__title {
     @include typography.title-text;
     color: var(--froly);
     text-align: center;
     margin-right: var(--extra-large-spacer);
 
-    @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 35px);
+    @include responsiveness.font($responsive: 3.8vw, $min: 21px, $max: 35px);
   }
 
   &__buttonContainer--primary {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include responsiveness.respond(tab-land) {
+      display: none;
+    }
   }
 
   &__buttonContainer--secondary {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 calc(100px - 25px + var(--small-spacer)) 0 auto;
+    margin: 0 calc(100px - 25px - 24px + var(--small-spacer)) 0 auto;
+
+    @include responsiveness.respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__menuButton {
+    visibility: hidden;
+    color: var(--froly);
+
+    @include responsiveness.respond(tab-land) {
+      visibility: inherit;
+      margin: 0 calc(100px - 25px + var(--medium-spacer)) 0 auto;
+    }
 
     @include responsiveness.respond(phone) {
-      margin: 0;
+      margin: 0 0 0 auto;
     }
+  }
+
+  &__link {
+    color: var(--froly);
+    text-decoration: none;
   }
 }
 
