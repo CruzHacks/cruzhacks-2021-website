@@ -36,7 +36,7 @@ interface HeroProps {
 }
 
 const defaultOptions = {
-  animationData: animationData,
+  animationData,
   loop: false,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
