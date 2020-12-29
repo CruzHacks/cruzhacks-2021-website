@@ -154,7 +154,7 @@
     max-width: 1000px;
     margin: auto;
     transform: rotate(-6deg);
-    
+
     @include responsiveness.respond(desktop) {
       max-width: calc(50vw + 10px);
     }
