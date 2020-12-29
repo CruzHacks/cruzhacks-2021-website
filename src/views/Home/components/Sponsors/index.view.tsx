@@ -1,11 +1,11 @@
-import React, { SVGProps } from "react";
+import React, { FunctionComponent, SVGProps } from "react";
 import "./sponsors.scss";
 
 interface Sponsors {
   sponsors: {
     name: string;
     tier: string;
-    logo: SVGProps<SVGSVGElement>;
+    logo: FunctionComponent<SVGProps<SVGSVGElement>>;
     url: string;
   }[];
 }
