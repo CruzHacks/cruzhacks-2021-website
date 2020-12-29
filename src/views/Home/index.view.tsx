@@ -7,6 +7,7 @@ import Background from "components/Background/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import "./Home.scss";
 import MilestonesComponent from "./components/Milestones/index.view";
+import SponsorsComponent from "./components/Sponsors/index.view";
 
 const title = [
   {
@@ -105,6 +106,7 @@ const HomepageView: React.FC = () => {
           mission_text={mission_props.mission}
         />
         <MilestonesComponent />
+        <SponsorsComponent />
       </div>
     </>
   );
