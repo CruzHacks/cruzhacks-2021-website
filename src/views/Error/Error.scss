@@ -1,17 +1,41 @@
+@use "~stylesheets/responsiveness";
 @use "~stylesheets/typography";
 
 .ErrorPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   height: 100%;
-  background: linear-gradient(180deg, var(--aubergine) 0%, var(--haiti) 100%);
+  width: 100%;
+
+  /* Text Layer */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    background: linear-gradient(180deg, var(--aubergine) 0%, var(--haiti) 100%);
+  }
 
   &__text {
     @include typography.error;
-    margin-bottom: var(--extra-large-spacer);
+    margin-bottom: 5%;
+
+    @include responsiveness.respond(mission) {
+      margin-bottom: 10%;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin-bottom: 20%;
+    }
+  }
+
+  &__graphic {
+    width: 50%;
+    flex-shrink: 0;
+
+    @include responsiveness.respond(big-desktop) {
+      width: 35%;
+    }
   }
 
   &__button {
@@ -21,8 +45,46 @@
     border: none;
     border-radius: 27px;
 
-    margin-top: 95px;
-    padding: var(--medium-spacer) var(--medium-spacer);
+    margin-top: 5%;
+    padding: var(--medium-spacer);
     cursor: pointer;
+
+    @include responsiveness.respond(mission) {
+      margin-top: 10%;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin-top: 20%;
+    }
+  }
+
+  /* Image Layer */
+  &__images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__lensFlare--left {
+    position: absolute;
+    width: 37%;
+    bottom: 0;
+  }
+
+  &__lensFlare--bottom {
+    position: absolute;
+    width: 28%;
+    left: 46%;
+    bottom: 0;
+  }
+
+  &__lensFlare--top {
+    position: absolute;
+    width: 53%;
+    left: 52%;
+    top: -14%;
   }
 }

@@ -49,15 +49,15 @@ $font-family-secondary: "Source Code Pro", sans-serif;
   font-family: $font-family-secondary;
   font-style: italic;
   color: var(--froly);
-  letter-spacing: 25px;
+  letter-spacing: min(3.5vw, 25px);
 
-  @include responsiveness.font($responsive: 3.8vw, $min: 78px, $max: 121px);
+  @include responsiveness.font($responsive: 3.6vw, $min: 12px, $max: 121px);
 }
 
 @mixin error-button {
   @include error;
   color: var(--haiti);
-  letter-spacing: 7px;
+  letter-spacing: max(0.5vw, 7px);
 
-  @include responsiveness.font($responsive: 3.8vw, $min: 52px, $max: 80px);
+  @include responsiveness.font($responsive:  2.1vw, $min: 12px, $max: 80px);
 }
