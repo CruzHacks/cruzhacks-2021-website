@@ -80,7 +80,7 @@
     left: calc(-10em - 15vh);
 
     @include responsiveness.respond(tab-land) {
-     top: calc(-17em - 4vh);
+      top: calc(-17em - 4vh);
     }
 
     @include responsiveness.respond(tab-port) {
@@ -154,6 +154,7 @@
     max-width: 1000px;
     margin: auto;
     transform: rotate(-6deg);
+    
     @include responsiveness.respond(desktop) {
       max-width: calc(50vw + 10px);
     }
