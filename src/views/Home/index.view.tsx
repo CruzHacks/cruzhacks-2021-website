@@ -1,5 +1,6 @@
 import * as React from "react";
 import Hero from "views/Home/components/Hero/index.view";
+import Footer from "./components/Footer/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
@@ -103,6 +104,7 @@ const HomepageView: React.FC = () => {
           about_text={mission_props.about}
           mission_text={mission_props.mission}
         />
+        <Footer />
       </div>
     </>
   );
