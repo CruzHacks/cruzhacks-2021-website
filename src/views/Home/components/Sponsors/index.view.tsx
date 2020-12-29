@@ -1,7 +1,16 @@
-import React from "react";
+import React, { SVGProps } from "react";
 import "./sponsors.scss";
 
-const SponsorsComponent: React.FC = () => {
+interface Sponsors {
+  sponsors: {
+    name: string;
+    tier: string;
+    logo: SVGProps<SVGSVGElement>;
+    url: string;
+  }[];
+}
+
+const SponsorsComponent: React.FC<Sponsors> = () => {
   return (
     <div className="Sponsors">
       <div className="Sponsors__titleContainer">
@@ -11,10 +20,7 @@ const SponsorsComponent: React.FC = () => {
           Powered by Blackstone Launchpad & CIED & Techstars
         </h2>
       </div>
-      <div className="Sponsors__tera"></div>
-      <div className="Sponsors__giga"></div>
-      <div className="Sponsors__mega"></div>
-      <div className="Sponsors__kilo"></div>
+      <div className="Sponsors__logoContainer"></div>
     </div>
   );
 };

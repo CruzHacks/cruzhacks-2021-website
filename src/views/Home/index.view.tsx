@@ -9,6 +9,20 @@ import "./Home.scss";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
 
+import { ReactComponent as Balsamiq } from "images/sponsors/balsamiq.svg";
+import { ReactComponent as CIED } from "images/sponsors/cied.svg";
+import { ReactComponent as CITRIS } from "images/sponsors/citris.svg";
+import { ReactComponent as ChooseSantaCruz } from "images/sponsors/chooseSantaCruz.svg";
+import { ReactComponent as Comcast } from "images/sponsors/comcast.svg";
+import { ReactComponent as eBay } from "images/sponsors/ebay.svg";
+import { ReactComponent as MLH } from "images/sponsors/mlh.svg";
+import { ReactComponent as Pinnacle } from "images/sponsors/pinnacle.svg";
+import { ReactComponent as SouthSwell } from "images/sponsors/southSwell.svg";
+import { ReactComponent as Stickermule } from "images/sponsors/stickermule.svg";
+import { ReactComponent as Stratovan } from "images/sponsors/stratovan.svg";
+import { ReactComponent as Wolfram } from "images/sponsors/wolfram.svg";
+import { ReactComponent as fifteenSeventeen } from "images/sponsors/1517.svg";
+
 const title = [
   {
     text: "CruzHacks 2021 /",
@@ -79,6 +93,88 @@ const mission_props = {
   },
 };
 
+const sponsors = [
+  {
+    name: "Balsamiq, LLC",
+    tier: "kilo",
+    logo: Balsamiq,
+    url: "https://balsamiq.com/",
+  },
+  {
+    name: "Center for Innovation and Entrepreneurial Development",
+    tier: "tera",
+    logo: CIED,
+    url: "https://cied.ucsc.edu/",
+  },
+  {
+    name:
+      "Center for Information Technology Research in the Interest of Society",
+    tier: "giga",
+    logo: CITRIS,
+    url: "https://citris-uc.org/",
+  },
+  {
+    name: "Choose Santa Cruz",
+    tier: "kilo",
+    logo: ChooseSantaCruz,
+    url: "https://www.choosesantacruz.com/",
+  },
+  {
+    name: "Comcast",
+    tier: "tera",
+    logo: Comcast,
+    url: "https://www.nbcuniversal.com/about",
+  },
+  {
+    name: "eBay",
+    tier: "mega",
+    logo: eBay,
+    url: "https://www.ebay.com",
+  },
+  {
+    name: "Major League Hacking",
+    tier: "kilo",
+    logo: MLH,
+    url: "https://mlh.io/",
+  },
+  {
+    name: "Pinnacle",
+    tier: "kilo",
+    logo: Pinnacle,
+    url: "https://pinnacle.us.org/",
+  },
+  {
+    name: "South Swell Ventures",
+    tier: "mega",
+    logo: SouthSwell,
+    url: "https://www.facebook.com/South-Swell-Ventures-422070777891517/",
+  },
+  {
+    name: "Stickermule",
+    tier: "kilo",
+    logo: Stickermule,
+    url: "https://www.stickermule.com/",
+  },
+  {
+    name: "Stratovan",
+    tier: "mega",
+    logo: Stratovan,
+    url: "https://www.stratovan.com/",
+  },
+  {
+    name: "Wolfram Language",
+    tier: "kilo",
+    logo: Wolfram,
+    url: "https://www.wolfram.com/language/",
+  },
+  {
+    name: "1517",
+    tier: "mega",
+    logo: fifteenSeventeen,
+    url: "https://www.1517fund.com/",
+  },
+];
+
 const HomepageView: React.FC = () => {
   return (
     <>
@@ -106,7 +202,7 @@ const HomepageView: React.FC = () => {
           mission_text={mission_props.mission}
         />
         <MilestonesComponent />
-        <SponsorsComponent />
+        <SponsorsComponent sponsors={sponsors} />
       </div>
     </>
   );
