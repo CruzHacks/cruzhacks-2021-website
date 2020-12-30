@@ -4,6 +4,13 @@
 .Sponsors {
   position: relative;
   margin: auto;
+  height: fit-content;
+
+  &__logoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.6fr 0.5fr 0.1fr;
+  }
 
   &__titleContainer {
     width: 100vw;
@@ -21,5 +28,110 @@
 
     max-width: 40vw;
     border-bottom: calc(3px + .25vh) solid white;
+  }
+
+  // sponsor logos
+  &__cied {
+    width: calc(5vw + 5vh);
+    height: fit-content;
+    justify-self: end;
+    margin: 1vw 4vw;
+  }
+
+  &__comcast {
+    width: calc(20vw + 20vh);
+    height: fit-content;
+    justify-self: center;
+    margin-bottom: 2vw;
+    margin-top: calc(2.25vw + 2.25vh);
+  }
+
+  &__fifteenSeventeen {
+    width: calc(9vw + 9vh);
+    height: fit-content;
+    justify-self: start;
+    margin-top: calc(5.75vw + 5.75vh);
+    margin-left: 4vw;
+  }
+
+  &__citris {
+    grid-row-start: 2;
+    justify-self: end;
+    width: calc(10vw + 10vh);
+    height: fit-content;
+    margin-top: 1vw;
+    margin-right: -1vw;
+  }
+  
+  &__ebay {
+    grid-row-start: 2;
+    justify-self: center;
+    width: calc(10vw + 10vh);
+    height: fit-content;
+    margin-top: 1vw;
+  }
+
+  &__southSwell {
+    grid-row-start: 2;
+    width: calc(10vw + 10vh);
+    height: fit-content;
+    margin-top: 1vw;
+  }
+
+  &__stratovan {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    width: calc(11.5vw + 11.5vh);
+    justify-self: end;
+    margin-right: -4vw;
+  }
+
+  &__balsamiq {
+    grid-row-start: 3;
+    justify-self: center;
+    width: calc(12vw + 4vh);
+  }
+
+  &__mlh {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    justify-self: start;
+    width: calc(9vw + 3vh);
+    margin-left: -4vw;
+  }
+
+  &__chooseSC {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    justify-self: center;
+    width: calc(8vw + 3vh);
+    margin-top: -1vh;
+    @include responsiveness.respond(tab-land) {
+      margin-right: 10%;
+      justify-self: end;
+    }
+  }
+
+  &__wolfram {
+    grid-row-start: 4;
+    justify-self: end;
+    margin-top: -1vw;
+    width: calc(9vw + 3vh);
+  }
+
+  &__stickermule {
+    grid-row-start: 4;
+    justify-self: center;
+    margin-top: 0.25vw;
+    margin-left: -3vw;
+    width: calc(13vw + 5vh);
+  }
+
+  &__pinnacle {
+    grid-row-start: 4;
+    justify-self: start;
+    margin-top: -1vw;
+    margin-left: -1vw;
+    width: calc(13vw + 5vh);
   }
 }

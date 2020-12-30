@@ -3,7 +3,7 @@ import "./sponsors.scss";
 
 interface Sponsors {
   name: string;
-  tier: string;
+  className: string;
   logo: string;
   url: string;
 }
@@ -22,9 +22,15 @@ const SponsorsComponent: React.FC<SponsorProps> = ({
         <hr className="Sponsors__ruleLine" />
       </div>
       <div className="Sponsors__logoContainer">
-        {Object.values(sponsors).map(({ name, url, logo }) => (
-          <a key={name} href={url} target="_blank" rel="noreferrer">
-            <img src={logo} alt={name} className={"Sponsors__" + name} />
+        {Object.values(sponsors).map(({ name, className, url, logo }) => (
+          <a
+            key={name}
+            href={url}
+            className={"Sponsors__" + className}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={logo} alt={name} />
           </a>
         ))}
       </div>

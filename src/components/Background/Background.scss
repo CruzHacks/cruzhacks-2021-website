@@ -26,6 +26,11 @@
       width: 100%;
       transform: scale(1.03);
       bottom: 0;
+
+      @include responsiveness.respond(phone) {
+        height: 50%;
+        width: 120%;
+      }
     }
 
     @include responsiveness.respond(big-desktop) {

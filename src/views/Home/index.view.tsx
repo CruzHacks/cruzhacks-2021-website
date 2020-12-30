@@ -97,83 +97,83 @@ const mission_props = {
 
 const sponsors = [
   {
-    name: "Balsamiq, LLC",
-    tier: "kilo",
-    logo: Balsamiq,
-    url: "https://balsamiq.com/",
-  },
-  {
     name: "Center for Innovation and Entrepreneurial Development",
-    tier: "tera",
+    className: "cied",
     logo: CIED,
     url: "https://cied.ucsc.edu/",
   },
   {
-    name:
-      "Center for Information Technology Research in the Interest of Society",
-    tier: "giga",
-    logo: CITRIS,
-    url: "https://citris-uc.org/",
-  },
-  {
-    name: "Choose Santa Cruz",
-    tier: "kilo",
-    logo: ChooseSantaCruz,
-    url: "https://www.choosesantacruz.com/",
-  },
-  {
     name: "Comcast",
-    tier: "tera",
+    className: "comcast",
     logo: Comcast,
     url: "https://www.nbcuniversal.com/about",
   },
   {
+    name: "1517",
+    className: "fifteenSeventeen",
+    logo: FifteenSeventeen,
+    url: "https://www.1517fund.com/",
+  },
+  {
+    name:
+      "Center for Information Technology Research in the Interest of Society",
+    className: "citris",
+    logo: CITRIS,
+    url: "https://citris-uc.org/",
+  },
+  {
     name: "eBay",
-    tier: "mega",
+    className: "ebay",
     logo: eBay,
-    url: "https://www.ebay.com",
-  },
-  {
-    name: "Major League Hacking",
-    tier: "kilo",
-    logo: MLH,
-    url: "https://mlh.io/",
-  },
-  {
-    name: "Pinnacle",
-    tier: "kilo",
-    logo: Pinnacle,
-    url: "https://pinnacle.us.org/",
+    url: "https://www.ebayinc.com/company/",
   },
   {
     name: "South Swell Ventures",
-    tier: "mega",
+    className: "southSwell",
     logo: SouthSwell,
     url: "https://www.facebook.com/South-Swell-Ventures-422070777891517/",
   },
   {
-    name: "Stickermule",
-    tier: "kilo",
-    logo: Stickermule,
-    url: "https://www.stickermule.com/",
-  },
-  {
     name: "Stratovan",
-    tier: "mega",
+    className: "stratovan",
     logo: Stratovan,
     url: "https://www.stratovan.com/",
   },
   {
+    name: "Balsamiq, LLC",
+    className: "balsamiq",
+    logo: Balsamiq,
+    url: "https://balsamiq.com/",
+  },
+  {
+    name: "Major League Hacking",
+    className: "mlh",
+    logo: MLH,
+    url: "https://mlh.io/",
+  },
+  {
+    name: "Choose Santa Cruz",
+    className: "chooseSC",
+    logo: ChooseSantaCruz,
+    url: "https://www.choosesantacruz.com/",
+  },
+  {
     name: "Wolfram Language",
-    tier: "kilo",
+    className: "wolfram",
     logo: Wolfram,
     url: "https://www.wolfram.com/language/",
   },
   {
-    name: "1517",
-    tier: "mega",
-    logo: FifteenSeventeen,
-    url: "https://www.1517fund.com/",
+    name: "Stickermule",
+    className: "stickermule",
+    logo: Stickermule,
+    url: "https://www.stickermule.com/",
+  },
+  {
+    name: "Pinnacle",
+    className: "pinnacle",
+    logo: Pinnacle,
+    url: "https://pinnacle.us.org/",
   },
 ];
 
