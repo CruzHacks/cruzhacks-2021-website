@@ -3,13 +3,8 @@ import PostcardStack from "components/PostcardStack/index.view";
 
 import "./Hero.scss";
 
-type DescriptionDetail = {
-  rightText: string;
-  leftText: string;
-};
-
 interface Description {
-  description: string | DescriptionDetail;
+  description: string;
   style: string;
   line: number;
 }

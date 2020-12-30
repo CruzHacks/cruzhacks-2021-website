@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button, { ButtonProps, ButtonTypes } from "components/Button/index.view";
+import IconButton from "@material-ui/core/IconButton";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuRounded from "@material-ui/icons/MenuRounded";
@@ -11,10 +12,9 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleClick = (event: any) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -40,7 +40,15 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
           ))}
       </div>
 
-      <MenuRounded className="Navbar__menuButton" onClick={handleClick} />
+      <IconButton
+        aria-label="more"
+        aria-controls="long-menu"
+        aria-haspopup="true"
+        className="Navbar__menuButton"
+        onClick={handleClick}
+      >
+        <MenuRounded />
+      </IconButton>
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
