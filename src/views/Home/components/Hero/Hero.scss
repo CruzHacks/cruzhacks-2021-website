@@ -1,22 +1,18 @@
 @use "~stylesheets/typography";
 @use "~stylesheets/responsiveness";
 
-.HeroView {
+.Hero {
   display: flex;
   overflow: hidden;
   min-height: 100%;
-
-  &__homeView {
-    background-color: initial;
-  }
 
   &__container {
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
     max-width: 1800px;
+    padding-top: calc(65px + 10vh);
     flex-grow: 4;
-    margin-top: 10vh;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
@@ -26,21 +22,16 @@
       flex-wrap: wrap;
       align-content: center;
     }
-
-    @include responsiveness.respond(phone) {
-      margin: 1em;
-      margin-top: 10vh;
-    }
   }
 
   &__visual {
     // postcard styling
     max-width: 1000px;
-    min-width: 475px;
+    min-width: 455px;
     margin: auto;
 
     @include responsiveness.respond(desktop) {
-      max-width: calc(50vw + 100px);
+      max-width: calc(50vw + 10px);
     }
 
     @include responsiveness.respond(tab-port) {
@@ -48,39 +39,46 @@
     }
 
     @include responsiveness.respond(phone-narrow) {
-      min-width: calc(60vw + 15vh);
-    }
-
-    @include responsiveness.respond(smallest) {
-      min-width: 300px;
+      min-width: calc(70vw + 8vh);
     }
   }
 
   &__textContainer {
-    margin: 2em var(--medium-spacer);
+    margin: 1.5em;
+    width: 55%;
+    align-items: center;
 
     @include responsiveness.respond(tab-port) {
       margin: 2em auto;
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      width: 85%;
     }
   }
 
   &__titleText {
     @include typography.title-text;
+    white-space: nowrap;
 
     &--secondary {
-      @extend .HeroView__titleText;
+      @extend .Hero__titleText;
       color: var(--wedgewood__darker);
     }
   }
 
   &__description {
-    max-width: 425px;
+    max-width: 25em;
     margin: 2em 0;
 
     @include typography.description;
 
     @include responsiveness.respond(tab-land) {
       margin: 1.1em 0;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin: 1.1em auto;
     }
   }
 }

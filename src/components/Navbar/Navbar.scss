@@ -1,3 +1,4 @@
+@use "~components/Button/Button";
 @use "~stylesheets/typography";
 @use "~stylesheets/responsiveness";
 
@@ -41,6 +42,12 @@
     }
   }
 
+  &__button {
+    @extend .Button;
+    background: var(--froly);
+    margin: var(--small-spacer) var(--large-spacer) var(--small-spacer) 0;
+  }
+
   &__menuButton {
     visibility: hidden;
     color: var(--froly);
@@ -59,9 +66,4 @@
     color: var(--froly);
     text-decoration: none;
   }
-}
-
-.Button__element {
-  background: var(--froly);
-  margin: var(--small-spacer) var(--large-spacer) var(--small-spacer) 0;
 }

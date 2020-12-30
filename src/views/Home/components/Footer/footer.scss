@@ -1,0 +1,64 @@
+@use "~stylesheets/responsiveness";
+@use "~stylesheets/typography";
+
+.Footer {
+  max-width: 1800px;
+  margin: auto;
+  padding: var(--extra-extra-large-spacer);
+
+  @include responsiveness.respond(tab-port) {
+    max-width: 55%;
+    padding: 0;
+  }
+
+  @include responsiveness.respond(phone-narrow) {
+    max-width: unset;
+  }
+
+  &__images {
+    display: none;
+    justify-content: space-between;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+
+    @include typography.description;
+    font-style: italic;
+    text-shadow: 2px 2px var(--black);
+
+    @include responsiveness.respond(tab-port) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__text--left {
+    margin: auto;
+  }
+
+  &__text--middle {
+    text-align: center;
+    margin: auto;
+    padding: 0 var(--large-spacer);
+
+    @include responsiveness.respond(tab-port) {
+      margin: var(--large-spacer) 0;
+      padding: 0;
+    }
+  }
+
+  &__text--right {
+    text-align: right;
+
+    @include responsiveness.respond(tab-port) {
+      text-align: center;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    margin-left: 0.5rem;
+  }
+}

@@ -21,11 +21,11 @@ const Button: React.FC<ButtonProps> = ({
   className,
 }: ButtonProps) => {
   return (
-    <a className="Button" href={link} target="_blank" rel="noreferrer">
-      <button className={`Button__element ${className}`} aria-label={label}>
+    <button className={`${className}`} aria-label={label}>
+      <a className="Button__link" href={link} target="_blank" rel="noreferrer">
         {text}
-      </button>
-    </a>
+      </a>
+    </button>
   );
 };
 

@@ -2,14 +2,14 @@
 
 .Button {
   transition: opacity 0.4s ease 0.27s, transform 0.2s ease, 0.8s filter ease;
+  border-radius: 15px;
+  padding: var(--small-spacer) var(--medium-spacer);
+  border: none;
+  cursor: pointer;
 
-  &__element {
+  &__link {
     @include typography.button-text;
-    background: var(--wedgewood);
-    border-radius: 15px;
-    padding: var(--small-spacer) var(--medium-spacer);
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
   }
 
   &:hover {

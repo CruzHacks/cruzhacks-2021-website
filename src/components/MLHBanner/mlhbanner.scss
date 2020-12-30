@@ -2,7 +2,7 @@
 
 .MLHBanner {
   display: block;
-  max-width: 100px;
+  max-width: calc(10px + 5vw);
   min-width: 60px;
   position: fixed;
   right: 25px;

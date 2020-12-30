@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button, { ButtonProps, ButtonTypes } from "components/Button/index.view";
-
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuRounded from "@material-ui/icons/MenuRounded";
@@ -30,14 +29,14 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
         {buttonProps
           .filter((entry) => entry.type === ButtonTypes.PRIMARY)
           .map((entry) => (
-            <Button key={entry.label} {...entry} />
+            <Button key={entry.label} className="Navbar__button" {...entry} />
           ))}
       </div>
       <div className="Navbar__buttonContainer--secondary">
         {buttonProps
           .filter((entry) => entry.type === ButtonTypes.SECONDARY)
           .map((entry) => (
-            <Button key={entry.label} {...entry} />
+            <Button key={entry.label} className="Navbar__button" {...entry} />
           ))}
       </div>
 
