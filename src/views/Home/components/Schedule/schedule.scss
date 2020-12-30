@@ -4,9 +4,9 @@
 .Schedule {
   position: relative;
   z-index: -3;
-  display: flex;
+  max-width: 1800px;
+  min-height: 100%;
   overflow: hidden;
-  min-height: 1000px;
 
   &__schedule {
     position: absolute;
@@ -258,15 +258,9 @@
 
   &__grid {
     position: absolute;
-    left: 50%;
-    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 125%;
+    right: 0.3vw;
     z-index: -6;
-
-    @include responsiveness.respond(tab-port) {
-      width: 200%;
-      left: 0;
-    }
   }
 }

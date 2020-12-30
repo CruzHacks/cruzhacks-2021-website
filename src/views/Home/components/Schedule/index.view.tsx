@@ -94,35 +94,35 @@ const ScheduleComponent: React.FC = () => {
         <div className="Schedule__whiteRect--variant"></div>
       </div>
       <img
-        src={require("images/schedule/moon.svg").default}
+        src={require("images/components/schedule/moon.svg").default}
         className="Schedule__moon"
         alt="moon"
         key="moon"
         id="moon"
       />
       <img
-        src={require("images/schedule/stars.svg").default}
+        src={require("images/components/schedule/stars.svg").default}
         className="Schedule__stars"
         alt="stars"
         key="stars"
         id="stars"
       />
       <img
-        src={require("images/schedule/comets.svg").default}
+        src={require("images/components/schedule/comets.svg").default}
         className="Schedule__comets"
         alt="comets"
         key="comets"
         id="comets"
       />
       <img
-        src={require("images/schedule/constellation.svg").default}
+        src={require("images/components/schedule/constellation.svg").default}
         className="Schedule__constellation"
         alt="constellation"
         key="constellation"
         id="constellation"
       />
       <img
-        src={require("images/schedule/grid.svg").default}
+        src={require("images/components/schedule/grid.svg").default}
         className="Schedule__grid"
         alt="grid"
         key="grid"
