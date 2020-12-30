@@ -180,29 +180,30 @@ const HomepageView: React.FC = () => {
     <>
       <MLHBanner />
       <div className="Homepage">
-        <Background />
-        <Hero pageName={"Home"} title={title} description={description}>
-          <div className="Homepage__emailSubscriptionContainer">
-            <EmailSubscriptionForm />
-          </div>
-          {Object.entries(buttonProps).map(([type, props]) => (
-            <div key={type} className="Homepage__buttonContainer">
-              {Object.entries(props).map(([_, buttonProp]) => (
-                <Button
-                  key={buttonProp.text}
-                  className={"Homepage__button"}
-                  {...buttonProp}
-                />
-              ))}
+        <Background>
+          <Hero pageName={"Home"} title={title} description={description}>
+            <div className="Homepage__emailSubscriptionContainer">
+              <EmailSubscriptionForm />
             </div>
-          ))}
-        </Hero>
-        <Mission
-          about_text={mission_props.about}
-          mission_text={mission_props.mission}
-        />
-        <MilestonesComponent />
-        <SponsorsComponent sponsors={sponsors} />
+            {Object.entries(buttonProps).map(([type, props]) => (
+              <div key={type} className="Homepage__buttonContainer">
+                {Object.entries(props).map(([_, buttonProp]) => (
+                  <Button
+                    key={buttonProp.text}
+                    className={"Homepage__button"}
+                    {...buttonProp}
+                  />
+                ))}
+              </div>
+            ))}
+          </Hero>
+          <Mission
+            about_text={mission_props.about}
+            mission_text={mission_props.mission}
+          />
+          <MilestonesComponent />
+          <SponsorsComponent sponsors={sponsors} />
+        </Background>
       </div>
     </>
   );

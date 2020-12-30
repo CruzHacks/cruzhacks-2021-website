@@ -1,3 +1,13 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/responsiveness";
+@use "~stylesheets/typography";
 
-/* Delete these lines when you begin development */
+.Sponsors {
+  position: relative;
+  max-width: 1800px;
+  margin: auto;
+
+  &__title {
+    @include typography.title-text;
+    @include responsiveness.font($responsive: 2.8vw, $min: 24px, $max: 50px);
+  }
+}

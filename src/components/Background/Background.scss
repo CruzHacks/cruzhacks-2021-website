@@ -4,11 +4,14 @@
 .Background {
   position: absolute;
   background: var(--dark-navy);
-  height: calc(200vh + 110vw);
   min-height: 100%;
   overflow: hidden;
   width: 100%;
-  z-index: -3;
+
+  &__children {
+    z-index: 1;
+    position: relative;
+  }
 
   &__wire {
     z-index: -1;
