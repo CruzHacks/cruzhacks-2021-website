@@ -3,11 +3,23 @@
 
 .Sponsors {
   position: relative;
-  max-width: 1800px;
   margin: auto;
 
-  &__title {
+  &__titleContainer {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 2px 2px var(--black);
+
     @include typography.title-text;
-    @include responsiveness.font($responsive: 2.8vw, $min: 24px, $max: 50px);
+    @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
+    line-height: 5vh;
+  }
+
+  &__ruleLine {
+    margin-top: -1vh;
+
+    max-width: 40vw;
+    border-bottom: calc(3px + .25vh) solid white;
   }
 }
