@@ -24,11 +24,7 @@ const SponsorsComponent: React.FC<SponsorProps> = ({
       <div className="Sponsors__logoContainer">
         {Object.values(sponsors).map(({ name, url, logo }) => (
           <a key={name} href={url} target="_blank" rel="noreferrer">
-            <img
-              src={`data:image/svg+xml;base64,${logo}`}
-              alt={name}
-              className={"Sponsors__" + name}
-            />
+            <img src={logo} alt={name} className={"Sponsors__" + name} />
           </a>
         ))}
       </div>

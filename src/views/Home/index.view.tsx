@@ -1,5 +1,4 @@
 import * as React from "react";
-import { renderToString } from "react-dom/server";
 import Hero from "views/Home/components/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
@@ -11,7 +10,7 @@ import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
 import FooterComponent from "./components/Footer/index.view";
 
-import { ReactComponent as Balsamiq } from "images/sponsors/balsamiq.svg";
+import Balsamiq from "images/sponsors/balsamiq.svg";
 
 const title = [
   {
@@ -87,8 +86,7 @@ const sponsors = [
   {
     name: "Balsamiq, LLC",
     tier: "kilo",
-    // eslint-disable-next-line no-console
-    logo: encodeURIComponent(renderToString(<Balsamiq />)),
+    logo: Balsamiq,
     url: "https://balsamiq.com/",
   },
   {
