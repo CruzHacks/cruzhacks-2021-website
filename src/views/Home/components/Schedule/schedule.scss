@@ -5,7 +5,9 @@
   position: relative;
   z-index: -3;
   max-width: 1800px;
-  min-height: 100%;
+  min-height: 800px;
+  max-height: 1000px;
+  margin: auto;
   overflow: hidden;
 
   &__schedule {
@@ -19,7 +21,15 @@
     height: 35%;
 
     @include responsiveness.respond(tab-port) {
-      left: 10%;
+      left: 25vw;
+    }
+
+    @include responsiveness.respond(phone) {
+      left: 10vw;
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      left: 6vw;
     }
   }
 
@@ -94,6 +104,10 @@
     position: absolute;
     left: 0;
     padding-left: 15%;
+
+    @include responsiveness.respond(tab-port) {
+      padding-left: 5%;
+    }
   }
 
   &__timeText {
@@ -259,8 +273,7 @@
   &__grid {
     position: absolute;
     width: 100%;
-    height: 125%;
-    right: 0.3vw;
+    height: 100%;
     z-index: -6;
   }
 }
