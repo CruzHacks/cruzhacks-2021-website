@@ -59,7 +59,6 @@ const text = [
 const FAQComponent: React.FC = () => {
   return (
     <div className="FAQ">
-      Hello from FAQComponent
       <div className="FAQ__whiteRect">
         <div className="FAQ__text--container">
           <div className="FAQ__text--header">Frequently Asked Questions</div>

@@ -100,11 +100,11 @@ const HomepageView: React.FC = () => {
             </div>
           ))}
         </Hero>
-        <FAQ />
         <Mission
           about_text={mission_props.about}
           mission_text={mission_props.mission}
         />
+        <FAQ />
       </div>
     </>
   );
