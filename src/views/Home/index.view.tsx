@@ -1,4 +1,5 @@
 import * as React from "react";
+import { renderToString } from "react-dom/server";
 import Hero from "views/Home/components/Hero/index.view";
 import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
@@ -8,20 +9,9 @@ import Mission from "views/Home/components/Mission/index.view";
 import "./Home.scss";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
+import FooterComponent from "./components/Footer/index.view";
 
 import { ReactComponent as Balsamiq } from "images/sponsors/balsamiq.svg";
-import { ReactComponent as CIED } from "images/sponsors/cied.svg";
-import { ReactComponent as CITRIS } from "images/sponsors/citris.svg";
-import { ReactComponent as ChooseSantaCruz } from "images/sponsors/chooseSantaCruz.svg";
-import { ReactComponent as Comcast } from "images/sponsors/comcast.svg";
-import { ReactComponent as eBay } from "images/sponsors/ebay.svg";
-import { ReactComponent as MLH } from "images/sponsors/mlh.svg";
-import { ReactComponent as Pinnacle } from "images/sponsors/pinnacle.svg";
-import { ReactComponent as SouthSwell } from "images/sponsors/southSwell.svg";
-import { ReactComponent as Stickermule } from "images/sponsors/stickermule.svg";
-import { ReactComponent as Stratovan } from "images/sponsors/stratovan.svg";
-import { ReactComponent as Wolfram } from "images/sponsors/wolfram.svg";
-import { ReactComponent as fifteenSeventeen } from "images/sponsors/1517.svg";
 
 const title = [
   {
@@ -97,80 +87,81 @@ const sponsors = [
   {
     name: "Balsamiq, LLC",
     tier: "kilo",
-    logo: Balsamiq,
+    // eslint-disable-next-line no-console
+    logo: encodeURIComponent(renderToString(<Balsamiq />)),
     url: "https://balsamiq.com/",
   },
   {
     name: "Center for Innovation and Entrepreneurial Development",
     tier: "tera",
-    logo: CIED,
+    logo: "images/sponsors/cied.svg",
     url: "https://cied.ucsc.edu/",
   },
   {
     name:
       "Center for Information Technology Research in the Interest of Society",
     tier: "giga",
-    logo: CITRIS,
+    logo: "images/sponsors/citris.svg",
     url: "https://citris-uc.org/",
   },
   {
     name: "Choose Santa Cruz",
     tier: "kilo",
-    logo: ChooseSantaCruz,
+    logo: "images/sponsors/chooseSantaCruz.svg",
     url: "https://www.choosesantacruz.com/",
   },
   {
     name: "Comcast",
     tier: "tera",
-    logo: Comcast,
+    logo: "images/sponsors/comcast.svg",
     url: "https://www.nbcuniversal.com/about",
   },
   {
     name: "eBay",
     tier: "mega",
-    logo: eBay,
+    logo: "images/sponsors/ebay.svg",
     url: "https://www.ebay.com",
   },
   {
     name: "Major League Hacking",
     tier: "kilo",
-    logo: MLH,
+    logo: "images/sponsors/mlh.svg",
     url: "https://mlh.io/",
   },
   {
     name: "Pinnacle",
     tier: "kilo",
-    logo: Pinnacle,
+    logo: "images/sponsors/pinnacle.svg",
     url: "https://pinnacle.us.org/",
   },
   {
     name: "South Swell Ventures",
     tier: "mega",
-    logo: SouthSwell,
+    logo: "images/sponsors/southSwell.svg",
     url: "https://www.facebook.com/South-Swell-Ventures-422070777891517/",
   },
   {
     name: "Stickermule",
     tier: "kilo",
-    logo: Stickermule,
+    logo: "images/sponsors/stickermule.svg",
     url: "https://www.stickermule.com/",
   },
   {
     name: "Stratovan",
     tier: "mega",
-    logo: Stratovan,
+    logo: "images/sponsors/stratovan.svg",
     url: "https://www.stratovan.com/",
   },
   {
     name: "Wolfram Language",
     tier: "kilo",
-    logo: Wolfram,
+    logo: "images/sponsors/wolfram.svg",
     url: "https://www.wolfram.com/language/",
   },
   {
     name: "1517",
     tier: "mega",
-    logo: fifteenSeventeen,
+    logo: "images/sponsors/1517.svg",
     url: "https://www.1517fund.com/",
   },
 ];
@@ -203,6 +194,7 @@ const HomepageView: React.FC = () => {
           />
           <MilestonesComponent />
           <SponsorsComponent sponsors={sponsors} />
+          <FooterComponent />
         </Background>
       </div>
     </>
