@@ -10,7 +10,20 @@ import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
 import FooterComponent from "./components/Footer/index.view";
 
+// sponsor logo paths
 import Balsamiq from "images/sponsors/balsamiq.svg";
+import CIED from "images/sponsors/cied.svg";
+import CITRIS from "images/sponsors/citris.svg";
+import ChooseSantaCruz from "images/sponsors/chooseSantaCruz.svg";
+import Comcast from "images/sponsors/comcast.svg";
+import eBay from "images/sponsors/ebay.svg";
+import MLH from "images/sponsors/mlh.svg";
+import Pinnacle from "images/sponsors/pinnacle.svg";
+import SouthSwell from "images/sponsors/southSwell.svg";
+import Stickermule from "images/sponsors/stickermule.svg";
+import Stratovan from "images/sponsors/stratovan.svg";
+import Wolfram from "images/sponsors/wolfram.svg";
+import FifteenSeventeen from "images/sponsors/1517.svg";
 
 const title = [
   {
@@ -92,74 +105,74 @@ const sponsors = [
   {
     name: "Center for Innovation and Entrepreneurial Development",
     tier: "tera",
-    logo: "images/sponsors/cied.svg",
+    logo: CIED,
     url: "https://cied.ucsc.edu/",
   },
   {
     name:
       "Center for Information Technology Research in the Interest of Society",
     tier: "giga",
-    logo: "images/sponsors/citris.svg",
+    logo: CITRIS,
     url: "https://citris-uc.org/",
   },
   {
     name: "Choose Santa Cruz",
     tier: "kilo",
-    logo: "images/sponsors/chooseSantaCruz.svg",
+    logo: ChooseSantaCruz,
     url: "https://www.choosesantacruz.com/",
   },
   {
     name: "Comcast",
     tier: "tera",
-    logo: "images/sponsors/comcast.svg",
+    logo: Comcast,
     url: "https://www.nbcuniversal.com/about",
   },
   {
     name: "eBay",
     tier: "mega",
-    logo: "images/sponsors/ebay.svg",
+    logo: eBay,
     url: "https://www.ebay.com",
   },
   {
     name: "Major League Hacking",
     tier: "kilo",
-    logo: "images/sponsors/mlh.svg",
+    logo: MLH,
     url: "https://mlh.io/",
   },
   {
     name: "Pinnacle",
     tier: "kilo",
-    logo: "images/sponsors/pinnacle.svg",
+    logo: Pinnacle,
     url: "https://pinnacle.us.org/",
   },
   {
     name: "South Swell Ventures",
     tier: "mega",
-    logo: "images/sponsors/southSwell.svg",
+    logo: SouthSwell,
     url: "https://www.facebook.com/South-Swell-Ventures-422070777891517/",
   },
   {
     name: "Stickermule",
     tier: "kilo",
-    logo: "images/sponsors/stickermule.svg",
+    logo: Stickermule,
     url: "https://www.stickermule.com/",
   },
   {
     name: "Stratovan",
     tier: "mega",
-    logo: "images/sponsors/stratovan.svg",
+    logo: Stratovan,
     url: "https://www.stratovan.com/",
   },
   {
     name: "Wolfram Language",
     tier: "kilo",
-    logo: "images/sponsors/wolfram.svg",
+    logo: Wolfram,
     url: "https://www.wolfram.com/language/",
   },
   {
     name: "1517",
     tier: "mega",
-    logo: "images/sponsors/1517.svg",
+    logo: FifteenSeventeen,
     url: "https://www.1517fund.com/",
   },
 ];
