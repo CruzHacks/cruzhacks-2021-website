@@ -152,7 +152,7 @@
     @include responsiveness.respond(phone) {
       justify-self: end;
       margin-top: 0;
-      margin-right: calc(1vw + 0.5vh);
+      margin-right: calc(1vw - 1vh);
     }
   }
 
@@ -170,7 +170,7 @@
   &__stickermule {
     grid-row-start: 4;
     justify-self: center;
-    margin-top: -1.25vh;
+    margin-top: calc(-0.75vh - 0.75vw);
     margin-left: -3vw;
     width: calc(13vw + 5vh);
     @include responsiveness.respond(phone) {
@@ -181,13 +181,12 @@
   &__pinnacle {
     grid-row-start: 4;
     justify-self: start;
-    margin-top: -2.75vh;
+    margin-top: calc(-1.5vw - 1.5vw);
     margin-left: calc(-1vw - 2vh);
     width: calc(13vw + 5vh);
     @include responsiveness.respond(phone) {
-      margin-top: calc(-0.15vh - 0.25vw);
+      margin-top: calc(-0.15vh - 0.225vw);
       justify-self: center;
     }
   }
-  
 }
