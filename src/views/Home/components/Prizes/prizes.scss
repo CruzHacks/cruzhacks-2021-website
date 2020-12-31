@@ -52,7 +52,7 @@
   }
 
   &__boxTop {
-    background: var(--purple-frosted-glass);
+    background: var(--frosted-glass);
     border-radius: 58px 58px 0 0;
   }
 
@@ -71,7 +71,7 @@
 
     padding: 10px 20px;
     min-height: 125px;
-    background: linear-gradient(180deg, var(--light-purple) 0%, var(--light-purple__gradient) 100%);
+    background: linear-gradient(180deg, var(--malibu) 0%, var(--malibu__gradient) 100%);
     box-shadow: 0 0 35px -3px var(--heliotrope);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 58px 58px;
