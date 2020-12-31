@@ -36,7 +36,7 @@
     margin-top: -1vh;
 
     max-width: 40vw;
-    border-bottom: calc(3px + .25vh) solid white;
+    border-bottom: calc(3px + 0.25vh) solid white;
   }
 
   // sponsor logos
@@ -45,6 +45,7 @@
     height: fit-content;
     justify-self: end;
     margin: 1vw 20%;
+
     @include responsiveness.respond(phone) {
       width: calc(8vw + 2vh);
       margin: 1vw 4vw;
@@ -58,6 +59,7 @@
     justify-self: center;
     margin-bottom: 2vw;
     margin-top: calc(2.25vw + 2.25vh);
+
     @include responsiveness.respond(phone) {
       width: calc(30vw + 2vh);
       margin-left: -2vw;
@@ -70,6 +72,7 @@
     justify-self: start;
     margin-top: calc(4.75vw + 4.75vh);
     margin-left: 4vw;
+
     @include responsiveness.respond(phone) {
       margin-top: calc(2.75vw + 2.75vh);
       margin-left: 4vw;
@@ -85,17 +88,19 @@
     height: fit-content;
     margin-top: 1vw;
     margin-right: -1vw;
+
     @include responsiveness.respond(phone) {
       justify-self: start;
     }
   }
-  
+
   &__ebay {
     grid-row-start: 2;
     justify-self: center;
     width: calc(10vw + 10vh);
     height: fit-content;
     margin-top: 1vw;
+
     @include responsiveness.respond(phone) {
       width: calc(8vw + 8vh);
     }
@@ -114,6 +119,7 @@
     width: calc(11.5vw + 11.5vh);
     justify-self: end;
     margin-right: -4vw;
+
     @include responsiveness.respond(phone) {
       justify-self: center;
       margin-top: 2vh;
