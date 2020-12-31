@@ -6,6 +6,8 @@ import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
 import Mission from "views/Home/components/Mission/index.view";
+import Milestones from "./components/Milestones/index.view";
+import Prizes from "./components/Prizes/index.view";
 import "./Home.scss";
 
 const title = [
@@ -104,6 +106,8 @@ const HomepageView: React.FC = () => {
           about_text={mission_props.about}
           mission_text={mission_props.mission}
         />
+        <Milestones />
+        <Prizes />
         <Footer />
       </div>
     </>
