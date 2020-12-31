@@ -95,6 +95,25 @@ const mission_props = {
   },
 };
 
+const milestones = [
+  {
+    title: "Attendees",
+    text: "500+",
+  },
+  {
+    title: "First-time Hackers",
+    text: "47%",
+  },
+  {
+    title: "Projects",
+    text: "60+",
+  },
+  {
+    title: "In Prizes",
+    text: "$20,000+",
+  },
+];
+
 const sponsors = [
   {
     name: "Center for Innovation and Entrepreneurial Development",
@@ -203,7 +222,7 @@ const HomepageView: React.FC = () => {
             about_text={mission_props.about}
             mission_text={mission_props.mission}
           />
-          <MilestonesComponent />
+          <MilestonesComponent milestones={milestones} />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
