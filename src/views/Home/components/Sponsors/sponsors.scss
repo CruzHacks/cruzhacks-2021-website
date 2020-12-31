@@ -130,6 +130,7 @@
     grid-row-start: 3;
     justify-self: center;
     width: calc(12vw + 4vh);
+
     @include responsiveness.respond(phone) {
       margin-top: 2vh;
     }
@@ -141,6 +142,7 @@
     margin-left: -3vw;
     justify-self: start;
     width: calc(9vw + 3vh);
+
     @include responsiveness.respond(phone) {
       justify-self: start;
       margin-top: 2vh;
@@ -155,6 +157,7 @@
     width: calc(8vw + 3vh);
     margin-top: -1vh;
     margin-right: 2vw;
+
     @include responsiveness.respond(phone) {
       justify-self: end;
       margin-top: 0;
@@ -167,6 +170,7 @@
     justify-self: end;
     margin-top: -2.5vh;
     width: calc(9vw + 3vh);
+
     @include responsiveness.respond(phone) {
       margin-top: 0;
       justify-self: center;
@@ -179,6 +183,7 @@
     margin-top: calc(-0.75vh - 0.75vw);
     margin-left: -3vw;
     width: calc(13vw + 5vh);
+
     @include responsiveness.respond(phone) {
       margin-top: calc(0.5vh + 0.75vw);
     }
@@ -190,6 +195,7 @@
     margin-top: calc(-1.5vw - 1.5vw);
     margin-left: calc(-1vw - 2vh);
     width: calc(13vw + 5vh);
+
     @include responsiveness.respond(phone) {
       margin-top: calc(-0.15vh - 0.225vw);
       justify-self: center;
