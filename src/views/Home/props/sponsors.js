@@ -93,4 +93,4 @@ export const sponsors = [
     logo: Pinnacle,
     url: "https://pinnacle.us.org/",
   },
-];
+]
