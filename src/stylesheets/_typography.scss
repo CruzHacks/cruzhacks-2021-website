@@ -37,11 +37,16 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
 }
 
+@mixin description-dark {
+  @include description;
+  color: var(--dark-navy);
+}
+
 @mixin button-text {
   color: var(--white);
   font-family: $font-family-italic;
 
-  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+  @include responsiveness.font($responsive: 1.5vw, $min: 12px, $max: 18px);
 }
 
 @mixin error {

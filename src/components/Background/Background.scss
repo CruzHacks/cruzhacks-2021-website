@@ -2,8 +2,8 @@
 
 .Background {
   position: absolute;
-  background: var(--darkmode);
-  height: 4000px;
+  background: var(--dark-navy);
+  height: calc(100vh + 155vw);
   min-height: fit-content;
   overflow: hidden;
   width: 100%;
@@ -13,7 +13,8 @@
     z-index: -1;
     position: absolute;
     width: 100%;
-    height: 75%;
+    height: 95%;
+    top: 8.7%;
 
     &--variant {
       position: absolute;
@@ -22,11 +23,6 @@
       transform: scale(1.03);
       bottom: 0;
     }
-  }
-
-  &__children {
-    z-index: 999;
-    position: relative;
   }
 
   &__gradient {

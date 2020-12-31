@@ -2,19 +2,21 @@
 
 .PostcardStack {
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 auto 0 2em;
   padding: 0 var(--medium-spacer) 0 0;
+  transform: rotate(-5deg);
 
   @include responsiveness.respond(tab-port) {
     padding: 0;
+    margin: 0 auto;
   }
 
   &__postcard {
-    width: 100%;
+    width: 95%;
 
     @include responsiveness.respond(tab-port) {
       padding-top: var(--small-spacer);
-      width: calc(100% - 4vw);
+      width: calc(100% - 5vw);
       max-height: 45vh;
       min-height: 200px;
     }
