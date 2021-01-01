@@ -4,26 +4,18 @@ import { ReactComponent as Background } from "images/components/milestones/backg
 import { ReactComponent as Pencil } from "images/components/milestones/pencil.svg";
 import { ReactComponent as Shell } from "images/components/milestones/shell.svg";
 
-const milestones = [
-  {
-    title: "Attendees",
-    text: "500+",
-  },
-  {
-    title: "First-time Hackers",
-    text: "47%",
-  },
-  {
-    title: "Projects",
-    text: "60+",
-  },
-  {
-    title: "In Prizes",
-    text: "$20,000+",
-  },
-];
+type Milestones = {
+  title: string;
+  text: string;
+};
 
-const MilestonesComponent: React.FC = () => {
+interface MilestoneProps {
+  milestones: Milestones[];
+}
+
+const MilestonesComponent: React.FC<MilestoneProps> = ({
+  milestones,
+}: MilestoneProps) => {
   return (
     <div className="Milestones">
       <Background className="Milestones__background" />

@@ -4,7 +4,6 @@
   display: inline-block;
   margin: 0 auto 0 2em;
   padding: 0 var(--medium-spacer) 0 0;
-  transform: rotate(-5deg);
 
   @include responsiveness.respond(tab-port) {
     padding: 0;

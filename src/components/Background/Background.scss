@@ -1,13 +1,17 @@
 @use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
 .Background {
   position: absolute;
   background: var(--dark-navy);
-  height: calc(100vh + 155vw);
-  min-height: fit-content;
+  min-height: 100%;
   overflow: hidden;
   width: 100%;
-  z-index: -3;
+
+  &__children {
+    z-index: 1;
+    position: relative;
+  }
 
   &__wire {
     z-index: -1;
@@ -16,12 +20,32 @@
     height: 95%;
     top: 8.7%;
 
-    &--variant {
-      position: absolute;
-      background: none;
-      width: 100%;
-      transform: scale(1.03);
-      bottom: 0;
+    @include responsiveness.respond(big-desktop) {
+      top: -5em;
+    }
+  }
+
+  &__wire--variant {
+    position: absolute;
+    background: none;
+    width: 100%;
+    transform: scale(1.03);
+    bottom: 0;
+
+    @include responsiveness.respond(tab-land) {
+      height: 72.5%;
+      width: 140%;
+      margin-left: -8vw;
+    }
+
+    @include responsiveness.respond(phone) {
+      height: 45%;
+      width: 180%;
+      margin-left: -24vw;
+    }
+
+    @include responsiveness.respond(big-desktop) {
+      top: -5em;
     }
   }
 

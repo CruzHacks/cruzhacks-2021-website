@@ -10,9 +10,7 @@ describe("Homepage", () => {
     expect(homepageDiv).not.toBeNull();
     const heroHomepageDiv = await page.$(".Hero__container");
     expect(heroHomepageDiv).not.toBeNull();
-    const postcardStack = await homepageDiv.$(".PostcardStack");
+    const postcardStack = await homepageDiv.$(".Hero__visual");
     expect(postcardStack).not.toBeNull();
-    const homePostcard = await postcardStack.$("#Home-postcard");
-    expect(homePostcard).not.toBeNull();
   });
 });

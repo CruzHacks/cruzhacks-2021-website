@@ -39,7 +39,9 @@ $font-family-italic: "Montserrat Italic", sans-serif;
 
 @mixin button-text {
   color: var(--white);
+  font-weight: bold;
   font-family: $font-family-italic;
+  line-height: 8px;
 
   @include responsiveness.font($responsive: 1.5vw, $min: 12px, $max: 18px);
 }
