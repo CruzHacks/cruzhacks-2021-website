@@ -1,6 +1,15 @@
 @use "~stylesheets/responsiveness";
 @use "~stylesheets/typography";
 
+@mixin lens-flare-positioning($width, $top, $right, $bottom, $left) {
+  position: absolute;
+  width: $width;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 .ErrorPage {
   height: 100%;
 
@@ -70,22 +79,14 @@
   }
 
   &__lensFlare--left {
-    position: absolute;
-    width: 37%;
-    bottom: 0;
+    @include lens-flare-positioning(37%, unset, unset, 0, unset);
   }
 
   &__lensFlare--bottom {
-    position: absolute;
-    width: 28%;
-    left: 46%;
-    bottom: 0;
+    @include lens-flare-positioning(28%, unset, unset, 0, 46%);
   }
 
   &__lensFlare--top {
-    position: absolute;
-    width: 53%;
-    left: 52%;
-    top: -14%;
+    @include lens-flare-positioning(53%, -14%, unset, unset, 52%);
   }
 }
