@@ -4,6 +4,7 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
+import FAQ from "./components/FAQ/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
@@ -47,6 +48,7 @@ const HomepageView: React.FC = () => {
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
           <SponsorsComponent sponsors={sponsors} />
+          <FAQ />
           <FooterComponent />
         </Background>
       </div>
