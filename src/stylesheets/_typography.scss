@@ -3,6 +3,7 @@
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
+$font-family-source-base: "Source Code Pro", sans-serif;
 
 @mixin title-text {
   margin: 0;
@@ -17,6 +18,33 @@ $font-family-italic: "Montserrat Italic", sans-serif;
   @include responsiveness.respond(tab-port) {
     line-height: 40px;
   }
+}
+
+@mixin alt-title-text {
+  color: var(--pink);
+  font-family: $font-family-base;
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 18px, $max: 32px);
+}
+
+@mixin alt-title-text-medium {
+  color: var(--pink);
+  font-family: $font-family-base;
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 22px, $max: 45px);
+}
+
+@mixin source-description-purple {
+  color: var(--purple);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-source-base;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
 }
 
 /* title text with the 3D cyan-red effect */
