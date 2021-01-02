@@ -31,35 +31,10 @@
     }
   }
 
-  &__buttonContainer--secondary {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 calc(100px - 25px + var(--small-spacer)) 0 auto;
-
-    @include responsiveness.respond(tab-land) {
-      display: none;
-    }
-  }
-
   &__button {
     @extend .Button;
     background: var(--froly);
     margin: var(--small-spacer) var(--large-spacer) var(--small-spacer) 0;
-  }
-
-  &__menuButton {
-    visibility: hidden;
-    color: var(--froly);
-
-    @include responsiveness.respond(tab-land) {
-      visibility: inherit;
-      margin: 0 calc(100px - 25px + var(--medium-spacer)) 0 auto;
-    }
-
-    @include responsiveness.respond(phone) {
-      margin: 0 0 0 auto;
-    }
   }
 
   &__link {
