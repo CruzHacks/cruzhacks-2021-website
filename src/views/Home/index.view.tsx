@@ -13,6 +13,7 @@ import "./Home.scss";
 import * as heroProps from "./props/hero.json";
 import * as missionProps from "./props/mission.json";
 import * as milestoneProps from "./props/milestones.json";
+import * as FAQprops from "./props/faq.json";
 import { sponsors } from "./props/sponsors.js";
 import { topics } from "./props/prizes";
 import FAQComponent from "./components/FAQ/index.view";
@@ -50,7 +51,11 @@ const HomepageView: React.FC = () => {
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
           <PrizesComponent topics={topics} />
-          <FAQComponent />
+          <FAQComponent
+            questionAnswersColumnLeft={FAQprops.questionAnswersColumnLeft}
+            questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
+            questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
+          />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
