@@ -14,7 +14,6 @@
   }
 
   &__wire {
-    z-index: -1;
     position: absolute;
     width: 100%;
     height: 95%;
@@ -32,21 +31,24 @@
     transform: scale(1.03);
     bottom: 0;
 
+    @include responsiveness.respond(desktop) {
+      height: 50.5%;
+      width: 110%;
+      margin-left: -4vw;
+    }
+    
     @include responsiveness.respond(tab-land) {
-      height: 72.5%;
-      width: 140%;
-      margin-left: -8vw;
+      height: 37.5%;
+      width: 100%;
+      margin-left: 0;
     }
 
     @include responsiveness.respond(phone) {
-      height: 45%;
-      width: 180%;
-      margin-left: -24vw;
+      height: 37.5%;
+      width: 100%;
+      margin-left: -2vw;
     }
 
-    @include responsiveness.respond(big-desktop) {
-      top: -5em;
-    }
   }
 
   &__gradient {

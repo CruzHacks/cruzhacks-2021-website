@@ -23,6 +23,7 @@ $font-family-source-base: "Source Code Pro", sans-serif;
 @mixin title-text-secondary {
   @include title-text;
   @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
+}
 
 @mixin alt-title-text {
   color: var(--pink);

@@ -4,19 +4,18 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import FAQ from "./components/FAQ/index.view";
 import Mission from "views/Home/components/Mission/index.view";
-import Milestones from "./components/Milestones/index.view";
-import Prizes from "./components/Prizes/index.view";
+import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
 import FooterComponent from "./components/Footer/index.view";
-
 import "./Home.scss";
 
 import * as heroProps from "./props/hero.json";
 import * as missionProps from "./props/mission.json";
 import * as milestoneProps from "./props/milestones.json";
 import { sponsors } from "./props/sponsors.js";
+import FAQComponent from "./components/FAQ/index.view";
+import PrizesComponent from "./components/Prizes/index.view";
 
 const HomepageView: React.FC = () => {
   return (
@@ -32,15 +31,25 @@ const HomepageView: React.FC = () => {
             <div className="Homepage__emailSubscriptionContainer">
               <EmailSubscriptionForm />
             </div>
-          ))}
+            {Object.entries(heroProps.buttonProps).map(([type, props]) => (
+              <div key={type} className="Homepage__buttonContainer">
+                {Object.entries(props).map(([_, buttonProp]) => (
+                  <Button
+                    key={buttonProp.text}
+                    className={"Homepage__button"}
+                    {...buttonProp}
+                  />
+                ))}
+              </div>
+            ))}
           </Hero>
           <Mission
-            about_text={mission_props.about}
-            mission_text={mission_props.mission}
+            about_text={missionProps.about}
+            mission_text={missionProps.mission}
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
-          <Prizes />
-          <FAQ />
+          <PrizesComponent />
+          <FAQComponent />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
