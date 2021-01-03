@@ -7,7 +7,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(3% - 5vw);
+  padding-bottom: calc(8% - 3vw);
 
   @include responsiveness.respond(tab-land) {
     transform: scale(0.9);

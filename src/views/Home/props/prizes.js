@@ -25,9 +25,9 @@ export const topics = [
       "This category hopes to support and shine a light on projects related to civil liberties and social justice!",
   },
   {
-    title: "Santa Cruz Hacks",
+    title: "Best Cruz Hack",
     icon: <SantaCruzHacksIcon />,
-    text: "Create a project that best showcases the essence of Santa Cruz!",
+    text: "Create something that best embodies the essence of Santa Cruz!",
   },
   {
     title: "Best UI / UX",

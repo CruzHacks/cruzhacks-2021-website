@@ -11,7 +11,7 @@
   max-width: 1700px;
   padding-top: 5%;
   margin: 0 auto;
-  margin-bottom: calc(-3em - 2vh + 5vw);
+  margin-bottom: calc(-4em - 2vh + 1vw);
 
   @include responsiveness.respond(tab-port) {
     margin-bottom: calc(-6em - 5vh + 3vw);
