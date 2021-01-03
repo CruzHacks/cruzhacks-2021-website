@@ -1,38 +1,24 @@
 import * as React from "react";
 import Hero from "views/Home/components/Hero/index.view";
-import { ButtonTypes } from "components/Button/index.view";
-import Footer from "./components/Footer/index.view";
+import Button, { ButtonTypes } from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Navbar from "components/Navbar/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
 import Mission from "views/Home/components/Mission/index.view";
+import MilestonesComponent from "./components/Milestones/index.view";
+import SponsorsComponent from "./components/Sponsors/index.view";
+import FooterComponent from "./components/Footer/index.view";
 import "./Home.scss";
 
-const title = [
-  {
-    text: "CruzHacks 2021 /",
-    style: "",
-  },
-  {
-    text: "January 15-17",
-    style: "--secondary",
-  },
-];
-
-const description = [
-  {
-    description:
-      "CruzHacks is the largest hackathon in Santa Cruz. Each year, we invite hundreds of students to develop solutions to real-world problems, pursue inclusion in tech, and kindle the spirit of innovation.  ",
-    style: "description",
-    line: 0,
-  },
-  {
-    description: "This year, we’re bringing CruzHacks to you.  ",
-    style: "description",
-    line: 1,
-  },
-];
+import * as heroProps from "./props/hero.json";
+import * as missionProps from "./props/mission.json";
+import * as milestoneProps from "./props/milestones.json";
+import * as FAQprops from "./props/faq.json";
+import { sponsors } from "./props/sponsors.js";
+import { topics } from "./props/prizes";
+import FAQComponent from "./components/FAQ/index.view";
+import PrizesComponent from "./components/Prizes/index.view";
 
 const buttonProps = {
   hacker: {
@@ -74,36 +60,36 @@ const buttonPropsObject = {
   buttonProps: Object.values(buttonProps),
 };
 
-const mission_props = {
-  about: {
-    title: "We Are CruzHacks",
-    body:
-      "CruzHacks is a virtual hackathon that provides ground for new ideas and innovation to flourish. By presenting real-world problems, hackers have the chance to begin a project using their creative and problem-solving technical skills. Open to individuals in varying levels of experience, Cruzhacks provides the opportunity to apply the skills learned in classes and connect with companies through the product that has been created.",
-  },
-  mission: {
-    title: "The CruzHacks Mission",
-    body:
-      "CruzHacks is a global event where people can collaborate, network, and apply technology to solve problems! Our initiative is to expand diversity in tech while facilitating an environment conducive for creating innovative solutions to complex problems. The CruzHacks mission, to support creativity in technology and promote the development solutions for social good, are at the forefront of our efforts every year.",
-  },
-};
-
 const HomepageView: React.FC = () => {
   return (
     <>
       <Navbar {...buttonPropsObject} />
       <MLHBanner />
       <div className="Homepage">
-        <Background />
-        <Hero pageName={"Home"} title={title} description={description}>
-          <div className="Homepage__emailSubscriptionContainer">
-            <EmailSubscriptionForm />
-          </div>
-        </Hero>
-        <Mission
-          about_text={mission_props.about}
-          mission_text={mission_props.mission}
-        />
-        <Footer />
+        <Background>
+          <Hero
+            pageName={"Home"}
+            title={heroProps.title}
+            description={heroProps.description}
+          >
+            <div className="Homepage__emailSubscriptionContainer">
+              <EmailSubscriptionForm />
+            </div>
+          </Hero>
+          <Mission
+            about_text={missionProps.about}
+            mission_text={missionProps.mission}
+          />
+          <MilestonesComponent milestones={milestoneProps.milestones} />
+          <PrizesComponent topics={topics} />
+          <FAQComponent
+            questionAnswersColumnLeft={FAQprops.questionAnswersColumnLeft}
+            questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
+            questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
+          />
+          <SponsorsComponent sponsors={sponsors} />
+          <FooterComponent />
+        </Background>
       </div>
     </>
   );
