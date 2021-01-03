@@ -21,7 +21,7 @@
     @include responsiveness.font($responsive: 3.8vw, $min: 21px, $max: 35px);
   }
 
-  &__buttonContainer--primary {
+  &__buttonContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -35,6 +35,22 @@
     @extend .Button;
     background: var(--froly);
     margin: var(--small-spacer) var(--large-spacer) var(--small-spacer) 0;
+  }
+
+  &__menuItems--primary {
+    display: none;
+
+    @include responsiveness.respond(tab-land) {
+      display: inherit;
+    }
+  }
+
+  &__menuItems--secondary {
+    display: inherit;
+
+    @include responsiveness.respond(tab-land) {
+      display: none;
+    }
   }
 
   &__link {

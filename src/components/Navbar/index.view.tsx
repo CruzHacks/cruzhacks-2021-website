@@ -7,7 +7,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuRounded from "@material-ui/icons/MenuRounded";
 
 import { makeStyles } from "@material-ui/core";
-import Media from "react-media";
 import "./Navbar.scss";
 
 interface NavbarProps {
@@ -39,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
   return (
     <div className="Navbar">
       <div className="Navbar__title">{title}</div>
-      <div className="Navbar__buttonContainer--primary">
+      <div className="Navbar__buttonContainer">
         {buttonProps
           .filter((entry) => entry.type === ButtonTypes.PRIMARY)
           .map((entry) => (
@@ -66,45 +65,36 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
         anchorOrigin={{ vertical: "top", horizontal: "left" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        <Media
-          queries={{
-            small: "max-width: 75em",
-            large: "min-width: 75em",
-          }}
-        >
-          {(matches) => (
-            <>
-              {matches.large &&
-                buttonProps
-                  .filter((entry) => entry.type === ButtonTypes.SECONDARY)
-                  .map((entry) => (
-                    <MenuItem key={entry.label}>
-                      <a
-                        className="Navbar__link"
-                        href={entry.link}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {entry.text}
-                      </a>
-                    </MenuItem>
-                  ))}
-              {matches.small &&
-                buttonProps.map((entry) => (
-                  <MenuItem key={entry.label}>
-                    <a
-                      className="Navbar__link"
-                      href={entry.link}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {entry.text}
-                    </a>
-                  </MenuItem>
-                ))}
-            </>
-          )}
-        </Media>
+        <div className="Navbar__menuItems--secondary">
+          {buttonProps
+            .filter((entry) => entry.type === ButtonTypes.SECONDARY)
+            .map((entry) => (
+              <MenuItem key={entry.label}>
+                <a
+                  className="Navbar__link"
+                  href={entry.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {entry.text}
+                </a>
+              </MenuItem>
+            ))}
+        </div>
+        <div className="Navbar__menuItems--primary">
+          {buttonProps.map((entry) => (
+            <MenuItem key={entry.label}>
+              <a
+                className="Navbar__link"
+                href={entry.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {entry.text}
+              </a>
+            </MenuItem>
+          ))}
+        </div>
       </Menu>
     </div>
   );
