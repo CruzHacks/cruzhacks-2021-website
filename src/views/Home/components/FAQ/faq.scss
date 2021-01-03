@@ -9,24 +9,23 @@
   height: 1000px;
   padding-top: 5%;
 
-  @mixin section {
-    overflow-y: auto;
+  @mixin section {  
+    display: table-cell;
+    overflow-y: scroll;
     margin: auto;
-    justify-content: left;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 85%;
+    float: left;
+    max-height: 100%;
+    min-height: 900px;
     width: calc(100% / 3);
     padding-bottom: 1em;
-
     @include responsiveness.respond(tab-port) {
-      height: 90%;
+      width: 100%;
+      min-height: 350px;
     }
   }
 
   &__whiteRect {
-    max-width: 1800px;
+    max-width: 1300px;
     position: absolute;
     width: 80%;
     height: 80%;
@@ -34,20 +33,18 @@
     box-shadow: 0 0 20px 11px rgba(89, 93, 130, 0.5);
     border-radius: 30px;
     z-index: 1;
-
     @include responsiveness.respond(tab-port) {
       width: 95vw;
     }
   }
 
-  &__text--header {
+  &__top {
     @include typography.alt-title-text-medium;
-
-    position: absolute;
+    background: var(--white__off);
+    border-radius: 30px 30px 0 0;
+    text-align: center;
     color: var(--pink);
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 0.5em;
 
     @include responsiveness.respond(tab-port) {
       padding-top: 2vh;
@@ -56,16 +53,24 @@
     }
   }
 
-  &__text--container {
-    background: var(--white__off);
-    border-radius: 30px 30px 0 0;
-    width: 100%;
-    height: 15%;
-    top: 0;
+  &__bottom:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-    @include responsiveness.respond(tab-port) {
-      height: 10%;
-    }
+  &__bottom {
+    //box-sizing: border-box;
+    display: table;
+    height: fit-content;
+    min-height: 900px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  &__text--container {
+    // background: var(--white__off);
+    background: yellow;
+    border-radius: 30px 30px 0 0;
   }
 
   &__text--question {
@@ -88,24 +93,24 @@
 
   &__pinkRect--left {
     @include section;
-    bottom: 0;
-    left: 0;
     background: var(--pink__light);
     border-radius: 0 0 0 30px;
+    @include responsiveness.respond(tab-port) {
+      border-radius: 0 0 0 0;
+    }
   }
 
   &__pinkRect--middle {
     @include section;
     background: var(--pink__medium);
-    bottom: 0;
-    left: calc(100% / 3);
   }
 
   &__pinkRect--right {
     @include section;
-    bottom: 0;
-    right: 0;
     background: var(--pink__light);
     border-radius: 0 0 30px 0;
+    @include responsiveness.respond(tab-port) {
+      border-radius: 0 0 30px 30px;
+    }
   }
 }

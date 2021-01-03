@@ -60,38 +60,38 @@ const FAQComponent: React.FC = () => {
   return (
     <div className="FAQ">
       <div className="FAQ__whiteRect">
-        <div className="FAQ__text--container">
-          <div className="FAQ__text--header">Frequently Asked Questions</div>
-        </div>
-        <div className="FAQ__pinkRect--left">
-          {text[0].map((item) => {
-            return (
-              <>
-                <div className="FAQ__text--question">{item.question}</div>
-                <div className="FAQ__text--answer">{item.answer}</div>
-              </>
-            );
-          })}
-        </div>
-        <div className="FAQ__pinkRect--middle">
-          {text[1].map((item) => {
-            return (
-              <>
-                <div className="FAQ__text--question">{item.question}</div>
-                <div className="FAQ__text--answer">{item.answer}</div>
-              </>
-            );
-          })}
-        </div>
-        <div className="FAQ__pinkRect--right">
-          {text[2].map((item) => {
-            return (
-              <>
-                <div className="FAQ__text--question">{item.question}</div>
-                <div className="FAQ__text--answer">{item.answer}</div>
-              </>
-            );
-          })}
+        <div className="FAQ__top">Frequently Asked Questions</div>
+        <div className="FAQ__bottom">
+          <div className="FAQ__pinkRect--left">
+            {text[0].map((item) => {
+              return (
+                <>
+                  <div className="FAQ__text--question">{item.question}</div>
+                  <div className="FAQ__text--answer">{item.answer}</div>
+                </>
+              );
+            })}
+          </div>
+          <div className="FAQ__pinkRect--middle">
+            {text[1].map((item) => {
+              return (
+                <>
+                  <div className="FAQ__text--question">{item.question}</div>
+                  <div className="FAQ__text--answer">{item.answer}</div>
+                </>
+              );
+            })}
+          </div>
+          <div className="FAQ__pinkRect--right">
+            {text[2].map((item) => {
+              return (
+                <>
+                  <div className="FAQ__text--question">{item.question}</div>
+                  <div className="FAQ__text--answer">{item.answer}</div>
+                </>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
