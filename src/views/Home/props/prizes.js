@@ -10,19 +10,19 @@ export const topics = [
     title: "Health Hacks",
     icon: <HealthHacksIcon />,
     text:
-      "Create a project dedicated to expanding healthcare access to everyone through a variety of means. Your project can address either/both physical or mental health!",
+      "This category aspires to address healthcare disparities. How do we support mental & physical well-being with accessible services?",
   },
   {
     title: "Earth Hacks",
     icon: <EarthHacksIcon />,
     text:
-      "This category is dedicated to supporting hackers interested in sustainability and earth conservation efforts and technologies.",
+      "This category is dedicated to supporting sustainability and conservation efforts. How can we live harmoniously with our planet?",
   },
   {
     title: "Justice Hacks",
     icon: <JusticeHacksIcon />,
     text:
-      "This category hopes to support and shine a light on projects related to civil liberties and social justice!",
+      "This category aims to drive innovation for civil liberty and social justice. How can we uphold truth & order in a (mis)information age?",
   },
   {
     title: "Best Cruz Hack",
@@ -32,12 +32,13 @@ export const topics = [
   {
     title: "Best UI / UX",
     icon: <BestUIUXIcon />,
-    text: "Create a project that has a great design and user experience!",
+    text:
+      "Have a new paradigm for interaction design? Create a project that has an awesome user experience!",
   },
   {
     title: "Best Beginner",
     icon: <BestBeginnerIcon />,
     text:
-      "Hackathons are meant for everyone, especially our for first-time hackers! To that end, we've created a prize category for teams with all first-time hackers.",
+      "Hackathons are meant for everyone, especially our first-timers! We've created a prize category to reward teams composed of all first-time hackers.",
   },
 ];
