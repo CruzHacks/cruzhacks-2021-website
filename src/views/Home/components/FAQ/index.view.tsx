@@ -21,7 +21,7 @@ const FAQComponent: React.FC<FAQProps> = ({
     <div className="FAQ">
       <div className="FAQ__whiteRect">
         <div className="FAQ__text--container">
-          <div className="FAQ__text--header">Frequently Asked Questions</div>
+          <div className="FAQ__text--header" />
         </div>
         <div className="FAQ__pinkRect--left">
           {Object.values(questionAnswersColumnLeft).map(
