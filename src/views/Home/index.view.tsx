@@ -14,6 +14,7 @@ import * as heroProps from "./props/hero.json";
 import * as missionProps from "./props/mission.json";
 import * as milestoneProps from "./props/milestones.json";
 import { sponsors } from "./props/sponsors.js";
+import { topics } from "./props/prizes";
 import FAQComponent from "./components/FAQ/index.view";
 import PrizesComponent from "./components/Prizes/index.view";
 
@@ -48,7 +49,7 @@ const HomepageView: React.FC = () => {
             mission_text={missionProps.mission}
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
-          <PrizesComponent />
+          <PrizesComponent topics={topics} />
           <FAQComponent />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
