@@ -192,7 +192,7 @@
   &__pinnacle {
     grid-row-start: 4;
     justify-self: start;
-    margin-top: calc(-1.85vw - 1.25vh);
+    margin-top: calc(-1.65vw - 1.25vh);
     width: calc(4vw + 1.32vh);
 
     @include responsiveness.respond(phone) {
