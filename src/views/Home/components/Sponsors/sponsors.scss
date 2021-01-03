@@ -198,6 +198,7 @@
     @include responsiveness.respond(tab-port) {
       margin-top: calc(-1.8vw - 1.25vh);
     }
+
     @include responsiveness.respond(phone) {
       margin-top: calc(-0.5vw - 0.2vh);
       margin-left: calc(-7.75vw - 2vh);
