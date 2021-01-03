@@ -4,7 +4,6 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import FAQ from "./components/FAQ/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
@@ -14,7 +13,11 @@ import "./Home.scss";
 import * as heroProps from "./props/hero.json";
 import * as missionProps from "./props/mission.json";
 import * as milestoneProps from "./props/milestones.json";
+import * as FAQprops from "./props/faq.json";
 import { sponsors } from "./props/sponsors.js";
+import { topics } from "./props/prizes";
+import FAQComponent from "./components/FAQ/index.view";
+import PrizesComponent from "./components/Prizes/index.view";
 
 const HomepageView: React.FC = () => {
   return (
@@ -47,8 +50,13 @@ const HomepageView: React.FC = () => {
             mission_text={missionProps.mission}
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
+          <PrizesComponent topics={topics} />
+          <FAQComponent
+            questionAnswersColumnLeft={FAQprops.questionAnswersColumnLeft}
+            questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
+            questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
+          />
           <SponsorsComponent sponsors={sponsors} />
-          <FAQ />
           <FooterComponent />
         </Background>
       </div>

@@ -7,6 +7,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
+  padding-bottom: calc(8% - 3vw);
 
   @include responsiveness.respond(tab-land) {
     transform: scale(0.9);
@@ -156,7 +157,7 @@
     justify-self: end;
     width: calc(8vw + 3vh);
     margin-top: -1vh;
-    margin-right: 2vw;
+    margin-right: 1.5vw;
 
     @include responsiveness.respond(phone) {
       justify-self: end;
@@ -181,7 +182,6 @@
     grid-row-start: 4;
     justify-self: center;
     margin-top: calc(-0.75vh - 0.75vw);
-    margin-left: -3vw;
     width: calc(13vw + 5vh);
 
     @include responsiveness.respond(phone) {
@@ -192,12 +192,12 @@
   &__pinnacle {
     grid-row-start: 4;
     justify-self: start;
-    margin-top: calc(-1.5vw - 1.5vw);
-    margin-left: calc(-1vw - 2vh);
-    width: calc(13vw + 5vh);
+    margin-top: calc(-1.85vw - 1.25vh);
+    width: calc(4vw + 1.32vh);
 
     @include responsiveness.respond(phone) {
-      margin-top: calc(-0.15vh - 0.225vw);
+      margin-top: calc(-0.5vw - 0.2vh);
+      margin-left: calc(-7.75vw - 2vh);
       justify-self: center;
     }
   }
