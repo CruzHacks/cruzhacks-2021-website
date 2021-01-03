@@ -192,9 +192,12 @@
   &__pinnacle {
     grid-row-start: 4;
     justify-self: start;
-    margin-top: calc(-1.65vw - 1.25vh);
+    margin-top: calc(-1.6vw - 1.25vh);
     width: calc(4vw + 1.32vh);
 
+    @include responsiveness.respond(tab-port) {
+      margin-top: calc(-1.8vw - 1.25vh);
+    }
     @include responsiveness.respond(phone) {
       margin-top: calc(-0.5vw - 0.2vh);
       margin-left: calc(-7.75vw - 2vh);
