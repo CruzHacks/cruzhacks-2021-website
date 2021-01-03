@@ -56,14 +56,14 @@
 
   &__text--header {
     @include typography.alt-title-text-medium;
-    
+
     position: relative;
     color: var(--pink);
     padding-top: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    &:after {
+    &::after {
       content: "Frequently Asked Questions";
     }
 
@@ -76,7 +76,7 @@
     @include responsiveness.respond(smallest) {
       padding-top: calc(0.1em + 0.85vh - .1vw);
       padding-left: 5vw;
-      &:after {
+      &::after {
         content: "FAQ";
       }
     }
