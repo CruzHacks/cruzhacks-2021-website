@@ -74,7 +74,7 @@
     }
 
     @include responsiveness.respond(smallest) {
-      padding-top: 0.3em;
+      padding-top: calc(0.1em + 0.7vh);
       padding-left: 5vw;
       &:after {
         content: "FAQ";
