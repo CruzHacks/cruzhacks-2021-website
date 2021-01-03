@@ -18,8 +18,11 @@ const SponsorsComponent: React.FC<SponsorProps> = ({
   return (
     <div className="Sponsors">
       <div className="Sponsors__titleContainer">
-        <h2 className="Sponsors__title">Thanks to Our Sponsors</h2>
+        <p className="Sponsors__text">
+          Powered by CIED and the Blackstone Launchpad & Techstars
+        </p>
         <hr className="Sponsors__ruleLine" />
+        <p className="Sponsors__title">Thanks to Our Sponsors!</p>
       </div>
       <div className="Sponsors__logoContainer">
         {Object.values(sponsors).map(({ name, className, url, logo }) => (

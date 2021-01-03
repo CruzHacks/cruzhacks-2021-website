@@ -26,18 +26,24 @@
     width: 100vw;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 2px 2px var(--black);
 
-    @include typography.title-text;
-    @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
-    line-height: 5vh;
+    @include typography.description;
   }
 
   &__ruleLine {
     margin-top: -1vh;
 
     max-width: 40vw;
-    border-bottom: calc(3px + 0.25vh) solid white;
+    border: 0;
+    border-bottom: calc(2px + 0.25vh) solid white;
+  }
+
+  &__title {
+    //text-shadow: 2px 2px var(--black);
+
+    @include typography.title-text;
+    @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
+    line-height: 5vh;
   }
 
   // sponsor logos
@@ -106,7 +112,7 @@
   &__stratovan {
     grid-row-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-right: -5vh;
     margin-left: 1vw;
   }
@@ -162,18 +168,19 @@
     grid-row-start: 4;
     grid-column-start: 2;
     justify-self: end;
-    width: calc(8vw + 2vh);
+    width: calc(10vw + 3vh);
     margin-top: 1.5vh;
+    margin-right: -3vw;
   }
 
   &__mlh {
     grid-row-start: 4;
     grid-column-start: 3;
-    margin-left: 1vw;
-    width: calc(9vw + 3vh);
+    width: calc(5vw + 3vh);
+    margin-top: 2vh;
+    margin-left: 5vw;
 
     @include responsiveness.respond(phone) {
-      margin-top: 2vh;
     }
   }
 
