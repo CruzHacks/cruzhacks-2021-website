@@ -1,5 +1,4 @@
 @use "~stylesheets/responsiveness";
-@use "~stylesheets/variables";
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
@@ -18,6 +17,12 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   @include responsiveness.respond(tab-port) {
     line-height: 40px;
   }
+}
+
+/* smaller than title-text but bigger than description */
+@mixin title-text-secondary {
+  @include title-text;
+  @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
 }
 
 @mixin alt-title-text {
