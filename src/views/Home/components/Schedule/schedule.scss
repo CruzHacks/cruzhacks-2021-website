@@ -28,10 +28,6 @@
     @include responsiveness.respond(phone) {
       left: 10vw;
     }
-
-    @include responsiveness.respond(phone-narrow) {
-      left: 6vw;
-    }
   }
 
   &__whiteRect {
