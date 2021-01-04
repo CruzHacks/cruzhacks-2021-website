@@ -4,7 +4,6 @@ import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
-import FAQ from "./components/FAQ/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
@@ -34,16 +33,6 @@ const HomepageView: React.FC = () => {
             <div className="Homepage__emailSubscriptionContainer">
               <EmailSubscriptionForm />
             </div>
-<<<<<<< HEAD
-          ))}
-        </Hero>
-        <Mission
-          about_text={mission_props.about}
-          mission_text={mission_props.mission}
-        />
-        <FAQ />
-        <Footer />
-=======
             {Object.entries(heroProps.buttonProps).map(([type, props]) => (
               <div key={type} className="Homepage__buttonContainer">
                 {Object.entries(props).map(([_, buttonProp]) => (
@@ -70,7 +59,6 @@ const HomepageView: React.FC = () => {
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
->>>>>>> 4a1aadee7e77c342fbb90ca90785495b0c680474
       </div>
     </>
   );

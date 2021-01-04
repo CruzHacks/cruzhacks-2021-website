@@ -19,15 +19,12 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   }
 }
 
-<<<<<<< HEAD
-=======
 /* smaller than title-text but bigger than description */
 @mixin title-text-secondary {
   @include title-text;
   @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
 }
 
->>>>>>> 4a1aadee7e77c342fbb90ca90785495b0c680474
 @mixin alt-title-text {
   color: var(--pink);
   font-family: $font-family-base;
