@@ -6,7 +6,7 @@
   z-index: -3;
   max-width: 1800px;
   min-height: 800px;
-  max-height: 1000px;
+  height: fit-content;
   margin: auto;
   overflow: hidden;
 
@@ -17,6 +17,7 @@
     bottom: 25%;
     width: 50%;
     min-width: 300px;
+    padding-bottom: 5%;
     max-width: 1000px;
     height: 35%;
 
@@ -40,7 +41,7 @@
     position: absolute;
     background: var(--white__off);
     box-shadow: 0 0 20px 11px rgba(89, 93, 130, 0.5);
-    border-radius: 50px;
+    border-radius: 40px;
 
     @include responsiveness.respond(tab-port) {
       border-radius: 3vh;
@@ -51,9 +52,9 @@
     @include typography.description;
 
     background: var(--pink__light);
-    border-radius: 50px;
+    border-radius: 40px;
     height: calc((57.5% / 3) * 2);
-    width: calc(57.9% / 3);
+    width: calc(57.5% / 3);
     padding-top: 2%;
     text-align: center;
     color: var(--grey__dark);
@@ -78,6 +79,10 @@
     position: absolute;
     left: -5%;
     top: -4.18%;
+
+    @include responsiveness.respond(tab-port) {
+      top: -4%;
+    }
   }
 
   &__dayTwo {
@@ -173,7 +178,7 @@
     right: 35%;
     width: 30%;
     background: var(--white__off);
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 40px 40px 0;
 
     @include responsiveness.respond(tab-port) {
       border-radius: 0 3vh 3vh 0;
@@ -186,7 +191,7 @@
     padding-top: 57.5%;
     right: 0;
     background: var(--pink__light);
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 40px 40px 0;
 
     @include responsiveness.respond(tab-port) {
       border-radius: 0 3vh 3vh 0;
