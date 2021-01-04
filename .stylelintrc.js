@@ -9,7 +9,7 @@ module.exports = {
       "declaration-empty-line-before": null,
       "declaration-colon-newline-after": null,
       "declaration-no-important": true,
-      "max-nesting-depth": 2,
+      "max-nesting-depth": 3,
       "scss/at-function-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "scss/at-mixin-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "scss/dollar-variable-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",

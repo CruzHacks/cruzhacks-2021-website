@@ -1,5 +1,4 @@
 @use "~stylesheets/responsiveness";
-@use "~stylesheets/variables";
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
@@ -20,6 +19,15 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   }
 }
 
+<<<<<<< HEAD
+=======
+/* smaller than title-text but bigger than description */
+@mixin title-text-secondary {
+  @include title-text;
+  @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
+}
+
+>>>>>>> 4a1aadee7e77c342fbb90ca90785495b0c680474
 @mixin alt-title-text {
   color: var(--pink);
   font-family: $font-family-base;
@@ -67,7 +75,9 @@ $font-family-source-base: "Source Code Pro", sans-serif;
 
 @mixin button-text {
   color: var(--white);
+  font-weight: bold;
   font-family: $font-family-italic;
+  line-height: 8px;
 
   @include responsiveness.font($responsive: 1.5vw, $min: 12px, $max: 18px);
 }

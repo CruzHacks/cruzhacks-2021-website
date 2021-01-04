@@ -1,0 +1,61 @@
+
+{
+  "questionAnswersColumnMiddle": [
+    {
+      "question": "What is a Hackathon?",
+      "answer":
+        "A hackathon is a weekend-long event where you can build out your ideas, network, and show off your skills. At CruzHacks, you can forming teams, discover an idea, build it, and show it off at the end. Hundreds of students, sponsors, mentors, and judges gather together to push the limits of what you can build, only limited by your imagination. CruzHacks will conduct workshops for you to learn new skills and network with folks, so don’t worry if this is your first time attending a hackathon!"
+    },
+    {
+      "question": "How long is CruzHacks?",
+      "answer":
+        "CruzHacks is a 3-day event that starts Friday night and ends Sunday afternoon. This year, CruzHacks will be taking place January 15-17, 2021."
+    },
+    {
+      "question": "How many people can be on a team?",
+      "answer": "Each team can have a maximum number of 4 people."
+    }
+  ],
+  "questionAnswersColumnRight": [
+    {
+      "question": "Who can participate?",
+      "answer":
+        "Everyone can! This event is open to coders, designers, artists, project managers, and anyone else who wants to create. No prior coding or technical experience is necessary— mentors will be available to guide you through technical challenges!"
+    },
+    {
+      "question": "Is CruzHacks restricted to UCSC students or American citizens?",
+      "answer":
+        "No, CruzHacks accepts applicants from around the world."
+    },
+    {
+      "question": "Can first year students apply?",
+      "answer": "Yes! Students of ANY grade or majors may apply."
+    }
+  ],
+  "questionAnswersColumnLeft": [
+    {
+      "question": "How will CruzHacks take place? ",
+      "answer":
+        "CruzHacks 2021 will be held virtually per CDC guidelines. Synchronous video presentations will be delivered via Hopin (hopin.to), while a Slack workspace will facilitate text communication & project management (slack.com)."
+    },
+    {
+      "question": "Where can I receive updates on CruzHacks?",
+      "answer":
+        "Check out our Instagram page and Twitter account @cruzhacks to receive updates. We will also email updates as the event approaches."
+    },
+    {
+      "question": "Do I need coding / hackathon experience to apply?",
+      "answer":
+        "No experience required. We are looking for applicants who want to learn and get creative! 47% of our attendees are first time hackers."
+    },
+    {
+      "question": "Do you need a team in mind when applying?",
+      "answer":
+        "It is not necessary to have a team at the time of application, nor during the actual hackathon."
+    },
+    {
+      "question": "When will decisions be made?",
+      "answer": "Decisions will be announced a week before the hackathon."
+    }
+  ]
+}
