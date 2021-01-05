@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { ReactComponent as Arrow } from "images/arrow.svg";
-import { footerProps, renderIcon } from "views/Home/props/footer";
+import { footerProps } from "views/Home/props/footer";
 import "./footer.scss";
 
 const FooterComponent: React.FC = () => {
@@ -24,17 +24,19 @@ const FooterComponent: React.FC = () => {
       <div className="Footer__images">
         <div className="Footer__team">Team</div>
         <div className="Footer__links">
-          {footerProps.map((props) => (
+          {footerProps.map((prop) => (
             <a
-              key={props.key}
-              href={props.link}
+              key={prop.key}
+              href={prop.link}
               target="_blank"
               rel="noreferrer"
               className="Footer__link--wrapper"
             >
-              <button className="Footer__link--button" aria-label={props.label}>
-                {renderIcon(props.key)}
-              </button>
+              <img
+                className="Footer__link--icon"
+                src={prop.icon}
+                alt={prop.label}
+              />
             </a>
           ))}
         </div>

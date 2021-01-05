@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 
   background: var(--white__off);
   box-shadow: 0 0 35px 16px rgba(255, 255, 255, 0.28);
@@ -31,6 +32,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--medium-spacer);
+
+    @include responsiveness.respond(phone-narrow) {
+      flex-direction: column;
+    }
   }
 
   &__team {
@@ -45,16 +50,24 @@
   &__links {
     display: flex;
     justify-content: center;
+
+    @include responsiveness.respond(phone-narrow) {
+      margin: var(--large-spacer) 0;
+    }
   }
 
   &__link--wrapper {
-    margin: 0 var(--medium-spacer);
+    @include footer-highlight();
+    height: 6vw;
+    width: 6vw;
+    max-height: 52px;
+    max-width: 52px;
+    margin: 0 1.05vw;
   }
 
-  &__link--button {
-    @include footer-highlight();
-    height: 53px;
-    width: 53px;
+  &__link--icon {
+    width: 70%;
+    height: 70%;
   }
 
   &__scroll {
