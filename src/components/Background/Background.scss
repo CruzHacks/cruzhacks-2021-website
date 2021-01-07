@@ -7,6 +7,8 @@
   min-height: 100%;
   overflow: hidden;
   width: 100%;
+  margin-top: 26px;
+  z-index: -1;
 
   &__children {
     z-index: 1;

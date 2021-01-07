@@ -44,7 +44,6 @@
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
       align-content: center;
-      padding-top: calc(2.5px + 2.5vh);
     }
   }
 
@@ -211,28 +210,5 @@
     @include responsiveness.respond(tab-port) {
       margin: 1.1em auto;
     }
-  }
-
-  &__details {
-    display: flex;
-    justify-content: space-around;
-    width: 87%;
-    margin: 0 0 var(--medium-spacer);
-
-    text-decoration: none;
-
-    max-width: calc(30px + 38vw);
-
-    @include responsiveness.respond(tab-port) {
-      justify-content: space-around;
-      max-width: 97%;
-    }
-  }
-
-  &__details--link {
-    margin: 0 1em 0 1em;
-
-    @include typography.description;
-    font-style: italic;
   }
 }
