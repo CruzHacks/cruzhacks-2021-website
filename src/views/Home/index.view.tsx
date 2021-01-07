@@ -57,8 +57,8 @@ const HomepageView: React.FC = () => {
             questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
             questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
           />
-          <SponsorsComponent sponsors={sponsors} />
           <Schedule />
+          <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
       </div>
