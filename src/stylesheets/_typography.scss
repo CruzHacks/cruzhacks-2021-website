@@ -96,10 +96,20 @@ $font-family-source-base: "Source Code Pro", sans-serif;
 }
 
 @mixin error {
-  color: var(--red);
-  font-family: $font-family-base;
+  font-family: $font-family-source-base;
+  font-style: italic;
+  color: var(--froly);
+  letter-spacing: min(3.5vw, 25px);
 
-  @include responsiveness.font($responsive: 2.2vw, $min: 11px, $max: 14px);
+  @include responsiveness.font($responsive: 3.6vw, $min: 12px, $max: 121px);
+}
+
+@mixin error-button {
+  @include error;
+  color: var(--haiti);
+  letter-spacing: max(0.5vw, 7px);
+
+  @include responsiveness.font($responsive:  2.1vw, $min: 12px, $max: 80px);
 }
 
 @mixin speaker-card-info {

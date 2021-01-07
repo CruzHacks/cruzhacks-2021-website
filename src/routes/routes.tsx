@@ -1,13 +1,15 @@
 import * as React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HomepageView from "views/Home/index.view";
+import HomePageView from "views/Home/index.view";
+import ErrorPageView from "views/Error/index.view";
 
 const Routes: React.FC = () => {
   return (
     <div className="Routes">
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <HomepageView />} />
+          <Route exact path="/" render={() => <HomePageView />} />
+          <Route exact path="*" render={() => <ErrorPageView />} />
         </Switch>
       </Router>
     </div>
