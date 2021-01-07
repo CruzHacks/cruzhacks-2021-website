@@ -9,7 +9,8 @@ module.exports = {
   },
   plugins: ["jest", "prettier", "@typescript-eslint"],
   rules: {
-    "no-unused-vars": [
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
       "error",
       {
         args: "after-used",
