@@ -73,6 +73,7 @@
   &__image {
     border-radius: 72px;
     width: 90%;
+    object-fit: cover;
   }
 
   &__question {
