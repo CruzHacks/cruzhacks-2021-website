@@ -23,7 +23,7 @@
   }
 
   &__titleContainer {
-    width: 100vw;
+    max-width: 20em;
     margin: 0 auto;
     text-align: center;
 
@@ -31,9 +31,7 @@
   }
 
   &__ruleLine {
-    margin-top: -1vh;
-
-    max-width: 40vw;
+    max-width: 30em;
     border: 0;
     border-bottom: calc(2px + 0.25vh) solid white;
   }
@@ -43,7 +41,7 @@
 
     @include typography.title-text;
     @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
-    line-height: 5vh;
+    line-height: calc(4em - 1.7vh);
   }
 
   // sponsor logos
