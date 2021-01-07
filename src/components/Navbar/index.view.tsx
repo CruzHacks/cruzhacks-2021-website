@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
 
   const useStyles = makeStyles({
     buttonWrapper: {
-      margin: "0 calc(5% + var(--medium-spacer)) 0 auto",
+      margin: "calc(10% + var(--lage-spacer)) 0 0 auto",
       color: "var(--froly)",
       "@media (max-width: 42.5em)": {
         margin: "0 0 0 auto",

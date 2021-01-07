@@ -20,7 +20,6 @@ import * as FAQprops from "./props/faq.json";
 import { sponsors } from "./props/sponsors.js";
 import { topics } from "./props/prizes";
 
-
 const HomepageView: React.FC = () => {
   return (
     <>
