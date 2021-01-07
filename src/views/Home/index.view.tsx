@@ -46,13 +46,13 @@ const HomepageView: React.FC = () => {
           />
           <MilestonesComponent milestones={milestoneProps.milestones} />
           <PrizesComponent topics={topics} />
+          <Schedule />
           <SpeakersComponent speakers={speakers} comingSoon={comingSoon} />
           <FAQComponent
             questionAnswersColumnLeft={FAQprops.questionAnswersColumnLeft}
             questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
             questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
           />
-          <Schedule />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>
