@@ -17,7 +17,7 @@
   &__logoContainer {
     display: grid;
     align-self: center;
-    grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px);
+    grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px) fit-content(300px);
     grid-template-rows: 1fr 0.6fr 0.5fr 0.1fr;
     margin: 0 auto;
   }
@@ -26,40 +26,47 @@
     width: 100vw;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 2px 2px var(--black);
 
-    @include typography.title-text;
-    @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
-    line-height: 5vh;
+    @include typography.description;
   }
 
   &__ruleLine {
     margin-top: -1vh;
 
     max-width: 40vw;
-    border-bottom: calc(3px + 0.25vh) solid white;
+    border: 0;
+    border-bottom: calc(2px + 0.25vh) solid white;
+  }
+
+  &__title {
+    //text-shadow: 2px 2px var(--black);
+
+    @include typography.title-text;
+    @include responsiveness.font($responsive: 2.2vw, $min: 18px, $max: 28px);
+    line-height: 5vh;
   }
 
   // sponsor logos
   &__cied {
+    grid-column-start: 2;
     width: calc(5vw + 5vh);
     height: fit-content;
-    justify-self: end;
-    margin: 1vw 20%;
+    margin: 1vw 20% 1vw -2vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 2vh);
-      margin: 1vw 4vw;
+      margin: 1vw 4vw 1vw -2vw;
       justify-self: start;
     }
   }
 
   &__comcast {
-    width: calc(20vw + 20vh);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    width: calc(18vw + 18vh);
     height: fit-content;
-    justify-self: center;
     margin-bottom: 2vw;
-    margin-top: calc(2.25vw + 2.25vh);
+    margin-top: calc(2vw + 2vh);
 
     @include responsiveness.respond(phone) {
       width: calc(30vw + 2vh);
@@ -67,142 +74,145 @@
     }
   }
 
-  &__fifteenSeventeen {
-    width: calc(12vw + 12vh);
-    height: fit-content;
-    justify-self: start;
-    margin-top: calc(4.75vw + 4.75vh);
-    margin-left: 4vw;
-
-    @include responsiveness.respond(phone) {
-      margin-top: calc(2.75vw + 2.75vh);
-      margin-left: 4vw;
-      width: calc(25vw + 2vh);
-      justify-self: end;
-    }
-  }
-
+  // Second tier
   &__citris {
     grid-row-start: 2;
-    justify-self: end;
-    width: calc(10vw + 10vh);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center;
+    width: calc(12vw + 12vh);
     height: fit-content;
     margin-top: 1vw;
     margin-right: -1vw;
-
-    @include responsiveness.respond(phone) {
-      justify-self: start;
-    }
   }
 
+  // Third tier
   &__ebay {
-    grid-row-start: 2;
-    justify-self: center;
-    width: calc(10vw + 10vh);
+    grid-row-start: 3;
+    width: calc(10vw + 8vh);
     height: fit-content;
     margin-top: 1vw;
 
     @include responsiveness.respond(phone) {
-      width: calc(8vw + 8vh);
+      width: calc(8vw + 5vh);
     }
   }
 
   &__southSwell {
-    grid-row-start: 2;
-    width: calc(10vw + 10vh);
+    grid-row-start: 3;
+    width: calc(10vw + 6vh);
     height: fit-content;
-    margin-top: 1vw;
+    margin: 1vw 1vw 0;
+
+    @include responsiveness.respond(phone) {
+      margin: 1vw 0 0;
+    }
   }
 
   &__stratovan {
     grid-row-start: 3;
-    grid-column-start: 1;
-    width: calc(11.5vw + 11.5vh);
+    width: calc(12.5vw + 12.5vh);
+    margin-top: 1vh;
+    margin-right: -5vh;
+    margin-left: 1vw;
+  }
+
+  &__fifteenSeventeen {
+    grid-row-start: 3;
     justify-self: end;
-    margin-right: -4vw;
+    width: calc(6vw + 4vh);
+    height: fit-content;
+    margin-top: 2vh;
+    margin-right: 3vw;
 
     @include responsiveness.respond(phone) {
-      justify-self: center;
-      margin-top: 2vh;
+      width: calc(8vw + 2vh);
+      margin-right: 0;
+    }
+  }
+
+  // Fourth tier
+  &__earthHacks {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    width: calc(10vw + 4vh);
+    height: fit-content;
+
+    @include responsiveness.respond(phone) {
+      width: calc(8vw + 4vh);
     }
   }
 
   &__balsamiq {
-    grid-row-start: 3;
-    justify-self: center;
-    width: calc(12vw + 4vh);
-
-    @include responsiveness.respond(phone) {
-      margin-top: 2vh;
-    }
-  }
-
-  &__mlh {
-    grid-row-start: 3;
-    grid-column-start: 3;
-    margin-left: -3vw;
-    justify-self: start;
-    width: calc(9vw + 3vh);
-
-    @include responsiveness.respond(phone) {
-      justify-self: start;
-      margin-top: 2vh;
-      margin-left: 0;
-    }
+    grid-row-start: 4;
+    grid-column-start: 1;
+    justify-self: right;
+    width: calc(6vw + 3vh);
+    height: fit-content;
+    margin-top: auto;
+    margin-right: 1vw;
   }
 
   &__chooseSC {
-    grid-row-start: 3;
-    grid-column-start: 3;
-    justify-self: end;
-    width: calc(8vw + 3vh);
+    grid-row-start: 4;
+    grid-column-start: 2;
+    width: calc(5vw + 2vh);
     margin-top: -1vh;
-    margin-right: 1.5vw;
 
     @include responsiveness.respond(phone) {
-      justify-self: end;
       margin-top: 0;
-      margin-right: calc(1vw - 1vh);
     }
   }
 
   &__wolfram {
     grid-row-start: 4;
+    grid-column-start: 2;
     justify-self: end;
-    margin-top: -2.5vh;
-    width: calc(9vw + 3vh);
+    width: calc(10vw + 3vh);
+    margin-top: 1.5vh;
+    margin-right: -4vw;
+  }
+
+  &__mlh {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    width: calc(5vw + 3vh);
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+
+  &__pinnacle {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    justify-self: end;
+    width: calc(4vw + 1.32vh);
 
     @include responsiveness.respond(phone) {
-      margin-top: 0;
-      justify-self: center;
+      margin-top: 2vw;
+    }
+
+    @include responsiveness.respond(smallest) {
+      margin-right: 3vw;
     }
   }
 
   &__stickermule {
     grid-row-start: 4;
-    justify-self: center;
-    margin-top: calc(-0.75vh - 0.75vw);
-    width: calc(13vw + 5vh);
-
-    @include responsiveness.respond(phone) {
-      margin-top: calc(0.5vh + 0.75vw);
-    }
+    grid-column-start: 4;
+    margin-left: 1vw;
+    width: calc(10vw + 5vh);
   }
 
-  &__pinnacle {
+  &__echoAR {
     grid-row-start: 4;
-    justify-self: start;
-    margin-top: calc(-1.6vw - 1.25vh);
-    width: calc(4vw + 1.32vh);
-
-    @include responsiveness.respond(tab-port) {
-      margin-top: calc(-1.8vw - 1.25vh);
-    }
+    grid-column-start: 4;
+    width: calc(12vw + 3vh);
+    margin-top: auto;
+    margin-left: 5vw;
+    margin-bottom: 1vh;
 
     @include responsiveness.respond(phone) {
-      margin-top: calc(-0.5vw - 0.2vh);
-      margin-left: calc(-7.75vw - 2vh);
-      justify-self: center;
+      margin-bottom: 0;
     }
   }
 }
