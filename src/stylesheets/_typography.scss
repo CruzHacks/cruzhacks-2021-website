@@ -19,6 +19,15 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   }
 }
 
+@mixin speaker-title {
+  font-family: $font-family-italic;
+  font-style: italic;
+  color: var(--salmon);
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 40px);
+}
+
 /* smaller than title-text but bigger than description */
 @mixin title-text-secondary {
   @include title-text;
@@ -91,4 +100,22 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   font-family: $font-family-base;
 
   @include responsiveness.font($responsive: 2.2vw, $min: 11px, $max: 14px);
+}
+
+@mixin speaker-card-info {
+  font-family: $font-family-source-base;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--light-grey);
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+}
+
+@mixin speaker-card-name {
+  color: var(--salmon);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-italic;
+
+  @include responsiveness.font($responsive: 1.5vw, $min: 14px, $max: 18px);
 }
