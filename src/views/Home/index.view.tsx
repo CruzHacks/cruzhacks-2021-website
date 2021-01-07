@@ -6,6 +6,7 @@ import Hero from "views/Home/components/Hero/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Mission from "views/Home/components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
+import Schedule from "./components/Schedule/index.view";
 import PrizesComponent from "./components/Prizes/index.view";
 import FAQComponent from "./components/FAQ/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
@@ -47,6 +48,7 @@ const HomepageView: React.FC = () => {
             questionAnswersColumnRight={FAQprops.questionAnswersColumnRight}
             questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
           />
+          <Schedule />
           <SponsorsComponent sponsors={sponsors} />
           <FooterComponent />
         </Background>

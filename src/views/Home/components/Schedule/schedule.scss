@@ -1,3 +1,280 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/typography";
+@use "~stylesheets/responsiveness";
 
-/* Delete these lines when you begin development */
+.Schedule {
+  position: relative;
+  z-index: -3;
+  max-width: 1800px;
+  min-height: 800px;
+  height: fit-content;
+  margin: auto;
+  overflow: hidden;
+
+  &__schedule {
+    position: absolute;
+    margin: auto;
+    left: 25%;
+    bottom: 25%;
+    width: 50%;
+    min-width: 300px;
+    padding-bottom: 5%;
+    max-width: 1000px;
+    height: 35%;
+
+    @include responsiveness.respond(tab-port) {
+      left: 25vw;
+    }
+
+    @include responsiveness.respond(phone) {
+      left: 10vw;
+    }
+  }
+
+  &__whiteRect {
+    padding-top: 57.5%;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background: var(--white__off);
+    box-shadow: 0 0 20px 11px rgba(89, 93, 130, 0.5);
+    border-radius: 40px;
+
+    @include responsiveness.respond(tab-port) {
+      border-radius: 3vh;
+    }
+  }
+
+  &__tab {
+    @include typography.description;
+
+    background: var(--pink__light);
+    border-radius: 40px;
+    height: calc((57.5% / 3) * 2);
+    width: calc(57.5% / 3);
+    padding-top: 2%;
+    text-align: center;
+    color: var(--grey__dark);
+    transform: rotate(-90deg);
+    min-height: 0.5em;
+    z-index: -3;
+    cursor: pointer;
+    user-select: none;
+
+    &--variant {
+      z-index: 0;
+      background: var(--white__off);
+      color: var(--pink);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      border-radius: 3vh;
+    }
+  }
+
+  &__dayOne {
+    position: absolute;
+    left: -5%;
+    top: -4.18%;
+
+    @include responsiveness.respond(tab-port) {
+      top: -4%;
+    }
+  }
+
+  &__dayTwo {
+    position: absolute;
+    left: -5%;
+    top: 28.9%;
+  }
+
+  &__dayThree {
+    position: absolute;
+    left: -5%;
+    top: 62.5%;
+  }
+
+  &__event {
+    width: 100%;
+    position: relative;
+    height: 3em;
+  }
+
+  &__eventText {
+    @include typography.source-description-purple;
+
+    position: absolute;
+    left: 0;
+    padding-left: 15%;
+
+    @include responsiveness.respond(tab-port) {
+      padding-left: 5%;
+    }
+  }
+
+  &__timeText {
+    @include typography.source-description-grey;
+
+    position: absolute;
+    padding-right: 2em;
+    right: 0;
+  }
+
+  &__dayText {
+    @include typography.description;
+
+    position: absolute;
+    padding: var(--extra-small-spacer);
+    bottom: 40%;
+    margin-right: 20px;
+    left: calc(-2.3vw + 10px);
+    color: var(--pink);
+    transform: rotate(-90deg);
+  }
+
+  &__title {
+    @include typography.alt-title-text;
+
+    position: absolute;
+    padding-left: var(--large-spacer);
+    z-index: 1;
+    padding-top: var(--medium-spacer);
+    margin-bottom: var(--large-spacer);
+    top: 0;
+
+    @include responsiveness.respond(tab-port) {
+      padding-top: 0;
+    }
+  }
+
+  &__eventContainer {
+    position: absolute;
+    top: calc(23% + 2.3vh);
+    left: 4%;
+    height: calc(100% - (23% + 2.3vh));
+    width: 90%;
+    padding-left: 3%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__date {
+    @include typography.source-description-purple;
+
+    position: absolute;
+    padding-left: var(--large-spacer);
+    z-index: 1;
+    top: 15%;
+  }
+
+  &__whiteRect--variant {
+    position: absolute;
+    padding-top: 57.5%;
+    right: 35%;
+    width: 30%;
+    background: var(--white__off);
+    border-radius: 0 40px 40px 0;
+
+    @include responsiveness.respond(tab-port) {
+      border-radius: 0 3vh 3vh 0;
+    }
+  }
+
+  &__pinkRect {
+    position: absolute;
+    width: 47%;
+    padding-top: 57.5%;
+    right: 0;
+    background: var(--pink__light);
+    border-radius: 0 40px 40px 0;
+
+    @include responsiveness.respond(tab-port) {
+      border-radius: 0 3vh 3vh 0;
+    }
+  }
+
+  &__greyRect {
+    position: absolute;
+    background: var(--grey__dark);
+    width: 90%;
+    left: 0;
+    left: 4%;
+    max-height: 2px;
+    height: 0.5vh;
+    top: calc(20% + 2.3vh);
+    z-index: 1;
+  }
+
+  &__greyRect--variant {
+    position: absolute;
+    background: linear-gradient(
+      270deg,
+      var(--grey__dark) 61.73%,
+      rgba(137, 137, 137, 0) 100%
+    );
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  &__moon {
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    width: 20%;
+    max-width: 400px;
+    z-index: -5;
+
+    @include responsiveness.respond(tab-port) {
+      bottom: 60%;
+    }
+  }
+
+  &__stars {
+    position: absolute;
+    left: 10%;
+    width: 1000px;
+    bottom: 45vh;
+    z-index: -5;
+
+    @include responsiveness.respond(tab-port) {
+      width: 600px;
+      bottom: 60vh;
+      left: 10%;
+    }
+  }
+
+  &__comets {
+    position: absolute;
+    left: 0;
+    z-index: -5;
+    bottom: 20vh;
+    width: 100%;
+
+    @include responsiveness.respond(tab-port) {
+      width: 500px;
+      bottom: 40vh;
+    }
+  }
+
+  &__constellation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+
+    @include responsiveness.respond(tab-port) {
+      width: 100px;
+      bottom: 20vh;
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -6;
+  }
+}
