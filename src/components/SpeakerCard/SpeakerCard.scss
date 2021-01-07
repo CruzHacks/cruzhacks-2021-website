@@ -1,0 +1,83 @@
+@use "~stylesheets/typography";
+@use "~stylesheets/responsiveness" as rsp;
+
+.SpeakerCard {
+  margin: 1% 2.5% 3%;
+
+  @include rsp.respond(phone) {
+    margin-bottom: 5%;
+  }
+
+  &__firstLayer {
+    width: 18em;
+    background: #ffd9e0;
+    border-radius: 72px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__secondLayer {
+    background: #fdfdee;
+    box-shadow: 0 0 20px 11px rgba(89, 93, 130, 0.26);
+    border-radius: 72px;
+    height: 20em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__thirdLayer {
+    width: 100%;
+    background: #fdfdee;
+    box-shadow: 0 0 20px 11px rgba(89, 93, 130, 0.17);
+    border-radius: 72px;
+    height: 17em;
+  }
+
+  &__infoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0;
+    z-index: 1;
+  }
+
+  &__info {
+    @include typography.speaker-card-info;
+    margin: 0.1em 0;
+    text-decoration: none;
+  }
+
+  &__divider {
+    border-top: 2px solid #898989;
+    width: 75%;
+  }
+
+  &__nameContainer {
+    margin-top: 5%;
+  }
+
+  &__name {
+    @include typography.speaker-card-name;
+  }
+
+  &__imageContainer {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__image {
+    border-radius: 72px;
+    width: 90%;
+    object-fit: cover;
+  }
+
+  &__question {
+    width: 60%;
+    object-fit: scale-down;
+  }
+}
