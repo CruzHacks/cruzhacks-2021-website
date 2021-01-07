@@ -103,7 +103,7 @@ export const sponsors = [
     name: "Stickermule",
     className: "stickermule",
     logo: Stickermule,
-    url: "https://www.stickermule.com/",
+    url: "http://hackp.ac/mlh-stickermule-hackathons",
   },
   {
     name: "echoAR",
