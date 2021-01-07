@@ -52,6 +52,15 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
 }
 
+@mixin source-description-grey {
+  color: var(--grey__dark);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-source-base;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
+}
+
 /* title text with the 3D cyan-red effect */
 @mixin anaglyph-title-text {
   @include title-text;
