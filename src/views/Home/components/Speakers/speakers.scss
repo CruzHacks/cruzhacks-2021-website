@@ -1,3 +1,43 @@
-/* stylelint-disable-line no-empty-source */
+@use "~stylesheets/typography" as tpy;
+@use "~stylesheets/responsiveness" as rsp;
 
-/* Delete these lines when you begin development */
+.Speakers {
+  position: relative;
+  padding-top: 2%;
+
+  &__titleContainer {
+    max-width: 75%;
+    height: 100%;
+    margin: auto auto 5%;
+  }
+
+  &__title {
+    margin: auto;
+    padding: 1%;
+    height: 75%;
+    width: 35%;
+    background: var(--creame);
+    border-radius: 64px;
+    text-align: center;
+
+    @include tpy.speaker-title;
+
+    @include rsp.respond(phone) {
+      width: 50%;
+    }
+
+    @include rsp.respond(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__cardsContainer {
+    max-width: 1200px;
+    min-height: 50em;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
