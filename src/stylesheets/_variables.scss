@@ -2,13 +2,20 @@
   --black: #181a1b;
   --white: #fff;
   --wedgewood: #4f728e;
+  --froly: #f06c84;
   --light-aqua: #4f9c95;
   --grey: rgb(137, 167, 189);
   --dark-navy: #1a1542;
   --blue: #4366c0;
+  --purple: #1a1542;
+  --salmon: #f06c84;
 
   /* variations */
   --wedgewood__dark: #{darken(#4f728e, 7%)};
+  --white__off: #fdfdee;
+  --grey__dark: #898989;
+  --pink__light: #ffd9e0;
+  --pink__medium: #ffccd5;
 
   /* These are for gradient */
   --wedgewood__gradient: #486988;
@@ -32,6 +39,8 @@
   --malibu__gradient: #8a9dda;
   --new-blue: rgba(138, 157, 218, 0.6);
   --heliotrope: #a687ff;
+  --light-grey: #898989;
+  --creame: #fdfdee;
 
   /* error section */
   --froly: #f37e7e;

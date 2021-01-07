@@ -1,9 +1,8 @@
 @use "~stylesheets/responsiveness";
-@use "~stylesheets/variables";
 
 $font-family-base: "Montserrat", sans-serif;
 $font-family-italic: "Montserrat Italic", sans-serif;
-$font-family-secondary: "Source Code Pro", sans-serif;
+$font-family-source-base: "Source Code Pro", sans-serif;
 
 @mixin title-text {
   margin: 0;
@@ -18,6 +17,57 @@ $font-family-secondary: "Source Code Pro", sans-serif;
   @include responsiveness.respond(tab-port) {
     line-height: 40px;
   }
+}
+
+@mixin speaker-title {
+  font-family: $font-family-italic;
+  font-style: italic;
+  color: var(--salmon);
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 28px, $max: 40px);
+}
+
+/* smaller than title-text but bigger than description */
+@mixin title-text-secondary {
+  @include title-text;
+  @include responsiveness.font($responsive: 3.8vw, $min: 24px, $max: 32px);
+}
+
+@mixin alt-title-text {
+  color: var(--pink);
+  font-family: $font-family-base;
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 18px, $max: 32px);
+}
+
+@mixin alt-title-text-medium {
+  color: var(--pink);
+  font-family: $font-family-base;
+  font-style: italic;
+  font-weight: normal;
+
+  @include responsiveness.font($responsive: 3.8vw, $min: 22px, $max: 45px);
+}
+
+@mixin source-description-purple {
+  color: var(--purple);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-source-base;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
+}
+
+@mixin source-description-grey {
+  color: var(--grey__dark);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-source-base;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
 }
 
 /* title text with the 3D cyan-red effect */
@@ -46,7 +96,7 @@ $font-family-secondary: "Source Code Pro", sans-serif;
 }
 
 @mixin error {
-  font-family: $font-family-secondary;
+  font-family: $font-family-source-base;
   font-style: italic;
   color: var(--froly);
   letter-spacing: min(3.5vw, 25px);
@@ -60,4 +110,22 @@ $font-family-secondary: "Source Code Pro", sans-serif;
   letter-spacing: max(0.5vw, 7px);
 
   @include responsiveness.font($responsive:  2.1vw, $min: 12px, $max: 80px);
+}
+
+@mixin speaker-card-info {
+  font-family: $font-family-source-base;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--light-grey);
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+}
+
+@mixin speaker-card-name {
+  color: var(--salmon);
+  font-style: italic;
+  font-weight: normal;
+  font-family: $font-family-italic;
+
+  @include responsiveness.font($responsive: 1.5vw, $min: 14px, $max: 18px);
 }

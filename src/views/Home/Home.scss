@@ -1,17 +1,5 @@
-@use "~components/Button/Button";
-
 .Homepage {
-  height: 100%;
-
-  &__buttonContainer {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-  }
-
-  &__button {
-    @extend .Button;
-    margin-right: 2vw;
-    margin-bottom: var(--medium-spacer);
-  }
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 }

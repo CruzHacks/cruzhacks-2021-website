@@ -1,19 +1,19 @@
 import * as React from "react";
+import Lottie from "react-lottie";
+import { ReactComponent as Grid } from "images/components/hero/grid.svg";
+import { ReactComponent as Computer } from "images/components/hero/computer.svg";
+import { ReactComponent as Mouse } from "images/components/hero/mouse.svg";
+import { ReactComponent as LargeFlare } from "images/components/hero/ellipse1.svg";
+import { ReactComponent as MediumFlare } from "images/components/hero/ellipse2.svg";
+import { ReactComponent as SmallFlare } from "images/components/hero/ellipse3.svg";
 import PostcardStack from "components/PostcardStack/index.view";
-
 import "./Hero.scss";
-
-type DescriptionDetail = {
-  rightText: string;
-  leftText: string;
-};
+import animationData from "./postcard.json";
 
 interface Description {
-  description: string | DescriptionDetail;
+  description: string;
   style: string;
   line: number;
-  linkRight?: string;
-  linkLeft?: string;
 }
 
 interface Title {
@@ -28,6 +28,14 @@ interface HeroProps {
   children?: React.ReactNode;
 }
 
+const defaultOptions = {
+  animationData,
+  loop: false,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const Hero: React.FC<HeroProps> = ({
   pageName,
   title,
@@ -37,8 +45,18 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
       <div className="Hero__container">
+        <Grid className="Hero__grid" />
+        <LargeFlare className="Hero__largeFlare" />
+        <MediumFlare className="Hero__mediumFlare" />
+        <SmallFlare className="Hero__smallFlare" />
+        <Computer className="Hero__computer" />
+        <Mouse className="Hero__mouse" />
         <div className="Hero__visual">
-          <PostcardStack pageName={pageName} />
+          {window.matchMedia("(prefers-reduced-motion: reduce)").matches ? (
+            <PostcardStack pageName={pageName} />
+          ) : (
+            <Lottie options={defaultOptions} />
+          )}
         </div>
         <div className="Hero__textContainer">
           {title.map((item) => (
@@ -48,31 +66,7 @@ const Hero: React.FC<HeroProps> = ({
           ))}
           {description.map((item) => (
             <p className={`Hero__${item.style}`} key={item.line}>
-              {item.linkLeft ? (
-                <a
-                  className="Hero__details--link"
-                  href={item.linkLeft}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {typeof item.description === "object"
-                    ? item.description.leftText
-                    : null}
-                </a>
-              ) : null}
-              {typeof item.description === "string" ? item.description : null}
-              {item.linkRight ? (
-                <a
-                  className="Hero__details--link"
-                  href={item.linkRight}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {typeof item.description === "object"
-                    ? item.description.rightText
-                    : null}
-                </a>
-              ) : null}
+              {item.description}
             </p>
           ))}
           {children}

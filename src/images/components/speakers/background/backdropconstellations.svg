@@ -1,0 +1,181 @@
+<svg viewBox="0 0 2575 1273" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity=".3" filter="url(#filter0_f)">
+    <g filter="url(#speakerbackdropfilter1)">
+      <circle cx="88.249" cy="99.802" r="11.422" fill="#E3DCF5"/>
+      <circle cx="88.249" cy="99.802" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter2)">
+      <circle cx="233.438" cy="426.95" r="11.422" fill="#E3DCF5"/>
+      <circle cx="233.438" cy="426.95" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter3)">
+      <circle cx="524.026" cy="626.338" r="11.422" fill="#E3DCF5"/>
+      <circle cx="524.026" cy="626.338" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter4)">
+      <circle cx="57.625" cy="842.502" r="11.422" fill="#E3DCF5"/>
+      <circle cx="57.625" cy="842.502" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter5)">
+      <circle cx="453.521" cy="1215.15" r="11.422" fill="#E3DCF5"/>
+      <circle cx="453.521" cy="1215.15" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter6)">
+      <circle cx="2075.16" cy="58.007" r="11.422" fill="#E3DCF5"/>
+      <circle cx="2075.16" cy="58.007" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter7)">
+      <circle cx="2497.36" cy="473.613" r="11.422" fill="#E3DCF5"/>
+      <circle cx="2497.36" cy="473.613" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter8)">
+      <circle cx="2130.98" cy="707.432" r="11.422" fill="#E3DCF5"/>
+      <circle cx="2130.98" cy="707.432" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter9)">
+      <circle cx="2514.25" cy="1144.58" r="11.422" fill="#E3DCF5"/>
+      <circle cx="2514.25" cy="1144.58" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter10)">
+      <circle cx="1033.44" cy="250.601" r="11.422" fill="#E3DCF5"/>
+      <circle cx="1033.44" cy="250.601" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter11)">
+      <circle cx="1556.63" cy="649.182" r="11.422" fill="#E3DCF5"/>
+      <circle cx="1556.63" cy="649.182" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <g filter="url(#speakerbackdropfilter12)">
+      <circle cx="1022.02" cy="1087.29" r="11.422" fill="#E3DCF5"/>
+      <circle cx="1022.02" cy="1087.29" r="10.922" stroke="#E3DCF5"/>
+    </g>
+    <path d="M83.504 98.215l151.195 326.64L525.68 630.254 54.976 844.211 457.215 1216.5" stroke="#E3DCF5" stroke-width="6"/>
+    <path d="M1031.62 248.796l521.04 399.095-532.13 443.439M2071.1 58.906l425.74 416.272-367.4 230.211 383.16 439.921" stroke="#E3DCF5" stroke-width="5"/>
+  </g>
+  <defs>
+    <filter id="filter0_f" x="26.202" y="26.584" width="2519.47" height="1219.99" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur"/>
+    </filter>
+    <filter id="speakerbackdropfilter1" x="30.826" y="42.38" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter2" x="176.016" y="369.527" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter3" x="466.604" y="568.915" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter4" x=".202" y="785.079" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter5" x="396.099" y="1157.73" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter6" x="2017.73" y=".584" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter7" x="2439.94" y="416.19" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter8" x="2073.55" y="650.01" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter9" x="2456.83" y="1087.15" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter10" x="976.018" y="193.179" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter11" x="1499.21" y="591.76" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="speakerbackdropfilter12" x="964.595" y="1029.87" width="114.845" height="114.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="11" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="17.5"/>
+      <feColorMatrix values="0 0 0 0 0.529167 0 0 0 0 0.64068 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+</svg>

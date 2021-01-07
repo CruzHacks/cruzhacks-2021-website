@@ -6,13 +6,36 @@
   overflow: hidden;
   min-height: 100%;
 
+  @mixin flare {
+    position: absolute;
+    z-index: -3;
+    width: 110vw;
+    height: calc(100%);
+    max-height: 1900px;
+    top: calc(-20vh);
+    margin-right: calc(-4vw - 5vh);
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-20vh - 20vw);
+      margin-right: calc(-35vw - 5vh);
+    }
+
+    @include responsiveness.respond(phone) {
+      visibility: hidden;
+    }
+  }
+
   &__container {
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
-    margin: auto;
-    max-width: 1800px;
+    margin: 0;
+    width: 100%;
     padding-top: calc(65px + 10vh);
+    padding-bottom: calc(65px + 10vh);
     flex-grow: 4;
+    justify-content: space-around;
+    overflow: hidden;
 
     @include responsiveness.respond(mission) {
       max-width: unset;
@@ -21,15 +44,115 @@
     @include responsiveness.respond(tab-port) {
       flex-wrap: wrap;
       align-content: center;
-      padding-top: calc(2.5px + 2.5vh);
     }
   }
 
+  // background
+  &__grid {
+    position: absolute;
+    transform: scaleY(-1);
+    z-index: -2;
+    bottom: 0;
+    left: 6vw;
+    max-width: calc(25% + 25vw);
+    max-height: 50%;
+    min-height: calc(20em + 60vh);
+
+    @include responsiveness.respond(tab-port) {
+      left: 0;
+      max-width: calc(20vw + 15vh);
+      min-height: 90%;
+      max-height: 100%;
+    }
+
+    @include responsiveness.respond(smallest) {
+      visibility: hidden;
+    }
+  }
+
+  &__computer {
+    position: absolute;
+    z-index: -1;
+    top: calc(-30em - 4vh);
+    width: 100%;
+    max-width: 125em;
+    left: calc(-10em - 15vh);
+
+    @include responsiveness.respond(tab-land) {
+      top: calc(-17em - 4vh);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-10em - 4vh);
+      left: calc(-5em - 15vh);
+    }
+
+    @include responsiveness.respond(smallest) {
+      top: calc(-5em - 4vh);
+    }
+  }
+
+  &__mouse {
+    position: absolute;
+    z-index: -1;
+    bottom: calc(4em + 4vh);
+    right: 2vw;
+    max-height: calc(40% - 10vh);
+    width: fit-content;
+
+    @include responsiveness.respond(desktop) {
+      right: 0;
+    }
+
+    @include responsiveness.respond(tab-port) {
+      max-height: calc(20% - 4vh);
+      bottom: calc(10em + 10vh);
+    }
+
+    @include responsiveness.respond(phone-narrow) {
+      visibility: hidden;
+    }
+  }
+
+  &__largeFlare {
+    @include flare;
+  }
+
+  &__mediumFlare {
+    @include flare;
+    margin-right: calc(-44vw - 5vh);
+    height: calc(70%);
+  }
+
+  &__smallFlare {
+    @include flare;
+    margin-right: calc(-75vw - 5vh);
+    height: 14%;
+    bottom: calc(35vh);
+    top: unset;
+
+    @include responsiveness.respond(big-desktop) {
+      top: calc(43%);
+    }
+
+    @include responsiveness.respond(desktop) {
+      bottom: calc(31vh + 5%);
+    }
+
+    @include responsiveness.respond(tab-port) {
+      margin-right: calc(-60vw - 5vh);
+      bottom: calc(39vh + 10%);
+      top: unset;
+    }
+  }
+
+  // postcard styling
   &__visual {
-    // postcard styling
+    width: 45vw;
+    padding: 2em;
     max-width: 1000px;
-    min-width: 455px;
     margin: auto;
+    transform: rotate(-6deg);
 
     @include responsiveness.respond(desktop) {
       max-width: calc(50vw + 10px);
@@ -42,11 +165,17 @@
     @include responsiveness.respond(phone-narrow) {
       min-width: calc(70vw + 8vh);
     }
+
+    @include responsiveness.respond(tab-port) {
+      top: calc(-10em - 4vh);
+      left: calc(-5em - 15vh);
+    }
   }
 
   &__textContainer {
-    margin: 1.5em;
-    width: 55%;
+    margin: auto;
+    max-width: 55%;
+    padding-right: 1em;
     align-items: center;
 
     @include responsiveness.respond(tab-port) {
@@ -54,17 +183,17 @@
     }
 
     @include responsiveness.respond(phone-narrow) {
-      width: 85%;
+      max-width: 85%;
     }
   }
 
   &__titleText {
-    @include typography.title-text;
+    @include typography.anaglyph-title-text;
     white-space: nowrap;
 
     &--secondary {
-      @extend .Hero__titleText;
-      color: var(--wedgewood__darker);
+      @include typography.title-text;
+      color: var(--salmon);
     }
   }
 
@@ -81,28 +210,5 @@
     @include responsiveness.respond(tab-port) {
       margin: 1.1em auto;
     }
-  }
-
-  &__details {
-    display: flex;
-    justify-content: space-around;
-    width: 87%;
-    margin: 0 0 var(--medium-spacer);
-
-    text-decoration: none;
-
-    max-width: calc(30px + 38vw);
-
-    @include responsiveness.respond(tab-port) {
-      justify-content: space-around;
-      max-width: 97%;
-    }
-  }
-
-  &__details--link {
-    margin: 0 1em 0 1em;
-
-    @include typography.description;
-    font-style: italic;
   }
 }
