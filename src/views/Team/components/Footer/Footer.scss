@@ -1,0 +1,27 @@
+@use "~stylesheets/responsiveness" as rsp;
+@use "~stylesheets/typography" as tpy;
+
+.HeroFooter {
+  min-height: 5em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+
+  &__arrow {
+    height: 4em;
+    width: 4em;
+    cursor: pointer;
+    margin-bottom: 2em;
+    align-self: center;
+  }
+
+  &__text {
+    @include tpy.team-footer-text;
+    align-self: flex-end;
+
+    @include rsp.respond(phone) {
+      align-self: center;
+      padding-bottom: 1em;
+    }
+  }
+}

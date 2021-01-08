@@ -1,0 +1,45 @@
+@use "~stylesheets/typography" as tpy;
+@use "~stylesheets/responsiveness" as rsp;
+
+.TeamHero {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 100%;
+  padding-top: calc(65px + 10vh);
+  padding-bottom: calc(65px + 10vh);
+  flex-grow: 4;
+  justify-content: space-around;
+  overflow: hidden;
+
+  &__titleContainer {
+    margin: auto;
+    max-width: 45%;
+  }
+
+  &__titleText {
+    @include tpy.title-text;
+    white-space: nowrap;
+
+    &--secondary {
+      @extend .TeamHero__titleText;
+      color: var(--salmon);
+    }
+  }
+
+  &__description {
+    max-width: 25em;
+    margin: 2em 0;
+
+    @include tpy.description;
+
+    @include rsp.respond(tab-land) {
+      margin: 1.1em 0;
+    }
+
+    @include rsp.respond(tab-port) {
+      margin: 1.1em auto;
+    }
+  }
+}
