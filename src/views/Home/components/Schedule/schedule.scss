@@ -12,21 +12,18 @@
 
   &__schedule {
     position: absolute;
-    margin: auto;
-    left: 25%;
+    left: 50%;
+    margin-left: -25%;
     bottom: 25%;
     width: 50%;
-    min-width: 300px;
+    min-width: 500px;
     padding-bottom: 5%;
     max-width: 1000px;
     height: 35%;
 
     @include responsiveness.respond(tab-port) {
-      left: 25vw;
-    }
-
-    @include responsiveness.respond(phone) {
-      left: 10vw;
+      min-width: 300px;
+      margin-left: -150px;
     }
   }
 
@@ -63,7 +60,7 @@
     &--variant {
       z-index: 0;
       background: var(--white__off);
-      color: var(--pink);
+      color: var(--salmon);
     }
 
     @include responsiveness.respond(tab-port) {
@@ -119,21 +116,10 @@
     right: 0;
   }
 
-  &__dayText {
-    @include typography.description;
-
-    position: absolute;
-    padding: var(--extra-small-spacer);
-    bottom: 40%;
-    margin-right: 20px;
-    left: calc(-2.3vw + 10px);
-    color: var(--pink);
-    transform: rotate(-90deg);
-  }
-
   &__title {
     @include typography.alt-title-text;
 
+    color: var(--salmon);
     position: absolute;
     padding-left: var(--large-spacer);
     z-index: 1;
