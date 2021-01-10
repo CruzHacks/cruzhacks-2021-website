@@ -6,12 +6,10 @@ import "./speakers.scss";
 
 interface SpeakerProps {
   speakers: SpeakerProp[];
-  comingSoon: SpeakerProp[];
 }
 
 const SpeakersComponent: React.FC<SpeakerProps> = ({
   speakers,
-  comingSoon,
 }: SpeakerProps) => {
   return (
     <div className="Speakers">
@@ -21,9 +19,6 @@ const SpeakersComponent: React.FC<SpeakerProps> = ({
       </div>
       <div className="Speakers__cardsContainer">
         {Object.entries(speakers).map(([type, props]) => (
-          <SpeakerCard {...props} key={type} />
-        ))}
-        {Object.entries(comingSoon).map(([type, props]) => (
           <SpeakerCard {...props} key={type} />
         ))}
       </div>
