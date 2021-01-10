@@ -35,12 +35,12 @@ $font-family-source-base: "Source Code Pro", sans-serif;
 }
 
 @mixin alt-title-text {
-  color: var(--pink);
-  font-family: $font-family-base;
+  font-family: $font-family-italic;
   font-style: italic;
+  color: var(--salmon);
   font-weight: normal;
 
-  @include responsiveness.font($responsive: 2.3vw, $min: 18px, $max: 32px);
+  @include responsiveness.font($responsive: 3.8vw, $min: 18px, $max: 40px);
 }
 
 @mixin alt-title-text-medium {

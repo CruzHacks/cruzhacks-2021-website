@@ -15,7 +15,7 @@
     left: 50%;
     margin-left: -25%;
     bottom: 25%;
-    width: 50%;
+    width: 60%;
     min-width: 500px;
     padding-bottom: 5%;
     max-width: 1000px;
@@ -123,8 +123,8 @@
     position: absolute;
     padding-left: var(--large-spacer);
     z-index: 1;
-    padding-top: var(--medium-spacer);
-    margin-bottom: var(--large-spacer);
+    padding-top: 5px;
+    padding-bottom: calc(var(--large-spacer) + 30px);
     top: 0;
 
     @include responsiveness.respond(tab-port) {
