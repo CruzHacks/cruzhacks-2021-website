@@ -199,6 +199,7 @@
     grid-column-start: 2;
     width: calc(5vw + 2vh);
     margin-top: -1vh;
+    margin-left: 2vw;
 
     @include responsiveness.respond(phone) {
       margin-top: 0;
