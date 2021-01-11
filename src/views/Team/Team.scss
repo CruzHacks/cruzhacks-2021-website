@@ -2,7 +2,12 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, var(--dark-mahogany) 0%, var(--midnight-blue) 100%);
+
+  &__cardsSection {
+    margin-top: -1%;
+    position: relative;
+    background: linear-gradient(180deg, var(--dark-mahogany) 0%, var(--midnight-blue) 100%);
+  }
 
   &__cardsContainer {
     display: flex;

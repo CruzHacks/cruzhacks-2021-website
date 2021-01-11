@@ -19,12 +19,14 @@ const TeamPageView: React.FC = () => {
       <div className="TeamPage">
         <Navbar page={"Team"} {...navbarProps} />
         <Hero description={description} />
-        <div className="TeamPage__cardsContainer">
-          {Object.entries(members).map(([memberName, props]) => (
-            <Card memberName={memberName} {...props} key={memberName} />
-          ))}
+        <div className="TeamPage__cardsSection">
+          <div className="TeamPage__cardsContainer">
+            {Object.entries(members).map(([memberName, props]) => (
+              <Card memberName={memberName} {...props} key={memberName} />
+            ))}
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </>
   );
