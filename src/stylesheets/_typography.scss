@@ -58,7 +58,7 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   font-weight: normal;
   font-family: $font-family-source-base;
 
-  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
+  @include responsiveness.font($responsive: 2vw, $min: 8px, $max: 20px);
 }
 
 @mixin source-description-grey {
@@ -67,7 +67,7 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   font-weight: normal;
   font-family: $font-family-source-base;
 
-  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 20px);
+  @include responsiveness.font($responsive: 2.3vw, $min: 8px, $max: 20px);
 }
 
 /* title text with the 3D cyan-red effect */
@@ -81,6 +81,13 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   font-family: $font-family-base;
 
   @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 18px);
+}
+
+@mixin description-medium {
+  color: var(--white);
+  font-family: $font-family-base;
+
+  @include responsiveness.font($responsive: 2.3vw, $min: 12px, $max: 24px);
 }
 
 @mixin description-dark {
