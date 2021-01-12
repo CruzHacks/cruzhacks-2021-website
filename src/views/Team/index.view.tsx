@@ -14,21 +14,19 @@ const description =
   "Meet our team of creators, thinkers, strategists, and believers, collaborating together to create something amazing. ";
 const TeamPageView: React.FC = () => {
   return (
-    <>
+    <div className="TeamPage">
+      <Navbar page={"Team"} {...navbarProps} />
       <MLHBanner />
-      <div className="TeamPage">
-        <Navbar page={"Team"} {...navbarProps} />
-        <Hero description={description} />
-        <div className="TeamPage__cardsSection">
-          <div className="TeamPage__cardsContainer">
-            {Object.entries(members).map(([memberName, props]) => (
-              <Card memberName={memberName} {...props} key={memberName} />
-            ))}
-          </div>
-          <Footer />
+      <Hero description={description} />
+      <div className="TeamPage__cardsSection">
+        <div className="TeamPage__cardsContainer">
+          {Object.entries(members).map(([memberName, props]) => (
+            <Card memberName={memberName} {...props} key={memberName} />
+          ))}
         </div>
+        <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

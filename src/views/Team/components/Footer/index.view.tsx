@@ -4,14 +4,14 @@ import "./Footer.scss";
 
 const Footer: React.FC = () => {
   return (
-    <div className="HeroFooter">
+    <div className="TeamFooter">
       <Arrow
-        className="HeroFooter__arrow"
+        className="TeamFooter__arrow"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       />
-      <div className="HeroFooter__text">
+      <div className="TeamFooter__text">
         @ 2021 Cruzhacks. All rights reserved.
       </div>
     </div>
