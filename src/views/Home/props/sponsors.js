@@ -6,6 +6,7 @@ import ChooseSantaCruz from "images/sponsors/chooseSantaCruz.svg";
 import CIED from "images/sponsors/cied.svg";
 import CITRIS from "images/sponsors/citris.svg";
 import Comcast from "images/sponsors/comcast.svg";
+import Cross from "images/sponsors/cross.svg";
 import EarthHacks from "images/sponsors/earthHacks.svg";
 import eBay from "images/sponsors/ebay.svg";
 import echoAR from "images/sponsors/echoAR.svg";
@@ -131,5 +132,11 @@ export const sponsors = [
     className: "echoAR",
     logo: echoAR,
     url: "https://www.echoar.xyz/",
+  },
+  {
+    name: "CROSS",
+    className: "cross",
+    logo: Cross,
+    url: "https://cross.ucsc.edu/",
   },
 ];

@@ -47,23 +47,15 @@
   // sponsor logos
   &__cied {
     grid-column-start: 1;
-    width: calc(4vw + 4vh);
+    width: calc(4vw + 3vh);
     height: fit-content;
     margin: 1vw 1vw 1vw 0;
-
-    @include responsiveness.respond(phone) {
-      width: calc(8vw + 2vh);
-    }
   }
 
   &__blackstone {
     grid-column-start: 2;
     width: auto;
-    margin: auto -5vw auto -6vw;
-
-    @include responsiveness.respond(phone) {
-      margin-left: -2vw;
-    }
+    margin: auto -8vw 2vh -3vw;
   }
 
   &__comcast {
@@ -72,7 +64,7 @@
     justify-self: center;
     width: calc(16vw + 16vh);
     height: fit-content;
-    margin: 2vh 0 2vh 8vw;
+    margin: auto 0 2vh 8vw;
 
     @include responsiveness.respond(phone) {
       width: calc(30vw + 2vh);
@@ -83,12 +75,13 @@
   &__citris {
     grid-row-start: 2;
     grid-column-start: 2;
-    width: calc(12vw + 12vh);
+    justify-self: center;
+    width: calc(12vw + 10vh);
     height: fit-content;
     margin-top: 1vw;
-    margin-right: -5vw;
 
     @include responsiveness.respond(phone) {
+      justify-self: left;
       margin-right: -8vw;
     }
   }
@@ -96,22 +89,19 @@
   &__santaCruzWorks {
     grid-row-start: 2;
     grid-column-start: 3;
-    justify-self: right;
     width: calc(8vw + 6vh);
     height: fit-content;
-    margin-right: -3vw;
-
-    @include responsiveness.respond(phone) {
-      margin-right: -8vw;
-    }
+    margin-left: 9vw;
   }
 
   // Third tier
   &__ebay {
     grid-row-start: 3;
-    width: calc(10vw + 8vh);
+    width: calc(8vw + 8vh);
     height: fit-content;
-    margin-top: 1vw;
+    margin-top: auto;
+    margin-left: -3vw;
+    margin-bottom: auto;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 5vh);
@@ -120,12 +110,14 @@
 
   &__southSwell {
     grid-row-start: 3;
-    width: calc(10vw + 6vh);
+    width: calc(12.5vw + 8vh);
     height: fit-content;
-    margin: 2vw 1vw 0 2vw;
+    justify-self: center;
+    margin-top: 2vh;
+    margin-right: 1vw;
 
     @include responsiveness.respond(phone) {
-      margin: 1vw 1vw 0 1vw;
+      width: calc(10vw + 6vh);
     }
   }
 
@@ -135,11 +127,10 @@
     width: calc(12.5vw + 12.5vh);
     margin-top: 1vh;
     margin-left: 1vw;
-    margin-right: -5vh;
+    margin-right: -5vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
-      margin-right: -3vh;
     }
   }
 
@@ -149,26 +140,19 @@
     width: calc(12.5vw + 12.5vh);
     margin-top: auto;
     margin-left: 1vw;
-    margin-right: -5vh;
+    margin-right: -5vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
-      margin-right: -3vh;
     }
   }
 
   &__fifteenSeventeen {
     grid-row-start: 3;
     grid-column-start: 4;
-    justify-self: end;
-    width: calc(6vw + 4vh);
+    width: calc(8vw + 4vh);
     height: fit-content;
-    margin-top: 2vh;
-    margin-right: 3vw;
-
-    @include responsiveness.respond(phone) {
-      width: calc(8vw + 2vh);
-    }
+    margin: auto 0 auto 6vw;
   }
 
   // Fourth tier
@@ -176,7 +160,8 @@
     grid-row-start: 4;
     grid-column-start: 1;
     width: calc(10vw + 4vh);
-    height: fit-content;
+    margin-top: -1vh;
+    margin-left: -3vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 4vh);
@@ -188,68 +173,75 @@
     grid-column-start: 1;
     justify-self: right;
     width: calc(6vw + 3vh);
-    height: fit-content;
     margin-top: auto;
-    margin-right: 1vw;
   }
 
   &__chooseSC {
     grid-row-start: 4;
     grid-column-start: 2;
-    width: calc(5vw + 2vh);
-    margin-top: -1vh;
+    width: calc(4.25vw + 2vh);
+    margin-top: -0.75vh;
+    margin-bottom: -1vh;
     margin-left: 1vw;
-
-    @include responsiveness.respond(phone) {
-      margin-top: 0;
-    }
   }
 
   &__wolfram {
     grid-row-start: 4;
     grid-column-start: 2;
-    justify-self: end;
     width: calc(10vw + 3vh);
-    margin-top: 1.5vh;
-    margin-right: -4vw;
+    margin-top: 1vh;
+    margin-left: calc(6.25vw + 2vh);
   }
 
   &__mlh {
     grid-row-start: 4;
     grid-column-start: 3;
     width: calc(5vw + 3vh);
-    margin-top: 2vh;
-    margin-left: 5vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
   }
 
   &__pinnacle {
     grid-row-start: 4;
     grid-column-start: 3;
-    justify-self: end;
     width: calc(4vw + 1.32vh);
-
-    @include responsiveness.respond(phone) {
-      margin-top: 2vw;
-    }
+    margin-bottom: -1vh;
+    margin-left: calc(7vw + 3vh);
   }
 
   &__stickermule {
     grid-row-start: 4;
     grid-column-start: 4;
-    margin-left: 1vw;
     width: calc(10vw + 5vh);
+    margin-left: -5vw;
+
+    @include responsiveness.respond(phone) {
+      margin-left: -8vw;
+    }
   }
 
   &__echoAR {
     grid-row-start: 4;
     grid-column-start: 4;
-    width: calc(12vw + 3vh);
+    width: calc(10vw + 3vh);
     margin-top: auto;
-    margin-left: 5vw;
-    margin-bottom: 1vh;
+    margin-left: -4vw;
 
     @include responsiveness.respond(phone) {
-      margin-bottom: 0;
+      width: calc(8vw + 3vh);
+      margin-left: -5vw;
+    }
+  }
+
+  &__cross {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    width: calc(8vw + 4vh);
+    margin-top: auto;
+    margin-left: calc(6vw + 5vh);
+
+    @include responsiveness.respond(phone) {
+      margin-left: calc(5vw + 5vh);
     }
   }
 }
