@@ -113,7 +113,6 @@
     width: calc(12.5vw + 8vh);
     height: fit-content;
     justify-self: center;
-    margin-top: 2vh;
     margin-right: 1vw;
 
     @include responsiveness.respond(phone) {
@@ -125,7 +124,6 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin-top: 1vh;
     margin-left: 1vw;
     margin-right: -5vw;
 
@@ -138,9 +136,7 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin-top: auto;
-    margin-left: 1vw;
-    margin-right: -5vw;
+    margin: auto -5vw 1vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
@@ -160,11 +156,16 @@
     grid-row-start: 4;
     grid-column-start: 1;
     width: calc(10vw + 4vh);
-    margin-top: -1vh;
     margin-left: -3vw;
 
-    @include responsiveness.respond(phone) {
+    @include responsiveness.respond(phone-narrow) {
       width: calc(8vw + 4vh);
+      margin-top: -0.75vh;
+      margin-left: 0;
+    }
+
+    @include responsiveness.respond(smallest) {
+      margin-top: -1.25vh;
     }
   }
 
@@ -180,7 +181,6 @@
     grid-row-start: 4;
     grid-column-start: 2;
     width: calc(4.25vw + 2vh);
-    margin-top: -0.75vh;
     margin-bottom: -1vh;
     margin-left: 1vw;
   }
@@ -189,16 +189,14 @@
     grid-row-start: 4;
     grid-column-start: 2;
     width: calc(10vw + 3vh);
-    margin-top: 1vh;
-    margin-left: calc(6.25vw + 2vh);
+    margin: auto 0 auto calc(6.25vw + 2vh);
   }
 
   &__mlh {
     grid-row-start: 4;
     grid-column-start: 3;
     width: calc(5vw + 3vh);
-    margin-top: 1vh;
-    margin-left: 1vw;
+    margin: auto 0 auto 1vw;
   }
 
   &__pinnacle {
@@ -213,9 +211,10 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 5vh);
-    margin-left: -5vw;
+    margin-left: -6vw;
 
-    @include responsiveness.respond(phone) {
+    @include responsiveness.respond(phone-narrow) {
+      margin-top: -0.75vh;
       margin-left: -8vw;
     }
   }
@@ -224,12 +223,12 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 3vh);
-    margin-top: auto;
-    margin-left: -4vw;
+    margin: auto 0 1vh -4vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 3vh);
       margin-left: -5vw;
+      margin-bottom: 0;
     }
   }
 
@@ -237,8 +236,7 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(8vw + 4vh);
-    margin-top: auto;
-    margin-left: calc(6vw + 5vh);
+    margin: auto 0 auto calc(6vw + 5vh);
 
     @include responsiveness.respond(phone) {
       margin-left: calc(5vw + 5vh);
