@@ -70,7 +70,7 @@
     &--variant {
       z-index: 0;
       background: var(--white__off);
-      color: var(--pink);
+      color: var(--salmon);
     }
 
     @include responsiveness.respond(tab-port) {
