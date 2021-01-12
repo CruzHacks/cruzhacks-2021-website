@@ -136,7 +136,7 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin: auto -5vw 1vw;
+    margin: auto -5vw 0 1vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
