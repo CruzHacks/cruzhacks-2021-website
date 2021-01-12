@@ -132,7 +132,7 @@
   &__title {
     @include typography.alt-title-text;
 
-    color: var(--salmon);
+    color: var(--pink);
     position: absolute;
     padding-left: var(--large-spacer);
     z-index: 1;
