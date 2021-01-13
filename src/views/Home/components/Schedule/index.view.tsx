@@ -8,42 +8,52 @@ const scheduleItems = [
   {
     date: "Friday, January 15, 2021",
     events: [
-      { event: "Event Begins", time: "5:00 pm" },
-      { event: "Opening Ceremony", time: "7:00 pm" },
-      { event: "Hacking Begins!", time: "9:00 pm" },
-      { event: "Software Ethics", time: "10:45 pm" },
+      { event: "Event Begins", time: "5:00 pm", end: true },
+      { event: "Opening Ceremony", time: "7:00 pm", end: true },
+      { event: "Hacking Begins!", time: "9:00 pm", end: true },
+      { event: "Software Ethics", time: "10:45 pm", end: true },
     ],
   },
   {
     date: "Saturday, January 16, 2021",
     events: [
-      { event: "Intro to Web Development", time: "10:30 am" },
-      { event: "Basics of NLP", time: "10:30 am" },
-      { event: "AWS", time: "11:30 am" },
-      { event: "MongoDB", time: "11:30 am" },
-      { event: "HTML", time: "12:30 am" },
-      { event: "Intro to Python", time: "12:30 am" },
-      { event: "Machine Learning Basics", time: "1:30 pm" },
-      { event: "Arduino LED", time: "1:30 pm" },
-      { event: "Civil Technology / Social Innovation", time: "2:30 pm" },
-      { event: "Exploring Data Driven Advocacy", time: "2:30 pm" },
-      { event: "Google Cloud Platform", time: "3:30 pm" },
-      { event: "ReactJS", time: "3:30 pm" },
-      { event: "Intro to Web Design", time: "4:30 pm" },
+      { event: "Intro to Web Development", time: "10:30 am", end: false },
+      { event: "Basics of NLP", time: "", end: true },
+      { event: "AWS", time: "11:30 am", end: false },
+      { event: "MongoDB", time: "", end: true },
+      { event: "HTML", time: "12:30 am", end: false },
+      { event: "Intro to Python", time: "", end: true },
+      { event: "Machine Learning Basics", time: "1:30 pm", end: false },
+      { event: "Arduino LED", time: "", end: true },
+      {
+        event: "Civil Technology / Social Innovation",
+        time: "2:30 pm",
+        end: false,
+      },
+      { event: "Exploring Data Driven Advocacy", time: "", end: true },
+      { event: "Google Cloud Platform", time: "3:30 pm", end: false },
+      { event: "ReactJS", time: "", end: true },
+      { event: "Intro to Web Design", time: "4:30 pm", end: true },
     ],
   },
   {
     date: "Sunday, January 17, 2021",
     events: [
-      { event: "Project Submissions", time: "10:00 am" },
-      { event: "Judging", time: "11:30 am" },
-      { event: "Closing Ceremony", time: "2:00 pm" },
-      { event: "Event Ends", time: "4:00 pm" },
+      { event: "Project Submissions", time: "10:00 am", end: true },
+      { event: "Judging", time: "11:30 am", end: true },
+      { event: "Closing Ceremony", time: "2:00 pm", end: true },
+      { event: "Event Ends", time: "4:00 pm", end: true },
     ],
   },
 ];
 const ScheduleComponent: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(0);
+
+  const renderDivider = (end: boolean) => {
+    if (end) {
+      return <div className="Schedule__greyRect--variant"></div>;
+    }
+  };
   return (
     <div className="Schedule">
       <div className="Schedule__schedule">
@@ -54,12 +64,12 @@ const ScheduleComponent: React.FC = () => {
           </div>
           <div className="Schedule__greyRect"></div>
           <div className="Schedule__eventContainer">
-            {scheduleItems[selectedDay].events.map(({ event, time }) => {
+            {scheduleItems[selectedDay].events.map(({ event, time, end }) => {
               return (
                 <div className="Schedule__event" key={event}>
                   <div className="Schedule__eventText">{event}</div>
                   <div className="Schedule__timeText">{time}</div>
-                  <div className="Schedule__greyRect--variant"></div>
+                  {renderDivider(end)}
                 </div>
               );
             })}
