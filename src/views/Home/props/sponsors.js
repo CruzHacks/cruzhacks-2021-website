@@ -1,15 +1,19 @@
 // sponsor logo paths
 import FifteenSeventeen from "images/sponsors/1517.svg";
 import Balsamiq from "images/sponsors/balsamiq.svg";
+import Blackstone from "images/sponsors/blackstone.svg";
 import ChooseSantaCruz from "images/sponsors/chooseSantaCruz.svg";
 import CIED from "images/sponsors/cied.svg";
 import CITRIS from "images/sponsors/citris.svg";
 import Comcast from "images/sponsors/comcast.svg";
+import Cross from "images/sponsors/cross.svg";
 import EarthHacks from "images/sponsors/earthHacks.svg";
 import eBay from "images/sponsors/ebay.svg";
 import echoAR from "images/sponsors/echoAR.svg";
 import MLH from "images/sponsors/mlh.svg";
 import Pinnacle from "images/sponsors/pinnacle.svg";
+import Progress from "images/sponsors/progress.svg";
+import SantaCruzWorks from "images/sponsors/santaCruzWorks.svg";
 import SouthSwell from "images/sponsors/southSwell.svg";
 import Stickermule from "images/sponsors/stickermule.svg";
 import Stratovan from "images/sponsors/stratovan.svg";
@@ -24,6 +28,12 @@ export const sponsors = [
     url: "https://cied.ucsc.edu/",
   },
   {
+    name: "Blackstone",
+    className: "blackstone",
+    logo: Blackstone,
+    url: "https://www.blackstonelaunchpad.org/",
+  },
+  {
     name: "Comcast",
     className: "comcast",
     logo: Comcast,
@@ -36,6 +46,12 @@ export const sponsors = [
     className: "citris",
     logo: CITRIS,
     url: "https://citris-uc.org/",
+  },
+  {
+    name: "Santa Cruz Works",
+    className: "santaCruzWorks",
+    logo: SantaCruzWorks,
+    url: "https://www.santacruzworks.org/",
   },
   // Third tier
   {
@@ -55,6 +71,12 @@ export const sponsors = [
     className: "stratovan",
     logo: Stratovan,
     url: "https://www.stratovan.com/",
+  },
+  {
+    name: "Progress",
+    className: "progress",
+    logo: Progress,
+    url: "https://www.telerik.com/",
   },
   {
     name: "1517",
@@ -110,5 +132,11 @@ export const sponsors = [
     className: "echoAR",
     logo: echoAR,
     url: "https://www.echoar.xyz/",
+  },
+  {
+    name: "CROSS",
+    className: "cross",
+    logo: Cross,
+    url: "https://cross.ucsc.edu/",
   },
 ];
