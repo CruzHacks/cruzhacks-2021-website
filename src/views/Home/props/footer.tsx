@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
 import FacebookIcon from "images/components/footer/facebook.svg";
 import TwitterIcon from "images/components/footer/twitter.svg";
 import LinkedInIcon from "images/components/footer/linkedIn.svg";

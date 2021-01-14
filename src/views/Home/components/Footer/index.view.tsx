@@ -9,19 +9,15 @@ const FooterComponent: React.FC = () => {
       <div className="Footer__images">
         <div className="Footer__team">Team</div>
         <div className="Footer__links">
-          {footerProps.map((prop) => (
+          {footerProps.map(({ icon, link, label }) => (
             <a
-              key={prop.key}
-              href={prop.link}
+              key={label}
+              href={link}
               target="_blank"
               rel="noreferrer"
               className="Footer__link--wrapper"
             >
-              <img
-                className="Footer__link--icon"
-                src={prop.icon}
-                alt={prop.label}
-              />
+              <img className="Footer__link--icon" src={icon} alt={label} />
             </a>
           ))}
         </div>
