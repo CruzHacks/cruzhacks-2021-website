@@ -3,13 +3,8 @@ import TwitterIcon from "images/components/footer/twitter.svg";
 import LinkedInIcon from "images/components/footer/linkedIn.svg";
 import InstagramIcon from "images/components/footer/instagram.svg";
 import YearIcon from "images/components/footer/2020.svg";
-export interface SocialMediaProp {
-  icon: string;
-  link: string;
-  label: string;
-}
 
-export const footerProps: SocialMediaProp[] = [
+export const footerProps = [
   {
     icon: FacebookIcon,
     link: "https://www.facebook.com/CruzHacks/",
