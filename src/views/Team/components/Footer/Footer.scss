@@ -1,0 +1,39 @@
+@use "~stylesheets/responsiveness" as rsp;
+@use "~stylesheets/typography" as tpy;
+
+.TeamFooter {
+  min-height: 5em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+
+  &__arrowContainer {
+    width: 4em;
+    height: 4em;
+    background: linear-gradient(90deg, var(--salmon) 0%, var(--salmon) 100%);
+    box-shadow: 0 0 22px 9px var(--pink__light);
+    transform: rotate(-90deg);
+    border-radius: 64px;
+    align-self: center;
+  }
+
+  &__arrow {
+    display: block;
+    margin: 10% auto;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+    padding: auto;
+  }
+
+  &__text {
+    @include tpy.team-footer-text;
+    align-self: flex-end;
+    padding-top: 1em;
+
+    @include rsp.respond(phone) {
+      align-self: center;
+      padding-bottom: 1em;
+    }
+  }
+}

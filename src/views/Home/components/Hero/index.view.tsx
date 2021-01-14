@@ -10,17 +10,10 @@ import PostcardStack from "components/PostcardStack/index.view";
 import "./Hero.scss";
 import animationData from "./postcard.json";
 
-type DescriptionDetail = {
-  rightText: string;
-  leftText: string;
-};
-
 interface Description {
-  description: string | DescriptionDetail;
+  description: string;
   style: string;
   line: number;
-  linkRight?: string;
-  linkLeft?: string;
 }
 
 interface Title {
@@ -73,31 +66,7 @@ const Hero: React.FC<HeroProps> = ({
           ))}
           {description.map((item) => (
             <p className={`Hero__${item.style}`} key={item.line}>
-              {item.linkLeft ? (
-                <a
-                  className="Hero__details--link"
-                  href={item.linkLeft}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {typeof item.description === "object"
-                    ? item.description.leftText
-                    : null}
-                </a>
-              ) : null}
-              {typeof item.description === "string" ? item.description : null}
-              {item.linkRight ? (
-                <a
-                  className="Hero__details--link"
-                  href={item.linkRight}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {typeof item.description === "object"
-                    ? item.description.rightText
-                    : null}
-                </a>
-              ) : null}
+              {item.description}
             </p>
           ))}
           {children}
