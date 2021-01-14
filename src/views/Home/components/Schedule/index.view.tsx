@@ -8,23 +8,46 @@ const scheduleItems = [
   {
     date: "Friday, January 15, 2021",
     events: [
-      { event: "Event Begins", time: "5:00 pm" },
-      { event: "Opening Ceremony", time: "7:00 pm" },
-      { event: "Hacking Begins!", time: "9:00 pm" },
-      { event: "Ongoing Workshops", time: "10:00 pm" },
+      { event: "Event Begins", time: "5:00 pm", end: true },
+      { event: "Opening Ceremony", time: "7:00 pm", end: true },
+      { event: "Hacking Begins!", time: "9:00 pm", end: true },
+      {
+        event: "Idea Development + UCSC Resources",
+        time: "9:00 pm",
+        end: true,
+      },
+      { event: "Software Ethics", time: "10:45 pm", end: true },
     ],
   },
   {
     date: "Saturday, January 16, 2021",
-    events: [{ event: "Ongoing Workshops", time: "10:30 am" }],
+    events: [
+      { event: "Intro to Web Development", time: "10:30 am", end: false },
+      { event: "Basics of NLP", time: "", end: true },
+      { event: "AWS", time: "11:30 am", end: false },
+      { event: "MongoDB", time: "", end: true },
+      { event: "HTML", time: "12:30 am", end: false },
+      { event: "Intro to Python", time: "", end: true },
+      { event: "Machine Learning Basics", time: "1:30 pm", end: false },
+      { event: "Arduino LED", time: "", end: true },
+      {
+        event: "Civil Innovation",
+        time: "2:30 pm",
+        end: false,
+      },
+      { event: "Data Driven Advocacy", time: "", end: true },
+      { event: "Google Cloud Platform", time: "3:30 pm", end: false },
+      { event: "ReactJS", time: "", end: true },
+      { event: "Intro to Web Design", time: "4:30 pm", end: true },
+    ],
   },
   {
     date: "Sunday, January 17, 2021",
     events: [
-      { event: "Project Submissions", time: "10:00 am" },
-      { event: "Judging", time: "11:30 am" },
-      { event: "Closing Ceremony", time: "2:00 pm" },
-      { event: "Event Ends", time: "4:00 pm" },
+      { event: "Project Submissions", time: "10:00 am", end: true },
+      { event: "Judging", time: "11:30 am", end: true },
+      { event: "Closing Ceremony", time: "2:00 pm", end: true },
+      { event: "Event Ends", time: "4:00 pm", end: true },
     ],
   },
 ];
@@ -40,15 +63,24 @@ const ScheduleComponent: React.FC = () => {
           </div>
           <div className="Schedule__greyRect"></div>
           <div className="Schedule__eventContainer">
-            {scheduleItems[selectedDay].events.map(({ event, time }) => {
-              return (
-                <div className="Schedule__event" key={event}>
-                  <div className="Schedule__eventText">{event}</div>
-                  <div className="Schedule__timeText">{time}</div>
-                  <div className="Schedule__greyRect--variant"></div>
-                </div>
-              );
-            })}
+            {scheduleItems[selectedDay].events.map(
+              ({ event, time, end }, index) => {
+                return (
+                  <div className="Schedule__event" key={event}>
+                    <div className="Schedule__eventText">{event}</div>
+                    <div className="Schedule__timeText">{time}</div>
+                    {index < scheduleItems[selectedDay].events.length - 1 ? (
+                      <div
+                        className={cx(
+                          { "Schedule__divider--variant": end === false },
+                          "Schedule__divider"
+                        )}
+                      ></div>
+                    ) : null}
+                  </div>
+                );
+              }
+            )}
           </div>
           <div
             id="day1"
