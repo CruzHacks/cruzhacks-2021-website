@@ -15,7 +15,7 @@ const FooterComponent: React.FC<FooterProps> = ({ links }: FooterProps) => {
   return (
     <div className="Footer">
       <div className="Footer__images">
-        <a key="team button" href="/team" className="Footer__team">
+        <a href="/team" className="Footer__team">
           Team
         </a>
         <div className="Footer__links">

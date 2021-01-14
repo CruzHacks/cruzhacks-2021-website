@@ -49,12 +49,11 @@
     @include typography.error-button;
     background: linear-gradient(90deg, var(--apricot) 0%, var(--froly__dark) 100%);
     box-shadow: 0 0 35px 16px var(--frosted-white);
-    border: none;
     border-radius: 27px;
+    text-decoration: none;
 
     margin-top: 5%;
     padding: var(--medium-spacer);
-    cursor: pointer;
 
     @include responsiveness.respond(mission) {
       margin-top: 10%;
