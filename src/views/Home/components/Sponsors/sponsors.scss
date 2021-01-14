@@ -80,15 +80,11 @@
   &__citris {
     grid-row-start: 2;
     grid-column-start: 2;
-    justify-self: center;
+    justify-self: right;
     width: calc(12vw + 10vh);
     height: fit-content;
     margin-top: 1vw;
-
-    @include responsiveness.respond(phone) {
-      justify-self: left;
-      margin-right: -8vw;
-    }
+    margin-right: -6vw;
   }
 
   &__santaCruzWorks {
@@ -97,6 +93,7 @@
     width: calc(8vw + 6vh);
     height: fit-content;
     margin-left: 9vw;
+    margin-right: -3vw;
   }
 
   // Third tier
@@ -104,9 +101,7 @@
     grid-row-start: 3;
     width: calc(8vw + 8vh);
     height: fit-content;
-    margin-top: auto;
-    margin-left: -3vw;
-    margin-bottom: auto;
+    margin: auto 0 auto -3vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 5vh);
@@ -166,7 +161,6 @@
     @include responsiveness.respond(phone-narrow) {
       width: calc(8vw + 4vh);
       margin-top: -0.75vh;
-      //margin-left: 0;
     }
 
     @include responsiveness.respond(smallest) {
@@ -216,11 +210,11 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 5vh);
-    margin-left: -6vw;
+    margin-left: -4vw;
 
     @include responsiveness.respond(phone-narrow) {
       margin-top: -0.75vh;
-      margin-left: -7vw;
+      margin-left: -5vw;
     }
   }
 
@@ -228,11 +222,11 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 3vh);
-    margin: auto 0 1vh -4vw;
+    margin: auto 0 1vh -2vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 3vh);
-      margin-left: -5vw;
+      margin-left: -3vw;
       margin-bottom: 0;
     }
   }
