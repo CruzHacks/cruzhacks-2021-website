@@ -11,6 +11,11 @@ const scheduleItems = [
       { event: "Event Begins", time: "5:00 pm", end: true },
       { event: "Opening Ceremony", time: "7:00 pm", end: true },
       { event: "Hacking Begins!", time: "9:00 pm", end: true },
+      {
+        event: "Idea Development + UCSC Resources",
+        time: "9:00 pm",
+        end: true,
+      },
       { event: "Software Ethics", time: "10:45 pm", end: true },
     ],
   },
