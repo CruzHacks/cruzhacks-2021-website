@@ -1,15 +1,31 @@
 import * as React from "react";
 import { ReactComponent as Arrow } from "images/arrow.svg";
-import { footerProps } from "views/Home/props/footer";
+import { SocialMediaProp } from "views/Home/props/footer";
+import { Route } from "react-router-dom";
 import "./footer.scss";
+interface FooterProps {
+  links: SocialMediaProp[];
+}
 
-const FooterComponent: React.FC = () => {
+const FooterComponent: React.FC<FooterProps> = ({ links }: FooterProps) => {
   return (
     <div className="Footer">
       <div className="Footer__images">
-        <div className="Footer__team">Team</div>
+        <Route
+          render={({ history }) => (
+            <button
+              type="button"
+              className="Footer__team"
+              onClick={() => {
+                history.push("/team");
+              }}
+            >
+              Team
+            </button>
+          )}
+        />
         <div className="Footer__links">
-          {footerProps.map(({ icon, link, label }) => (
+          {links.map(({ icon, link, label }) => (
             <a
               key={label}
               href={link}
