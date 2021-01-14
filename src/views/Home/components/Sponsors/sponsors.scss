@@ -10,7 +10,7 @@
   padding-bottom: calc(8% - 3vw);
 
   @include responsiveness.respond(tab-land) {
-    transform: scale(0.9);
+    transform: scale(0.77);
     max-width: 100vw;
   }
 
@@ -60,7 +60,7 @@
   &__blackstone {
     grid-column-start: 2;
     width: auto;
-    margin: auto -8vw 2vh -3vw;
+    margin: auto -8vw 2vh -2vw;
   }
 
   &__comcast {
@@ -101,7 +101,7 @@
     grid-row-start: 3;
     width: calc(8vw + 8vh);
     height: fit-content;
-    margin: auto 0 auto -3vw;
+    margin: auto 0 auto -2.5vw;
 
     @include responsiveness.respond(phone) {
       width: calc(8vw + 5vh);
@@ -113,7 +113,7 @@
     width: calc(12.5vw + 8vh);
     height: fit-content;
     justify-self: center;
-    margin: 0 2vw;
+    margin: 0 2vw 1vw 3.5vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 6vh);
@@ -124,8 +124,10 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin-left: 2vw;
+    align-self: start;
+    margin-left: 3.5vw;
     margin-right: -5vw;
+    margin-top: -0.8vh;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
@@ -136,7 +138,7 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin: auto -5vw 0 2vw;
+    margin: auto -5vw -0.8vh 3.5vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
@@ -149,6 +151,10 @@
     width: calc(8vw + 4vh);
     height: fit-content;
     margin: auto 0 auto 6vw;
+    justify-self: center;
+    
+    @include responsiveness.respond(phone) {
+    }
   }
 
   // Fourth tier
@@ -157,15 +163,7 @@
     grid-column-start: 1;
     width: calc(10vw + 4vh);
     margin-left: -3vw;
-
-    @include responsiveness.respond(phone-narrow) {
-      width: calc(8vw + 4vh);
-      margin-top: -0.75vh;
-    }
-
-    @include responsiveness.respond(smallest) {
-      margin-top: -1.25vh;
-    }
+    margin-top: calc(-0.5vw - 0.3vh);
   }
 
   &__balsamiq {
@@ -173,7 +171,8 @@
     grid-column-start: 1;
     justify-self: right;
     width: calc(6vw + 3vh);
-    margin: auto 2vw 0 -3vw;
+    margin: calc(2.3vw + 1.2vh) 2vw 0 -3vw;
+
   }
 
   &__chooseSC {
@@ -181,7 +180,7 @@
     grid-column-start: 2;
     width: calc(4.25vw + 2vh);
     margin-bottom: -1vh;
-    margin-left: 1vw;
+    margin-left: 1.5vw;
   }
 
   &__wolfram {
@@ -189,56 +188,60 @@
     grid-column-start: 2;
     width: calc(10vw + 3vh);
     margin: auto 0 auto calc(7.25vw + 2vh);
+    justify-self: center;
+
+    @include responsiveness.respond(phone) {
+      margin-right: 0.5vw;
+    }
   }
 
   &__mlh {
     grid-row-start: 4;
     grid-column-start: 3;
     width: calc(5vw + 3vh);
-    margin: auto 0 auto 1vw;
+    justify-self: start;
+    align-self: center;
+    margin-left: calc(0.7vw - 0.4vh);
+
+    @include responsiveness.respond(phone) {
+      margin-left: 0.5vw;
+    }
   }
 
   &__pinnacle {
     grid-row-start: 4;
     grid-column-start: 3;
-    width: calc(4vw + 1.32vh);
-    margin-bottom: -1vh;
-    margin-left: calc(7vw + 3vh);
+    width: calc(4vw + 1.8vh);
+    margin-left: calc(7vw + 3.8vh);
+    padding-top: 1.2vh;
+    
+    @include responsiveness.respond(tab-land) {
+      margin-left: calc(8vw + 4.2vh);
+    }
   }
 
   &__stickermule {
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 5vh);
-    margin-left: -4vw;
-
-    @include responsiveness.respond(phone-narrow) {
-      margin-top: -0.75vh;
-      margin-left: -5vw;
-    }
+    margin-left: -3vw;
   }
 
   &__echoAR {
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(10vw + 3vh);
-    margin: auto 0 1vh -2vw;
-
-    @include responsiveness.respond(phone) {
-      width: calc(8vw + 3vh);
-      margin-left: -3vw;
-      margin-bottom: 0;
-    }
+    margin: auto 0 1vh -1vw;
   }
 
   &__cross {
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(8vw + 4vh);
-    margin: auto 0 auto calc(8vw + 5vh);
+    margin: auto 0 auto calc(9vw + 7vh);
 
-    @include responsiveness.respond(phone) {
-      margin-left: calc(7vw + 5vh);
+    @include responsiveness.respond(tab-land) {
+      margin-left: calc(9vw + 6vh);
     }
   }
 }
