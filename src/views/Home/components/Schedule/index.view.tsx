@@ -26,11 +26,11 @@ const scheduleItems = [
       { event: "Machine Learning Basics", time: "1:30 pm", end: false },
       { event: "Arduino LED", time: "", end: true },
       {
-        event: "Civil Technology / Social Innovation",
+        event: "Civil Innovation",
         time: "2:30 pm",
         end: false,
       },
-      { event: "Exploring Data Driven Advocacy", time: "", end: true },
+      { event: "Data Driven Advocacy", time: "", end: true },
       { event: "Google Cloud Platform", time: "3:30 pm", end: false },
       { event: "ReactJS", time: "", end: true },
       { event: "Intro to Web Design", time: "4:30 pm", end: true },
