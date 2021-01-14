@@ -48,12 +48,6 @@ const scheduleItems = [
 ];
 const ScheduleComponent: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(0);
-
-  const renderDivider = (end: boolean) => {
-    if (end) {
-      return <div className="Schedule__greyRect--variant"></div>;
-    }
-  };
   return (
     <div className="Schedule">
       <div className="Schedule__schedule">
@@ -69,7 +63,12 @@ const ScheduleComponent: React.FC = () => {
                 <div className="Schedule__event" key={event}>
                   <div className="Schedule__eventText">{event}</div>
                   <div className="Schedule__timeText">{time}</div>
-                  {renderDivider(end)}
+                  <div
+                    className={cx(
+                      { "Schedule__divider--variant": end === false },
+                      "Schedule__divider"
+                    )}
+                  ></div>
                 </div>
               );
             })}
