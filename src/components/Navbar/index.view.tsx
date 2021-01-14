@@ -43,7 +43,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <div className={cx("Navbar", { "Navbar--teamPage": page === "Team" })}>
-      <div className="Navbar__title">{title}</div>
+      <a href="/" className="Navbar__title">
+        {title}
+      </a>
       <div className="Navbar__buttonContainer">
         {buttonProps
           .filter((entry) => entry.type === ButtonTypes.PRIMARY)
