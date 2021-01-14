@@ -21,6 +21,7 @@ import { topics } from "./props/prizes";
 import { speakers } from "./props/speakers";
 import * as FAQprops from "./props/faq.json";
 import { sponsors } from "./props/sponsors.js";
+import { footerProps } from "./props/footer";
 
 import "./Home.scss";
 
@@ -54,7 +55,7 @@ const HomepageView: React.FC = () => {
             questionAnswersColumnMiddle={FAQprops.questionAnswersColumnMiddle}
           />
           <SponsorsComponent sponsors={sponsors} />
-          <FooterComponent />
+          <FooterComponent links={footerProps} />
         </Background>
       </div>
     </>
