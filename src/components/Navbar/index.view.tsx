@@ -1,4 +1,5 @@
 import * as React from "react";
+import cx from "classnames";
 import Button, { ButtonProps, ButtonTypes } from "components/Button/index.view";
 
 import IconButton from "@material-ui/core/IconButton";
@@ -10,11 +11,16 @@ import { makeStyles } from "@material-ui/core";
 import "./Navbar.scss";
 
 interface NavbarProps {
+  page?: string;
   title: string;
   buttonProps: ButtonProps[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
+const Navbar: React.FC<NavbarProps> = ({
+  page,
+  title,
+  buttonProps,
+}: NavbarProps) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -36,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, buttonProps }: NavbarProps) => {
   });
 
   return (
-    <div className="Navbar">
+    <div className={cx("Navbar", { "Navbar--teamPage": page === "Team" })}>
       <div className="Navbar__title">{title}</div>
       <div className="Navbar__buttonContainer">
         {buttonProps
