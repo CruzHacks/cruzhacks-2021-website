@@ -136,3 +136,22 @@ $font-family-source-base: "Source Code Pro", sans-serif;
 
   @include responsiveness.font($responsive: 1.5vw, $min: 14px, $max: 18px);
 }
+
+@mixin card-name {
+  font-family: $font-family-base;
+  word-break: break-word;
+  text-align: center;
+  text-shadow: 0 0 22px var(--light-purple);
+  background: -webkit-linear-gradient(180deg, var(--white-blue) 0%, var(--light-aqua) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin team-footer-text {
+  font-family: $font-family-base;
+  background: -webkit-linear-gradient(90deg, var(--salmon) 0%, var(--salmon) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  @include responsiveness.font($responsive: 2.2vw, $min: 11px, $max: 14px);
+}
