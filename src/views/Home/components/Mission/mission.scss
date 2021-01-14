@@ -23,6 +23,8 @@
 
   &__section {
     z-index: 2;
+    max-width: 70%;
+    margin: auto;
 
     &:first-of-type {
       display: flex;
@@ -96,6 +98,7 @@
     height: 100%;
 
     position: absolute;
+    
     top: 0;
     left: 0;
     z-index: 0;
@@ -103,6 +106,7 @@
 
   &__can--left {
     position: absolute;
+    max-height: 550px;
     width: 18%;
     left: 1%;
     top: 0;
@@ -110,6 +114,7 @@
 
   &__can--right {
     position: absolute;
+    max-height: 550px;
     width: 18%;
     left: 80%;
     top: 32%;
@@ -117,6 +122,7 @@
 
   &__flower {
     position: absolute;
+    max-height: 550px;
     width: 28%;
     left: 5%;
     bottom: 5%;
