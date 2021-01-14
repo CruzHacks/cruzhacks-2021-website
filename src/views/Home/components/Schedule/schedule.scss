@@ -215,8 +215,8 @@
   &__divider {
     position: absolute;
     background: linear-gradient(
-      270deg,
-      var(--grey__dark) 61.73%,
+      90deg,
+      var(--grey__dark) 91.73%,
       rgba(137, 137, 137, 0) 100%
     );
     width: 100%;
@@ -227,8 +227,8 @@
     &--variant {
       background: linear-gradient(
         270deg,
-        var(--grey__dark) 0%,
-        rgba(137, 137, 137, 0) 100%
+        var(--grey__dark) 10%,
+        rgba(180, 180, 180, 0) 100%
       );
     }
   }
