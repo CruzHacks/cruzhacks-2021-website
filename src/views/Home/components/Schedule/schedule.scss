@@ -12,26 +12,28 @@
 
   &__schedule {
     position: absolute;
-    margin: auto;
-    left: 25%;
-    bottom: 25%;
-    width: 50%;
-    min-width: 300px;
+    left: 50%;
+    margin-left: -32%;
+    bottom: 40%;
+    width: 75%;
+    min-width: min(500px, 70vw);
     padding-bottom: 5%;
     max-width: 1000px;
+    max-height: 1000px;
     height: 35%;
 
     @include responsiveness.respond(tab-port) {
-      left: 25vw;
+      margin-left: -32.5%;
     }
 
-    @include responsiveness.respond(phone) {
-      left: 10vw;
+    @include responsiveness.respond(phone-narrow) {
+      min-width: 300px;
+      margin-left: min(-125px, -32.5%);
     }
   }
 
   &__whiteRect {
-    padding-top: 57.5%;
+    padding-top: 68%;
     width: 100%;
     height: auto;
     position: absolute;
@@ -40,17 +42,21 @@
     border-radius: 40px;
 
     @include responsiveness.respond(tab-port) {
-      border-radius: 3vh;
+      border-radius: 5vh;
+    }
+
+    @include responsiveness.respond(phone) {
+      border-radius: 20px;
     }
   }
 
   &__tab {
-    @include typography.description;
+    @include typography.description-medium;
 
     background: var(--pink__light);
     border-radius: 40px;
-    height: calc((57.5% / 3) * 2);
-    width: calc(57.5% / 3);
+    height: calc((68% / 3) * 2);
+    width: calc(68% / 3);
     padding-top: 2%;
     text-align: center;
     color: var(--grey__dark);
@@ -63,34 +69,34 @@
     &--variant {
       z-index: 0;
       background: var(--white__off);
-      color: var(--pink);
+      color: var(--salmon);
     }
 
     @include responsiveness.respond(tab-port) {
-      border-radius: 3vh;
+      border-radius: 5vh;
+    }
+
+    @include responsiveness.respond(phone) {
+      border-radius: 20px;
     }
   }
 
   &__dayOne {
     position: absolute;
     left: -5%;
-    top: -4.18%;
-
-    @include responsiveness.respond(tab-port) {
-      top: -4%;
-    }
+    top: -7.43%;
   }
 
   &__dayTwo {
     position: absolute;
     left: -5%;
-    top: 28.9%;
+    top: 25.8%;
   }
 
   &__dayThree {
     position: absolute;
     left: -5%;
-    top: 62.5%;
+    top: 59%;
   }
 
   &__event {
@@ -104,7 +110,7 @@
 
     position: absolute;
     left: 0;
-    padding-left: 15%;
+    padding-left: 5%;
 
     @include responsiveness.respond(tab-port) {
       padding-left: 5%;
@@ -119,27 +125,15 @@
     right: 0;
   }
 
-  &__dayText {
-    @include typography.description;
-
-    position: absolute;
-    padding: var(--extra-small-spacer);
-    bottom: 40%;
-    margin-right: 20px;
-    left: calc(-2.3vw + 10px);
-    color: var(--pink);
-    transform: rotate(-90deg);
-  }
-
   &__title {
     @include typography.alt-title-text;
 
+    color: var(--pink);
     position: absolute;
     padding-left: var(--large-spacer);
     z-index: 1;
-    padding-top: var(--medium-spacer);
-    margin-bottom: var(--large-spacer);
-    top: 0;
+    padding-bottom: calc(var(--large-spacer) + 30px);
+    top: 2%;
 
     @include responsiveness.respond(tab-port) {
       padding-top: 0;
@@ -148,7 +142,7 @@
 
   &__eventContainer {
     position: absolute;
-    top: calc(23% + 2.3vh);
+    top: calc(21% + 2.3vh);
     left: 4%;
     height: calc(100% - (23% + 2.3vh));
     width: 90%;
@@ -170,27 +164,35 @@
 
   &__whiteRect--variant {
     position: absolute;
-    padding-top: 57.5%;
+    padding-top: 68%;
     right: 35%;
     width: 30%;
     background: var(--white__off);
     border-radius: 0 40px 40px 0;
 
     @include responsiveness.respond(tab-port) {
-      border-radius: 0 3vh 3vh 0;
+      border-radius: 0 5vh 5vh 0;
+    }
+
+    @include responsiveness.respond(phone) {
+      border-radius: 0 20px 20px 0;
     }
   }
 
   &__pinkRect {
     position: absolute;
     width: 47%;
-    padding-top: 57.5%;
+    padding-top: 68%;
     right: 0;
     background: var(--pink__light);
     border-radius: 0 40px 40px 0;
 
     @include responsiveness.respond(tab-port) {
-      border-radius: 0 3vh 3vh 0;
+      border-radius: 0 5vh 5vh 0;
+    }
+
+    @include responsiveness.respond(phone) {
+      border-radius: 0 20px 20px 0;
     }
   }
 
@@ -200,23 +202,31 @@
     width: 90%;
     left: 0;
     left: 4%;
-    max-height: 2px;
+    max-height: 1.5px;
     height: 0.5vh;
-    top: calc(20% + 2.3vh);
+    top: calc(18% + 2.3vh);
     z-index: 1;
   }
 
-  &__greyRect--variant {
+  &__divider {
     position: absolute;
     background: linear-gradient(
-      270deg,
-      var(--grey__dark) 61.73%,
+      90deg,
+      var(--grey__dark) 91.73%,
       rgba(137, 137, 137, 0) 100%
     );
-    width: 100%;
+    min-width: 100%;
     height: 1px;
-    bottom: 0;
+    bottom: -4px;
     margin-bottom: 5px;
+
+    &--variant {
+      background: linear-gradient(
+        270deg,
+        var(--grey__dark) 10%,
+        rgba(180, 180, 180, 0) 100%
+      );
+    }
   }
 
   &__moon {
@@ -228,7 +238,7 @@
     z-index: -5;
 
     @include responsiveness.respond(tab-port) {
-      bottom: 60%;
+      bottom: 68%;
     }
   }
 
