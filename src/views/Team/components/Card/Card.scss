@@ -1,0 +1,58 @@
+@use "~stylesheets/typography" as tpy;
+@use "~stylesheets/responsiveness" as rsp;
+
+.Card {
+  min-height: 18em;
+  width: 100%;
+  margin: 3em 5em 0;
+  max-width: 175px;
+
+  &__frameContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 18em;
+    width: 12em;
+  }
+
+  &__pictureFrame {
+    height: 18em;
+    position: absolute;
+  }
+
+  &__imageContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  &__profilePicture {
+    border-radius: 75px;
+    box-shadow: 0 0 35px 16px rgba(255, 255, 255, 0.28);
+    width: 140px;
+    height: 143px;
+  }
+
+  &__teammateName {
+    margin: auto;
+
+    @include tpy.card-name;
+    @include rsp.font($responsive: 2.3vw, $min: 13px, $max: 19px);
+  }
+
+  &__teamName {
+    margin: auto;
+
+    @include tpy.card-name;
+    @include rsp.font($responsive: 2.2vw, $min: 10px, $max: 13px);
+  }
+
+  &__linkedinContainer {
+    z-index: 1;
+    margin: auto;
+  }
+
+  &__linkedinLogo {
+    height: 2em;
+    width: auto;
+  }
+}
