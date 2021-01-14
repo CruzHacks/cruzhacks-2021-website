@@ -31,8 +31,7 @@
     flex-wrap: nowrap;
     margin: 0;
     width: 100%;
-    padding-top: calc(65px + 10vh);
-    padding-bottom: calc(65px + 10vh);
+    min-height: 100vh;
     flex-grow: 4;
     justify-content: space-around;
     overflow: hidden;
