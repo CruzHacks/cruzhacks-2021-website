@@ -19,7 +19,12 @@
     align-self: center;
     grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px) fit-content(300px);
     grid-template-rows: 1fr 0.6fr 0.5fr 0.1fr;
+    row-gap: 3vh;
     margin: 0 auto;
+
+    @include responsiveness.respond(phone) {
+      row-gap: 2vh;
+    }
   }
 
   &__titleContainer {
@@ -113,7 +118,7 @@
     width: calc(12.5vw + 8vh);
     height: fit-content;
     justify-self: center;
-    margin-right: 1vw;
+    margin: 0 2vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 6vh);
@@ -124,7 +129,7 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin-left: 1vw;
+    margin-left: 2vw;
     margin-right: -5vw;
 
     @include responsiveness.respond(phone) {
@@ -136,7 +141,7 @@
     grid-row-start: 3;
     grid-column-start: 3;
     width: calc(12.5vw + 12.5vh);
-    margin: auto -5vw 0 1vw;
+    margin: auto -5vw 0 2vw;
 
     @include responsiveness.respond(phone) {
       width: calc(10vw + 10vh);
@@ -161,7 +166,7 @@
     @include responsiveness.respond(phone-narrow) {
       width: calc(8vw + 4vh);
       margin-top: -0.75vh;
-      margin-left: 0;
+      //margin-left: 0;
     }
 
     @include responsiveness.respond(smallest) {
@@ -174,7 +179,7 @@
     grid-column-start: 1;
     justify-self: right;
     width: calc(6vw + 3vh);
-    margin-top: auto;
+    margin: auto 2vw 0 -3vw;
   }
 
   &__chooseSC {
@@ -189,7 +194,7 @@
     grid-row-start: 4;
     grid-column-start: 2;
     width: calc(10vw + 3vh);
-    margin: auto 0 auto calc(6.25vw + 2vh);
+    margin: auto 0 auto calc(7.25vw + 2vh);
   }
 
   &__mlh {
@@ -215,7 +220,7 @@
 
     @include responsiveness.respond(phone-narrow) {
       margin-top: -0.75vh;
-      margin-left: -8vw;
+      margin-left: -7vw;
     }
   }
 
@@ -236,10 +241,10 @@
     grid-row-start: 4;
     grid-column-start: 4;
     width: calc(8vw + 4vh);
-    margin: auto 0 auto calc(6vw + 5vh);
+    margin: auto 0 auto calc(8vw + 5vh);
 
     @include responsiveness.respond(phone) {
-      margin-left: calc(5vw + 5vh);
+      margin-left: calc(7vw + 5vh);
     }
   }
 }
