@@ -85,10 +85,6 @@
     position: absolute;
     left: -5%;
     top: -7.43%;
-
-    @include responsiveness.respond(tab-port) {
-      top: -7.18%;
-    }
   }
 
   &__dayTwo {
