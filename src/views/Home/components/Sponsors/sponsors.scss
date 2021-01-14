@@ -152,9 +152,6 @@
     height: fit-content;
     margin: auto 0 auto 6vw;
     justify-self: center;
-    
-    @include responsiveness.respond(phone) {
-    }
   }
 
   // Fourth tier
@@ -172,7 +169,6 @@
     justify-self: right;
     width: calc(6vw + 3vh);
     margin: calc(2.3vw + 1.2vh) 2vw 0 -3vw;
-
   }
 
   &__chooseSC {
@@ -214,7 +210,7 @@
     width: calc(4vw + 1.8vh);
     margin-left: calc(7vw + 3.8vh);
     padding-top: 1.2vh;
-    
+
     @include responsiveness.respond(tab-land) {
       margin-left: calc(8vw + 4.2vh);
     }
