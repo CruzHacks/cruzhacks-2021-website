@@ -12,15 +12,15 @@
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
   border-radius: 0  0 25px 25px;
 
-  &--teamPage {
-    z-index: 1;
-  }
+  position: relative;
+  z-index: 1;
 
   &__title {
     @include typography.title-text;
     color: var(--froly);
     text-align: center;
     margin-right: var(--extra-large-spacer);
+    text-decoration: none;
 
     @include responsiveness.font($responsive: 3.8vw, $min: 21px, $max: 35px);
   }
