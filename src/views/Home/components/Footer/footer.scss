@@ -74,6 +74,7 @@
   &__scroll {
     @include footer-highlight();
     height: fit-content;
+    cursor: pointer;
   }
 
   &__arrow {
