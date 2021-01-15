@@ -1,5 +1,7 @@
 .Homepage {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: fit-content;
+  z-index: 0;
 }
