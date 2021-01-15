@@ -56,9 +56,9 @@ const ScheduleComponent: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(
     date <= new Date(2021, 0, 15)
       ? 0
-      : date >= new Date(2021, 0, 15) && date < new Date(2021, 0, 16)
-      ? 1
       : date >= new Date(2021, 0, 16) && date < new Date(2021, 0, 17)
+      ? 1
+      : date >= new Date(2021, 0, 17) && date < new Date(2021, 0, 18)
       ? 2
       : date >= new Date(2021, 0, 18)
       ? 0
