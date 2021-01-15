@@ -4,7 +4,7 @@
 
 .Mission {
   position: relative;
-  max-width: 1800px;
+  width: 100vw;
   margin: auto;
 
   /* Background Layer */
@@ -23,6 +23,8 @@
 
   &__section {
     z-index: 2;
+    max-width: 800px;
+    margin: auto;
 
     &:first-of-type {
       display: flex;
@@ -94,7 +96,6 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -103,6 +104,7 @@
 
   &__can--left {
     position: absolute;
+    max-height: 550px;
     width: 18%;
     left: 1%;
     top: 0;
@@ -110,6 +112,7 @@
 
   &__can--right {
     position: absolute;
+    max-height: 550px;
     width: 18%;
     left: 80%;
     top: 32%;
@@ -117,6 +120,7 @@
 
   &__flower {
     position: absolute;
+    max-height: 550px;
     width: 28%;
     left: 5%;
     bottom: 5%;
