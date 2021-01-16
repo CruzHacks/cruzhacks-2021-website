@@ -31,7 +31,7 @@ const scheduleItems = [
       { event: "Machine Learning Basics", time: "1:30 pm", end: false },
       { event: "Arduino LED", time: "", end: true },
       {
-        event: "Civil Innovation",
+        event: "Civic Tech/Social Innovation",
         time: "2:30 pm",
         end: false,
       },
@@ -39,6 +39,16 @@ const scheduleItems = [
       { event: "Google Cloud Platform", time: "3:30 pm", end: false },
       { event: "ReactJS", time: "", end: true },
       { event: "Intro to Web Design", time: "4:30 pm", end: true },
+      {
+        event: "Cybersecurity Challenge w/ MLH",
+        time: "5:30 pm",
+        end: true,
+      },
+      {
+        event: "Bob Ross Paint Night w/ MLH",
+        time: "6:00 pm",
+        end: true,
+      },
     ],
   },
   {
@@ -68,7 +78,7 @@ const ScheduleComponent: React.FC = () => {
     <div className="Schedule">
       <div className="Schedule__schedule">
         <div className="Schedule__whiteRect">
-          <div className="Schedule__title">General Schedule</div>
+          <div className="Schedule__title">General Schedule (PST)</div>
           <div className="Schedule__date">
             {scheduleItems[selectedDay].date}
           </div>
