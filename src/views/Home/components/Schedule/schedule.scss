@@ -27,8 +27,8 @@
 
   &__schedule {
     position: relative;
-    width: 75%;
-    min-width: max(314.25px, 70vw);
+    width: 70vw;
+    min-width: 314.25px;
     max-width: 1000px;
     min-height: auto;
     height: fit-content;
