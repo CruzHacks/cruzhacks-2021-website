@@ -84,24 +84,20 @@ const ScheduleComponent: React.FC = () => {
           </div>
           <div className="Schedule__greyRect"></div>
           <div className="Schedule__eventContainer">
-            {scheduleItems[selectedDay].events.map(
-              ({ event, time, end }, index) => {
-                return (
-                  <div className="Schedule__event" key={event}>
-                    <div className="Schedule__eventText">{event}</div>
-                    <div className="Schedule__timeText">{time}</div>
-                    {index < scheduleItems[selectedDay].events.length - 1 ? (
-                      <div
-                        className={cx(
-                          { "Schedule__divider--variant": end === false },
-                          "Schedule__divider"
-                        )}
-                      ></div>
-                    ) : null}
-                  </div>
-                );
-              }
-            )}
+            {scheduleItems[selectedDay].events.map(({ event, time, end }) => {
+              return (
+                <div
+                  className={cx(
+                    { "Schedule__event--variant": end === false },
+                    "Schedule__event"
+                  )}
+                  key={event}
+                >
+                  <div className="Schedule__eventText">{event}</div>
+                  <div className="Schedule__timeText">{time}</div>
+                </div>
+              );
+            })}
           </div>
           <div
             id="day1"
