@@ -32,6 +32,7 @@
     margin: 0;
     width: 100%;
     min-height: 100vh;
+    padding-top: 1vh;
     flex-grow: 4;
     justify-content: space-around;
     overflow: hidden;
@@ -183,6 +184,7 @@
 
     @include responsiveness.respond(phone-narrow) {
       max-width: 85%;
+      margin-top: 0;
     }
   }
 
