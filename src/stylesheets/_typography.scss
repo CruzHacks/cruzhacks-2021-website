@@ -67,7 +67,7 @@ $font-family-source-base: "Source Code Pro", sans-serif;
   font-weight: normal;
   font-family: $font-family-source-base;
 
-  @include responsiveness.font($responsive: 2.3vw, $min: 8px, $max: 20px);
+  @include responsiveness.font($responsive: 2vw, $min: 8px, $max: 20px);
 }
 
 /* title text with the 3D cyan-red effect */
