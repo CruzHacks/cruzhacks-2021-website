@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.12",
-    "@babel/preset-typescript": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.17",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.20",
