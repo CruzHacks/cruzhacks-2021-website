@@ -84,6 +84,6 @@
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-use-variable": "^1.7.2",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.19.0"
   }
 }
