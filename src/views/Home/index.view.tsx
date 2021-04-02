@@ -3,6 +3,7 @@ import Navbar from "components/Navbar/index.view";
 import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
 import Hero from "./components/Hero/index.view";
+import Button from "components/Button/index.view";
 import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Mission from "./components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
@@ -22,6 +23,7 @@ import { speakers } from "./props/speakers";
 import * as FAQprops from "./props/faq.json";
 import { sponsors } from "./props/sponsors.js";
 import { footerProps } from "./props/footer";
+import { organizerFormProps } from "./props/organizerForm";
 
 import "./Home.scss";
 
@@ -39,6 +41,9 @@ const HomepageView: React.FC = () => {
           >
             <div className="Homepage__emailSubscriptionContainer">
               <EmailSubscriptionForm />
+            </div>
+            <div className="Homepage__organizerApplication">
+              <Button {...organizerFormProps} />
             </div>
           </Hero>
           <Mission

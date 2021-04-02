@@ -9,6 +9,12 @@ export const navbarProps = {
       label: "mlh code of conduct",
       type: ButtonTypes.SECONDARY,
     },
+    organizer_application: {
+      text: "Organizer Applications",
+      link: "https://forms.gle/VJxrg8REVy3R55Cm8",
+      label: "organizer app",
+      type: ButtonTypes.SECONDARY,
+    },
     contact_us: {
       text: "Contact Us",
       link: "mailto:contact@cruzhacks.com",
