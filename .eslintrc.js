@@ -20,7 +20,7 @@ module.exports = {
     ],
     "no-var": "error",
     "no-console": ["error"],
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
   },

@@ -1,11 +1,11 @@
 {
   "title": [
     {
-      "text": "CruzHacks 2021 /",
+      "text": "CruzHacks 2022 /",
       "style": ""
     },
     {
-      "text": "January 15-17",
+      "text": "January 14-16",
       "style": "--secondary"
     }
   ],
@@ -19,6 +19,11 @@
     },
     {
       "description": "This year, we’re bringing CruzHacks to you.  ",
+      "style": "description",
+      "line": 1
+    },
+    {
+      "description": "Subscribe for CruzHacks 2022 Updates ",
       "style": "description",
       "line": 1
     }
