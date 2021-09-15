@@ -14,3 +14,9 @@ In order to push to production, follow these steps:
 6. Once all changes have been cherry-picked, push your branch upstream & create a pull request requesting to merge your newly created `deploy` branch into `production` with the [deploy format in the PR description](../.github/deploy_request_template.md)
 7. This PR's title should also be in the following format `[Deploy] Today's Date` ie `[Deploy] Sep 15 21` 
 8. Once CI passes & PR has been approved, this PR should be merged using `Rebase and Merge`! This step is super important so we don't lose the script's functionality & cleanliness in differentiating between our two branches. Only deploy PRs should use `Rebase and Merge`!! All other PRs should squash and merge. 
+
+# Demo 
+
+
+https://user-images.githubusercontent.com/40477553/133472923-76faec9b-0a1f-4ec0-bcd3-8951c1bdf9bf.mov
+
