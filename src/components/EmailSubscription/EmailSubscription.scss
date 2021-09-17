@@ -50,14 +50,17 @@
     display: flex;
     align-items: center;
     margin: var(--medium-spacer) 0;
+    width: min(48vw, 300px);
 
-    @include responsiveness.respond(mission) {
-      width: min(48vw, 300px);
+    @include responsiveness.respond(phone) {
+      width: min(80vw, 300px);
     }
   }
 
   &__feedbackMessage {
     @include typography.error;
+    @include responsiveness.font($responsive: 1.5vw, $min: 12px, $max: 18px);
+
     font-weight: bold;
     color: var(--waterleaf);
     padding-left: 5px;

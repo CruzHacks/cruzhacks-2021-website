@@ -25,6 +25,8 @@
 
   &__text {
     @include typography.error;
+    letter-spacing: min(3.5vw, 25px);
+
     margin-bottom: 5%;
 
     @include responsiveness.respond(mission) {
@@ -47,6 +49,8 @@
 
   &__button {
     @include typography.error-button;
+    letter-spacing: max(0.5vw, 7px);
+
     background: linear-gradient(90deg, var(--apricot) 0%, var(--froly__dark) 100%);
     box-shadow: 0 0 35px 16px var(--frosted-white);
     border-radius: 27px;
