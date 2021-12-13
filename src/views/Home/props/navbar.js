@@ -1,7 +1,7 @@
 import { ButtonTypes } from "components/Button/index.view";
 
 export const navbarProps = {
-  title: "CruzHacks 2022",
+  title: "CruzHacks 2021",
   buttonProps: Object.values({
     code_conduct: {
       text: "Our Code of Conduct",
