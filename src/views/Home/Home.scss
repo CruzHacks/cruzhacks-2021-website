@@ -1,7 +1,32 @@
+@use "~stylesheets/responsiveness";
+@use "~stylesheets/typography";
+
+@mixin homepage-highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: var(--froly);
+  border: none;
+  border-radius: 50%;
+  padding: 1%;
+}
+
 .Homepage {
   display: flex;
   flex-direction: column;
   position: relative;
   height: fit-content;
   z-index: 0;
+}
+
+.DevpostLink {
+  @include typography.title-text-tertiary;
+  @include homepage-highlight();
+  color: var(--white);
+  height: fit-content;
+  border-radius: 68.7897px;
+  padding: 0.5% 1.5%;
+  text-decoration: none;
 }
