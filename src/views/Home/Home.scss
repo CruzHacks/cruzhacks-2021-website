@@ -1,7 +1,7 @@
 @use "~stylesheets/responsiveness";
 @use "~stylesheets/typography";
 
-@mixin Homepage-highlight {
+@mixin homepage-highlight {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
 
 .DevpostLink {
   @include typography.title-text-tertiary;
-  @include Homepage-highlight();
+  @include homepage-highlight();
   color: var(--white);
   height: fit-content;
   border-radius: 68.7897px;
