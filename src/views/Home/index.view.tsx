@@ -4,7 +4,6 @@ import MLHBanner from "components/MLHBanner/index.view";
 import Background from "components/Background/index.view";
 import Hero from "./components/Hero/index.view";
 // import Button from "components/Button/index.view";
-import EmailSubscriptionForm from "components/EmailSubscription/index.view";
 import Mission from "./components/Mission/index.view";
 import MilestonesComponent from "./components/Milestones/index.view";
 import Schedule from "./components/Schedule/index.view";
@@ -13,7 +12,6 @@ import SpeakersComponent from "./components/Speakers/index.view";
 import FAQComponent from "./components/FAQ/index.view";
 import SponsorsComponent from "./components/Sponsors/index.view";
 import FooterComponent from "./components/Footer/index.view";
-
 import { navbarProps } from "./props/navbar.js";
 import * as heroProps from "./props/hero.json";
 import * as missionProps from "./props/mission.json";
@@ -37,14 +35,19 @@ const HomepageView: React.FC = () => {
           <Hero
             pageName={"Home"}
             title={heroProps.title}
-            description={heroProps.description}
+            description={[heroProps.description[0]]}
           >
-            <div className="Homepage__emailSubscriptionContainer">
-              <EmailSubscriptionForm />
-            </div>
             {/* <div className="Homepage__sponsorApplication">
               <Button {...sponsorFormProps} />
             </div> */}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://cruzhacks-2021.devpost.com/"
+              className="DevpostLink"
+            >
+              2021 Project Submissions
+            </a>
           </Hero>
           <Mission
             about_text={missionProps.about}
